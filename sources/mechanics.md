@@ -1,4 +1,0 @@
-Mechanics
-=======================
-
-Mechanics section?
