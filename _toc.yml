@@ -1,0 +1,6 @@
+- file: intro
+- file: mechanics
+  sections:
+    - file: mech1Q
+    - file: mech1
+    - file: mech2
