@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Question 1 - Answers" href="mech1.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">My sample book</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mechanics.html">
+   Mechanics
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/mech2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><strong>The drag force on a skydiver is of the form
+\begin{equation}
+F_{Drag} = -kv^2,
+\end{equation}
+where <span class="math notranslate nohighlight">\(k=0.7\)</span> kg m<sup>-1 </sup>s<sup>2</sup> with the parachute closed and <span class="math notranslate nohighlight">\(k=30\)</span> kg m<sup>-1 </sup>s<sup>2</sup> with the parachute open. The skydiver performs a series of 3 jumps from an altitude of 3000 m. To perform the jump safely, the speed of the skydiver must be less than 10 m/s when they land.</p>
+<p>Use the <samp>scipy.integrate.odeint</samp> function to solve the differential equation describing the skydiver’s motion. See the Session 4 Advanced Computing Worksheet for help using this function. For each jump listed below plot the altitude and velocity of the skydiver against time and calculate the total time taken for the jump.</p>
+<ol class="simple">
+<li><p>The parachute is open for the whole jump</strong></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define constants</span>
+<span class="n">g</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9.8</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Or any sensible value</span>
+<span class="n">k_diver</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">k_chute</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">h_start</span> <span class="o">=</span> <span class="mi">3000</span>
+
+<span class="c1"># Define function for odeint</span>
+<span class="k">def</span> <span class="nf">all_chute</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>  <span class="c1"># Variables will be a list with the form [x, v]</span>
+    <span class="n">dx_dt</span> <span class="o">=</span> <span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">dv_dt</span> <span class="o">=</span> <span class="n">g</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">k_chute</span> <span class="o">/</span> <span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># Drag acts in the opposite direction velocity</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dx_dt</span><span class="p">,</span> <span class="n">dv_dt</span><span class="p">]</span>
+
+<span class="c1"># Set time to solve equations for and initial conditions</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">initial</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">solution</span>  <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">all_chute</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">trajectory</span> <span class="o">=</span> <span class="n">solution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">velocity</span> <span class="o">=</span> <span class="n">solution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Have velocity become zero when skydiver hits the ground</span>
+<span class="n">trajectory_final</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">trajectory</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">velocity_final</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Find time for jump to be completed</span>
+<span class="n">t_final</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time that skydiver lands: </span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">t_final</span><span class="p">)</span>
+
+<span class="c1"># Update plot parameters using values suggested in solutions to Session 1 computing worksheet</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;axes.labelsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+   <span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+   <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="s1">&#39;sans-serif&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;font.serif&#39;</span><span class="p">:</span> <span class="s1">&#39;Arial&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;legend.fontsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+   <span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+   <span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> 
+   <span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.8</span><span class="o">/</span><span class="mf">1.618</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">trajectory_final</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Height (m)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">velocity_final</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Velocity (m/s)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Time that skydiver lands: 521.212
+</pre></div>
+</div>
+<div class="stderr docutils container">
+<pre class="stderr literal-block">C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:15: DeprecationWarning: scipy.linspace is deprecated and will be removed in SciPy 2.0.0, use numpy.linspace instead
+  from ipykernel import kernelapp as app
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:11: DeprecationWarning: scipy.sign is deprecated and will be removed in SciPy 2.0.0, use numpy.sign instead
+  # This is added back by InteractiveShellApp.init_path()
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:23: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:24: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:27: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+</pre>
+</div>
+<img alt="_images/mech2_2_2.png" src="_images/mech2_2_2.png" />
+</div>
+</div>
+<p><strong>2. The jump is performed using a static line 1000 m in length. Therefore the parachute opens when the skydiver is 1000 m below the plane</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">length_of_line</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="c1"># Define new function</span>
+<span class="k">def</span> <span class="nf">static_line</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>  <span class="c1"># Variables will be a list with the form [x, v]</span>
+    <span class="n">dx_dt</span> <span class="o">=</span> <span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">variables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">h_start</span> <span class="o">-</span> <span class="n">length_of_line</span><span class="p">:</span>
+        <span class="n">dv_dt</span> <span class="o">=</span> <span class="n">g</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">k_diver</span> <span class="o">/</span> <span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># Drag acts in the opposite direction velocity</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dv_dt</span> <span class="o">=</span> <span class="n">g</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">k_chute</span> <span class="o">/</span> <span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dx_dt</span><span class="p">,</span> <span class="n">dv_dt</span><span class="p">]</span>
+
+<span class="c1"># Set time to solve equations for and initial conditions</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">initial</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">solution</span>  <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">static_line</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">trajectory</span> <span class="o">=</span> <span class="n">solution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">velocity</span> <span class="o">=</span> <span class="n">solution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Have velocity become zero when skydiver hits the ground</span>
+<span class="n">trajectory_final</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">trajectory</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">velocity_final</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Find time for jump to be completed</span>
+<span class="n">t_final</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time that skydiver lands: </span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">t_final</span><span class="p">)</span>
+
+<span class="c1"># Update plot parameters using values suggested in solutions to Session 1 computing worksheet</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;axes.labelsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+   <span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+   <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="s1">&#39;sans-serif&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;font.serif&#39;</span><span class="p">:</span> <span class="s1">&#39;Arial&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;legend.fontsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+   <span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+   <span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> 
+   <span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.8</span><span class="o">/</span><span class="mf">1.618</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">trajectory_final</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Height (m)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">velocity_final</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Velocity (m/s)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:13: DeprecationWarning: scipy.linspace is deprecated and will be removed in SciPy 2.0.0, use numpy.linspace instead
+  del sys.path[0]
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:7: DeprecationWarning: scipy.sign is deprecated and will be removed in SciPy 2.0.0, use numpy.sign instead
+  import sys
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:9: DeprecationWarning: scipy.sign is deprecated and will be removed in SciPy 2.0.0, use numpy.sign instead
+  if __name__ == '__main__':
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:21: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:22: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:25: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+</pre>
+</div>
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Time that skydiver lands: 373.737
+</pre></div>
+</div>
+<img alt="_images/mech2_4_2.png" src="_images/mech2_4_2.png" />
+</div>
+</div>
+<p><strong>3. The skydiver deploys their parachute to minimise the total time taken for the jump, whilst still landing safely</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define new function</span>
+<span class="k">def</span> <span class="nf">variable_line</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">h_open</span><span class="p">):</span>  <span class="c1"># Variables will be a list with the form [x, v]</span>
+    <span class="n">dx_dt</span> <span class="o">=</span> <span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">variables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">h_start</span> <span class="o">-</span> <span class="n">h_open</span><span class="p">:</span>
+        <span class="n">dv_dt</span> <span class="o">=</span> <span class="n">g</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">k_diver</span> <span class="o">/</span> <span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># Drag acts in the opposite direction velocity</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dv_dt</span> <span class="o">=</span> <span class="n">g</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">k_chute</span> <span class="o">/</span> <span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">variables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dx_dt</span><span class="p">,</span> <span class="n">dv_dt</span><span class="p">]</span>
+
+<span class="c1"># Chose range of h_open to try</span>
+<span class="n">h_open</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># We want to chose h_open to minimise the time before the skydiver lands so we need a place to store t_landing</span>
+<span class="c1"># We also need to store the final speed to make sure that the landing is safe</span>
+<span class="n">t_landing</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h_open</span><span class="p">))</span>
+<span class="n">v_landing</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h_open</span><span class="p">))</span>
+
+<span class="c1"># Chose time interval and initial conditions</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">initial</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h_open</span><span class="p">)):</span>
+    <span class="n">solution</span>  <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">variable_line</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">h_open</span><span class="p">[</span><span class="n">i</span><span class="p">],))</span>
+    <span class="n">trajectory</span> <span class="o">=</span> <span class="n">solution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">velocity</span> <span class="o">=</span> <span class="n">solution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Have velocity become zero when skydiver hits the ground</span>
+    <span class="n">trajectory_final</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">trajectory</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">velocity_final</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Find time for jump to be completed and velocity at landing</span>
+    <span class="n">t_final</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">v_final</span> <span class="o">=</span> <span class="n">velocity</span><span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trajectory</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="c1"># Save value of t_final and v_final for later</span>
+    <span class="n">t_landing</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">t_final</span>
+    <span class="n">v_landing</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">v_final</span>
+
+<span class="c1"># Update plot parameters using values suggested in solutions to Session 1 computing worksheet</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;axes.labelsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+   <span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+   <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="s1">&#39;sans-serif&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;font.serif&#39;</span><span class="p">:</span> <span class="s1">&#39;Arial&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;legend.fontsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+   <span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+   <span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> 
+   <span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.8</span><span class="o">/</span><span class="mf">1.618</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">h_open</span><span class="p">,</span> <span class="n">t_landing</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Distance below plane</span><span class="se">\n</span><span class="s2">when parachute opened(m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Time of jump(s)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">h_open</span><span class="p">,</span> <span class="n">v_landing</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Distance below plane</span><span class="se">\n</span><span class="s2">when parachute opened(m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Velocity (m/s)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:11: DeprecationWarning: scipy.linspace is deprecated and will be removed in SciPy 2.0.0, use numpy.linspace instead
+  # This is added back by InteractiveShellApp.init_path()
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:15: DeprecationWarning: scipy.empty is deprecated and will be removed in SciPy 2.0.0, use numpy.empty instead
+  from ipykernel import kernelapp as app
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:16: DeprecationWarning: scipy.empty is deprecated and will be removed in SciPy 2.0.0, use numpy.empty instead
+  app.launch_new_instance()
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:19: DeprecationWarning: scipy.linspace is deprecated and will be removed in SciPy 2.0.0, use numpy.linspace instead
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:5: DeprecationWarning: scipy.sign is deprecated and will be removed in SciPy 2.0.0, use numpy.sign instead
+  &quot;&quot;&quot;
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:7: DeprecationWarning: scipy.sign is deprecated and will be removed in SciPy 2.0.0, use numpy.sign instead
+  import sys
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:28: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:29: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:32: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:33: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+</pre>
+</div>
+<img alt="_images/mech2_6_1.png" src="_images/mech2_6_1.png" />
+</div>
+</div>
+<p>From the left hand graph we can see that time of the jump is minimised by opening the parachute as close to the ground as possible. Therefore we need to find the largest distance below the plane where the final speed of the skydiver is less than 10 m/s.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find latest trajectory where the final velocity of the skydiver is less than 10 m/s</span>
+<span class="n">index_of_fastest_trajectory</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">v_landing</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">10</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># Remeber velocity is downwards</span>
+<span class="n">t_fastest</span> <span class="o">=</span> <span class="n">t_landing</span><span class="p">[</span><span class="n">index_of_fastest_trajectory</span><span class="p">]</span>
+<span class="n">v_fastest</span> <span class="o">=</span> <span class="n">v_landing</span><span class="p">[</span><span class="n">index_of_fastest_trajectory</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The shortest time in which the skydiver can safely complete the jump is </span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">t_fastest</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The skydiver lands with a velocity of </span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">v_fastest</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>The shortest time in which the skydiver can safely complete the jump is 82.966
+The skydiver lands with a velocity of -9.758
+</pre></div>
+</div>
+<div class="stderr docutils container">
+<pre class="stderr literal-block">C:\Users\Lloyd\Anaconda3\lib\site-packages\ipykernel_launcher.py:2: DeprecationWarning: scipy.where is deprecated and will be removed in SciPy 2.0.0, use numpy.where instead
+  
+</pre>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="mech1.html" title="previous page">Question 1 - Answers</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
