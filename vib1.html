@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Problem 1 - Answers &#8212; PyProblems</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 2" href="vib2Q.html" />
+    <link rel="prev" title="Problem 1" href="vib1Q.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mechanics.html">
+   Mechanics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="electrostatics.html">
+   Electrostatics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="magnetism.html">
+   Magnetism
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="vibrations.html">
+   Vibrations
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="vib1Q.html">
+     Problem 1
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Problem 1 - Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vib2Q.html">
+     Problem 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vib2.html">
+     Problem 2 - Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vib3Q.html">
+     Problem 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vib3.html">
+     Problem 3 - Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="relativity.html">
+   Relativity
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/vib1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-1-answers">
+<h1>Problem 1 - Answers<a class="headerlink" href="#problem-1-answers" title="Permalink to this headline">¶</a></h1>
+<p>To start with we solve the undamped simple harmonics oscillator as detailed in lecture notes 3, and end up with:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} U = \frac{1}{2}m\omega_0^2A^2\cos^2(\omega_0t + \phi) \\ Ke  =  \frac{1}{2}m\omega_0^2A^2\sin^2(\omega_0t + \phi) \\ E = U + Ke\end{split}\]</div>
+<p>Implementing this in python, we end up with:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import packages</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># set variables</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="n">m</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># write out the equations</span>
+<span class="n">U</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">w</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">A</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">t</span><span class="o">+</span><span class="n">phi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">KE</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">w</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">A</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">t</span><span class="o">+</span><span class="n">phi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">U</span><span class="o">+</span><span class="n">KE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">U</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">KE</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">E</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Energy (mJ)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;Ke&#39;</span><span class="p">,</span> <span class="s1">&#39;Total&#39;</span><span class="p">),</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/vib1_6_0.png" src="_images/vib1_6_0.png" />
+</div>
+</div>
+<p>Once we introduce damping however, things get a bit more complicated. The general form of the equation of motion for a damped harmonic oscillator is (see lecture notes 4):</p>
+<div class="math notranslate nohighlight">
+\[ \ddot \Psi + \gamma \dot \Psi + \omega_0^2 \Psi = 0\]</div>
+<p>This differential equation is soluble, and gives potential and kinetic energies of:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} U = \frac{1}{2}m\omega_0^2A^2e^{-\gamma t}\cos^2(\omega_dt + \phi) \\ Ke  =  \frac{1}{8}mA^2e^{-\gamma t}(\gamma\cos(\omega_dt + \phi) + 2\omega_d\sin(\omega_dt + \phi))^2 \\ \omega_d = \sqrt{\omega_0^2 - (\frac{\gamma}{2})^2}\end{split}\]</div>
+<p>which can be implemented in python like so:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># extra constants</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.4</span>
+<span class="n">wd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">w</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="n">gamma</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># new equations</span>
+<span class="n">U</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">A</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">w</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">gamma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">wd</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">KE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">A</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">gamma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">gamma</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">wd</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">wd</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">wd</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">U</span><span class="o">+</span><span class="n">KE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot solutions</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">U</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">KE</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">E</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Energy (mJ)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;Ke&#39;</span><span class="p">,</span> <span class="s1">&#39;Total&#39;</span><span class="p">),</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/vib1_10_0.png" src="_images/vib1_10_0.png" />
+</div>
+</div>
+<p>However, not all differential equations are solvable analytically. This is where one of the great strengths of computers come in, as they can solve sets of differential equations numerically, so the explicit form of the solutions never has to be worked out.</p>
+<p>One common form of numerical solution is called the fourth order Runge-Kutta method. It is useable on a set of equations of the form <span class="math notranslate nohighlight">\(\frac{d\mathbf{r}}{dt} = \mathbf{f}(\mathbf{r},t)\)</span>, where <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> is a vector of coordinates <span class="math notranslate nohighlight">\(x,y,z,...\)</span> and <span class="math notranslate nohighlight">\(\mathbf{f}\)</span> is the corresponding vector of time dependent functions <span class="math notranslate nohighlight">\(\mathit{f_x}(\mathbf{r},t), \mathit{f_y}(\mathbf{r},t), \mathit{f_z}(\mathbf{r},t),...\)</span> where <span class="math notranslate nohighlight">\(\mathit{f_x}(\mathbf{r},t) = \frac{dx}{dt}\)</span>. (note that this is effectively just a short way of writing a set of simulntaneous first order differential equations).</p>
+<p>Then for a time interval <span class="math notranslate nohighlight">\(h\)</span> and initial values <span class="math notranslate nohighlight">\(t_n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_n\)</span> we take <span class="math notranslate nohighlight">\(t_{n+1} = t_n + h\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_{n+1} = \mathbf{r}_n + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4)\)</span>. The <span class="math notranslate nohighlight">\(k\)</span>’s are given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} k_1 = h\mathbf{f}(\mathbf{r}_n,t_n) \\ k_2 = h\mathbf{f}(\mathbf{r}_n + \frac{k_1}{2},t_n + \frac{h}{2}) \\ k_3 = h\mathbf{f}(\mathbf{r}_n + \frac{k_2}{2},t_n + \frac{h}{2}) \\ k_4 = h\mathbf{f}(\mathbf{r}_n + k_3,t_n + h)\end{split}\]</div>
+<p>and are equivalent to taking the slope of the line at the beginning, two in the middle and one again at the end, with guesses at the coordinates given by the previous slope. This is then repeated for as many points over the desired interval as the step size allows.</p>
+<p>We can rewrite the general equation as <span class="math notranslate nohighlight">\(\frac{dv}{dt} = -\gamma\frac{dx}{dt} + \omega_0^2x\)</span>. As <span class="math notranslate nohighlight">\(\frac{dx}{dt} = v\)</span> this then gives us the set of simulntaneous equations <span class="math notranslate nohighlight">\(\mathbf{r} = (x,v)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{f} = (\frac{dx}{dt},\frac{dv}{dt})\)</span>.</p>
+<p>This can be implemented as a function in python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">vx</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">fx</span> <span class="o">=</span> <span class="n">vx</span>
+    <span class="n">fvx</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">gamma</span><span class="o">*</span><span class="n">vx</span> <span class="o">+</span> <span class="n">w</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">fx</span><span class="p">,</span><span class="n">fvx</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The Runge-Kutta method can be implemented as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># more constants - note t is redefined now we need the step size to be explicit</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">4</span>
+<span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span><span class="o">/</span><span class="n">N</span>
+<span class="n">t_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Runge-Kutta method - loop over t, append old x and v to the array, calculate the </span>
+<span class="c1"># new ones and replace the old points in the r </span>
+<span class="k">def</span> <span class="nf">rungekutta</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">xpoints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">vpoints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
+        <span class="n">xpoints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">vpoints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">k1</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">h</span><span class="p">)</span>
+        <span class="n">k3</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">k2</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">h</span><span class="p">)</span>
+        <span class="n">k4</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="n">k3</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">+</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k3</span> <span class="o">+</span> <span class="n">k4</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xpoints</span><span class="p">,</span><span class="n">vpoints</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># set initial conditions, and solve for U and Ke</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">rsol</span> <span class="o">=</span> <span class="n">rungekutta</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">t_2</span><span class="p">)</span>
+
+<span class="n">U_2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">w</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">rsol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">KE_2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">rsol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">E_2</span> <span class="o">=</span> <span class="n">U_2</span> <span class="o">+</span> <span class="n">KE_2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_2</span><span class="p">,</span><span class="n">U_2</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">t_2</span><span class="p">,</span><span class="n">KE_2</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">t_2</span><span class="p">,</span><span class="n">E_2</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Energy (mJ)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;Ke&#39;</span><span class="p">,</span> <span class="s1">&#39;Total&#39;</span><span class="p">),</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/vib1_17_0.png" src="_images/vib1_17_0.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="vib1Q.html" title="previous page">Problem 1</a>
+    <a class='right-next' id="next-link" href="vib2Q.html" title="next page">Problem 2</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

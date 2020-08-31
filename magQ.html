@@ -1,0 +1,612 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Problems &#8212; PyProblems</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Answers" href="mag.html" />
+    <link rel="prev" title="Magnetism" href="magnetism.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mechanics.html">
+   Mechanics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="electrostatics.html">
+   Electrostatics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="magnetism.html">
+   Magnetism
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mag.html">
+     Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vibrations.html">
+   Vibrations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="relativity.html">
+   Relativity
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/magQ.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-some-vector-products">
+   1. Defining some vector products
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-dot-product">
+     1.a. Dot product
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-testing-the-dot-product">
+     1.b. Testing the dot product
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-cross-product">
+     1.c. Cross product
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-testing-the-cross-product">
+     1.d. Testing the cross product
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualising-some-magnetic-fields">
+   2. Visualising some magnetic fields
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-defining-some-field-functions">
+     2.a Defining some field functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-defining-a-function-to-generate-a-grid-of-points-parallel-to-the-xy-plane">
+     2.b. Defining a function to generate a grid of points parallel to the
+     <span class="math notranslate nohighlight">
+      \(xy\)
+     </span>
+     -plane
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-visualising-the-magnetic-fields">
+     2.c. Visualising the magnetic fields
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-and-testing-an-integrator-for-vector-differential-equations">
+   3. Writing and testing an integrator for vector differential equations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-writing-the-integrator">
+     3.a. Writing the integrator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-testing-with-a-1st-order-differential-equation">
+     3.b. Testing with a 1st-order differential equation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-testing-with-a-2nd-order-differential-equation">
+     3.c. Testing with a 2nd-order differential equation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulating-a-charged-test-particle-moving-in-a-magnetic-field">
+   4. Simulating a charged test particle moving in a magnetic field
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-writing-the-differential-equation">
+     4.a. Writing the differential equation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-performing-a-simulation">
+     4.b. Performing a simulation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-another-simulation">
+     4.c. Another simulation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualising-the-magnetic-field-induced-by-a-moving-charge">
+   5. Visualising the magnetic field induced by a moving charge
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-writing-the-induced-field-function">
+     5.a. Writing the induced field function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-visualising-the-induced-field">
+     5.b. Visualising the induced field
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gauss-law-for-magnetism">
+   6. Gauss’ law for magnetism
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-creating-the-cubic-surface">
+     6.a. Creating the cubic surface
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-creating-the-area-element-vectors">
+     6.b. Creating the area element vectors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-calculating-the-fluxes">
+     6.c. Calculating the fluxes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problems">
+<h1>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h1>
+<p>In these exercises, we will develop a basic simulation to explore how charged particles interact with magnetic fields.
+Some of these exercises involve producing visualisations with the external plotting library <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.
+As such, it is recommended that you import its <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> interface with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<p>In addition, you may want to use the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library to provide arrays which can be used as vectors.
+<code class="docutils literal notranslate"><span class="pre">numpy</span></code> is typically imported with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<p>Lastly, as we will be simulating small charged particles moving through space, it might be helpful to define the following constants to use throughout the exercises:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">echarge</span> <span class="o">=</span> <span class="mf">1.60217662e-19</span>  <span class="c1"># electron charge</span>
+<span class="n">emass</span> <span class="o">=</span> <span class="mf">9.10938356e-31</span>    <span class="c1"># electron mass</span>
+<span class="n">vperm</span> <span class="o">=</span> <span class="mf">1.25663706212e-6</span>  <span class="c1"># vacuum permittivity</span>
+</pre></div>
+</div>
+<div class="section" id="defining-some-vector-products">
+<h2>1. Defining some vector products<a class="headerlink" href="#defining-some-vector-products" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-dot-product">
+<h3>1.a. Dot product<a class="headerlink" href="#a-dot-product" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong>: Define a function with signature</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dot</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>that takes in two 3-component vectors (i.e 1-dimensional <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays of length 3) <code class="docutils literal notranslate"><span class="pre">v1</span></code> and <code class="docutils literal notranslate"><span class="pre">v2</span></code> and returns their vector dot product.</p>
+</div>
+<div class="section" id="b-testing-the-dot-product">
+<h3>1.b. Testing the dot product<a class="headerlink" href="#b-testing-the-dot-product" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong>: Test your <code class="docutils literal notranslate"><span class="pre">dot</span></code> function by working out some dot products of some simple 3-component vectors by hand and comparing these with the function output.</p>
+</div>
+<div class="section" id="c-cross-product">
+<h3>1.c. Cross product<a class="headerlink" href="#c-cross-product" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong>: Define a function with signature</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cross</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>that takes in two 3-component vectors (i.e 1-dimensional <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays of length 3) <code class="docutils literal notranslate"><span class="pre">v1</span></code> and <code class="docutils literal notranslate"><span class="pre">v2</span></code> and returns their vector cross product, also as a 3-component vector).</p>
+</div>
+<div class="section" id="d-testing-the-cross-product">
+<h3>1.d. Testing the cross product<a class="headerlink" href="#d-testing-the-cross-product" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong>: Test your <code class="docutils literal notranslate"><span class="pre">cross</span></code> function by working out some cross products of some simple 3-component vectors by hand and comparing these with the function output.</p>
+</div>
+</div>
+<div class="section" id="visualising-some-magnetic-fields">
+<h2>2. Visualising some magnetic fields<a class="headerlink" href="#visualising-some-magnetic-fields" title="Permalink to this headline">¶</a></h2>
+<p>As we will be working with magnetic fields, we will need a convenient way to represent them in our code. A magnetic field is a vector field; that is, it assigns a vector <span class="math notranslate nohighlight">\(\mathbf{B(\mathbf{x}, t)}\)</span> to each point in space <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> at each time <span class="math notranslate nohighlight">\(t\)</span>. As such, a convenient way to represent our magnetic field will be a function of the form <code class="docutils literal notranslate"><span class="pre">Bfield(pos,</span> <span class="pre">t)</span></code> that takes in a position vector <code class="docutils literal notranslate"><span class="pre">pos</span></code> and a time <code class="docutils literal notranslate"><span class="pre">t</span></code> and returns the appropriate 3-component magnetic field vector (again, as a  1-dimensional <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays of length 3)</p>
+<div class="section" id="a-defining-some-field-functions">
+<h3>2.a Defining some field functions<a class="headerlink" href="#a-defining-some-field-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong>: Define</p>
+<ul class="simple">
+<li><p>a function <code class="docutils literal notranslate"><span class="pre">Bfield_constant(pos,</span> <span class="pre">t)</span></code> that returns a magnetic field of magnitude <span class="math notranslate nohighlight">\(1\mathrm{T}\)</span> along the positive <span class="math notranslate nohighlight">\(z\)</span>-direction, for any position <code class="docutils literal notranslate"><span class="pre">pos</span></code> and time <code class="docutils literal notranslate"><span class="pre">t</span></code></p></li>
+<li><p>a function <code class="docutils literal notranslate"><span class="pre">Bfield_spacevarying(pos,</span> <span class="pre">t)</span></code> that returns a magnetic field, oriented along the positive <span class="math notranslate nohighlight">\(z\)</span>-direction, with magntitude <span class="math notranslate nohighlight">\(1\mathrm{T}/||\mathbf{x}||\)</span> (where <span class="math notranslate nohighlight">\(||\mathbf{x}||\)</span> is the magntitude of the position vector <code class="docutils literal notranslate"><span class="pre">pos</span></code>) for any time <code class="docutils literal notranslate"><span class="pre">t</span></code> (it is up to you if and how you handle the singularity at <span class="math notranslate nohighlight">\(||\mathbf{x}||=0\)</span>)</p></li>
+<li><p>a function <code class="docutils literal notranslate"><span class="pre">Bfield_timevarying(pos,</span> <span class="pre">t)</span></code> that returns a magnetic field, parrallel to the <span class="math notranslate nohighlight">\(z\)</span>-axis, with <span class="math notranslate nohighlight">\(z\)</span>-component <span class="math notranslate nohighlight">\(1\mathrm{T}\cos(2\pi t)\)</span> for any position vector <code class="docutils literal notranslate"><span class="pre">pos</span></code>.</p></li>
+</ul>
+<p>All of these field functions we’ve defined take both arguments <code class="docutils literal notranslate"><span class="pre">pos</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>, even if the calculations don’t actually use them. This <em>consistent interface</em> will be useful later on when we want to write code that works with arbitrary magnetic fields.</p>
+</div>
+<div class="section" id="b-defining-a-function-to-generate-a-grid-of-points-parallel-to-the-xy-plane">
+<h3>2.b. Defining a function to generate a grid of points parallel to the <span class="math notranslate nohighlight">\(xy\)</span>-plane<a class="headerlink" href="#b-defining-a-function-to-generate-a-grid-of-points-parallel-to-the-xy-plane" title="Permalink to this headline">¶</a></h3>
+<p>We are nearly ready to visualise the magnetic fields that we’ve defined. While we could in principle do this in three dimensions, it might be clearer to visualize 2-dimensional slices of space instead. Furthermore, while we could in principle pick arbitrary slices, it will be much easier to choose planes that are aligned with two of our co-ordinate axes. This is what we will do here.</p>
+<p>We want to define a surface, parrallel to the <span class="math notranslate nohighlight">\(yz\)</span>-plane that extend from <span class="math notranslate nohighlight">\(y=y_0\)</span> to <span class="math notranslate nohighlight">\(y=y_\mathrm{max}\)</span> and from
+<span class="math notranslate nohighlight">\(z=z_0\)</span> to <span class="math notranslate nohighlight">\(z=z_\mathrm{max}\)</span>, and which has a particular constant <span class="math notranslate nohighlight">\(x\)</span> co-ordinate. To treat this computationally, we will need to discretize this surface into small rectangles of sides <span class="math notranslate nohighlight">\(\delta y\)</span> and <span class="math notranslate nohighlight">\(\delta z\)</span>. We can then represent the surface by a collection of the points that are the centres of these rectangles. For example, a surface defined by
+<span class="math notranslate nohighlight">\(x=0.123\)</span>
+<span class="math notranslate nohighlight">\(y_0=-0.2, y_\mathrm{max}=0.2\)</span>
+<span class="math notranslate nohighlight">\(z_0=0.0, z_\mathrm{max}=0.4\)</span>
+and which is discretized with <span class="math notranslate nohighlight">\(\delta y=\delta z = 0.2\)</span> would be represented by the points <span class="math notranslate nohighlight">\((0.123, -0.1, 0.1)\)</span>, <span class="math notranslate nohighlight">\((0.123, 0.1, 0.1)\)</span>, <span class="math notranslate nohighlight">\((0.123, -0.1, 0.3)\)</span>, <span class="math notranslate nohighlight">\((0.123, 0.1, 0.3)\)</span>.</p>
+<p><strong>EXERCISE</strong>: Define a function <code class="docutils literal notranslate"><span class="pre">gen_grid(x,</span> <span class="pre">y0,</span> <span class="pre">z0,</span> <span class="pre">ymax,</span> <span class="pre">ymax,</span> <span class="pre">zmax,</span> <span class="pre">dyz)</span></code> that returns a python <code class="docutils literal notranslate"><span class="pre">list</span></code> of points (i.e position vectors as <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays) that make up a planar surface parrallel to the <span class="math notranslate nohighlight">\(yz\)</span>-plane, as described above. <code class="docutils literal notranslate"><span class="pre">x</span></code> should be the constant <span class="math notranslate nohighlight">\(x\)</span>-co-ordinate, and <code class="docutils literal notranslate"><span class="pre">dyz</span></code> should give the discretization value <span class="math notranslate nohighlight">\(\delta y=\delta z\)</span> (using a single value for simplicity means that the small ‘rectangles’ will really be squares.)</p>
+<p><strong>EXERCISE</strong>: Using <code class="docutils literal notranslate"><span class="pre">gen_grid</span></code>, generate some surfaces and plot the points using <code class="docutils literal notranslate"><span class="pre">plt.scatter</span></code> to check that they look as you expect.
+If you don’t know how to turn your <code class="docutils literal notranslate"><span class="pre">list</span></code> of <span class="math notranslate nohighlight">\((x, y, z)\)</span> points into something more easily plottable by <code class="docutils literal notranslate"><span class="pre">plt.scatter</span></code>, the following will be helpful:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="n">gen_grid</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="c1"># arguments replaced by ... for brevity </span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="nb">tuple</span><span class="p">(</span><span class="n">grid</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you don’t understand what this code is doing, look online for information about the <code class="docutils literal notranslate"><span class="pre">zip</span></code> function, tuple-packing and tuple-unpacking. This is a very useful pattern.</p>
+</div>
+<div class="section" id="c-visualising-the-magnetic-fields">
+<h3>2.c. Visualising the magnetic fields<a class="headerlink" href="#c-visualising-the-magnetic-fields" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong>: Using <code class="docutils literal notranslate"><span class="pre">gen_grid</span></code>, generate a a surface defined by
+<span class="math notranslate nohighlight">\(x=0.0\)</span>
+<span class="math notranslate nohighlight">\(y_0=-2.0, y_\mathrm{max}=2.0\)</span>
+<span class="math notranslate nohighlight">\(z_0=-2.0, z_\mathrm{max}=2.0\)</span>
+and which is discretized with <span class="math notranslate nohighlight">\(\delta y=\delta z = 0.2\)</span>. For each point in the grid, call <code class="docutils literal notranslate"><span class="pre">Bfield_constant</span></code> (at time 0) and store the resulting field vector (which should be the same for each point). Plot these field vectors as their respective points using <code class="docutils literal notranslate"><span class="pre">plt.quiver</span></code>. The call to <code class="docutils literal notranslate"><span class="pre">plt.quiver</span></code> will look something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">By</span><span class="p">,</span> <span class="n">Bz</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">By</span></code> and <code class="docutils literal notranslate"><span class="pre">Bz</span></code> are sequences of the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> components of the field vectors respectively. You may need to use the <code class="docutils literal notranslate"><span class="pre">zip</span></code> trick again to prepare <code class="docutils literal notranslate"><span class="pre">By</span></code> and <code class="docutils literal notranslate"><span class="pre">Bz</span></code>.</p>
+<p><strong>EXERCISE</strong>: Repeat the above exercise for <code class="docutils literal notranslate"><span class="pre">Bfield_spacevarying</span></code> at time <span class="math notranslate nohighlight">\(t=0.0\)</span>, and for <code class="docutils literal notranslate"><span class="pre">Bfield_timevarying</span></code> at times <span class="math notranslate nohighlight">\(t=0.0\)</span>, <span class="math notranslate nohighlight">\(t=0.25\)</span>, <span class="math notranslate nohighlight">\(t=0.5\)</span>. Do the visualizations look as you expect? If the time-varying case at <span class="math notranslate nohighlight">\(t=0.25\)</span> is producing an unexpected results, look at the documentation for <code class="docutils literal notranslate"><span class="pre">plt.quiver}</span></code>; in particular, look at the <code class="docutils literal notranslate"><span class="pre">scale</span></code> parameter.</p>
+</div>
+</div>
+<div class="section" id="writing-and-testing-an-integrator-for-vector-differential-equations">
+<h2>3. Writing and testing an integrator for vector differential equations<a class="headerlink" href="#writing-and-testing-an-integrator-for-vector-differential-equations" title="Permalink to this headline">¶</a></h2>
+<p>The motion of a particle with charge <span class="math notranslate nohighlight">\(q\)</span> under the influence of a magnetic field <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> is described by the equation</p>
+<div class="math notranslate nohighlight" id="equation-ac-lorentzforce">
+<span class="eqno">(1)<a class="headerlink" href="#equation-ac-lorentzforce" title="Permalink to this equation">¶</a></span>\[\mathbf{F} = q\mathbf{v}\times\mathbf{B}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{v}=\frac{\mathrm{d}}{\mathrm{d}t}\mathbf{x}\)</span> is the velocity of the particle and <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is the resulting force the particle experiences.
+Since we also have that <span class="math notranslate nohighlight">\(\mathbf{F}=m\frac{\mathrm{d}^2}{\mathrm{d}t^2}\mathbf{x}\)</span> where <span class="math notranslate nohighlight">\(m\)</span> is the mass of the particle, we ultimately have to solve the differential equation</p>
+<div class="math notranslate nohighlight" id="equation-ac-2ndode">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ac-2ndode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}^2}{\mathrm{d}t^2}\mathbf{x} = \frac{q}{m}(\frac{\mathrm{d}}{\mathrm{d}t}\mathbf{x})\times\mathbf{B}(\mathbf{x}, t)\]</div>
+<p>As such, we will need to write an integrator.</p>
+<p>Eq. <a class="reference internal" href="#equation-ac-2ndode">(2)</a> is a 2nd-order vector differential equation, but we can simplify things a bit by turning it into a 1st-order one.
+To do this, we can use the facts that <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{d}t}\mathbf{x} = \mathbf{v}\)</span> and that <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{d}t}\mathbf{v} = \frac{\mathrm{d}^2}{\mathrm{d}t^2}\mathbf{x}=q\mathbf{v}\times\mathbf{B}(\mathbf{x}, t)\)</span> to rewrite Eq. <a class="reference internal" href="#equation-ac-2ndode">(2)</a> as</p>
+<div class="math notranslate nohighlight" id="equation-ac-concatvec">
+<span class="eqno">(3)<a class="headerlink" href="#equation-ac-concatvec" title="Permalink to this equation">¶</a></span>\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}t}
+\Big(
+\begin{array}{ll}
+\mathbf{x} \\ \mathbf{v}
+\end{array}
+\Big)
+= \Big(
+\begin{array}{c}
+\mathbf{v} \\ \mathbf{\frac{q}{m}\mathbf{v}\times\mathbf{B}(\mathbf{x}, t)}
+\end{array}
+\Big).\end{split}\]</div>
+<p>where
+<span class="math notranslate nohighlight">\(\Big(
+\begin{array}{ll}
+\mathbf{x} \\ \mathbf{v}
+\end{array}
+\Big)\)</span>
+is the 6-component vector formed by concatenating <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.</p>
+<p>So, we just need to write a 1st-order vector integrator. A simple method to use is the explicity Euler method, which solves a differential equation</p>
+<div class="math notranslate nohighlight" id="equation-gen-de">
+<span class="eqno">(4)<a class="headerlink" href="#equation-gen-de" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}t}\mathbf{u}(t) = f(\mathbf{u}(t), t).\]</div>
+<p>for the vector <span class="math notranslate nohighlight">\(\mathbf{u}(t)\)</span>, with boundary condition <span class="math notranslate nohighlight">\(\mathbf{u}(t_\mathrm{init})=\mathbf{u}_\mathrm{init}\)</span>, by iterating the step</p>
+<div class="math notranslate nohighlight" id="equation-disc-de">
+<span class="eqno">(5)<a class="headerlink" href="#equation-disc-de" title="Permalink to this equation">¶</a></span>\[\mathbf{u}(t_{n+1}) = \mathbf{u}(t_n) +  (\delta t)f(\mathbf{u}(t_n), t_n),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\delta t\)</span> is some chosen step size.</p>
+<div class="section" id="a-writing-the-integrator">
+<h3>3.a. Writing the integrator<a class="headerlink" href="#a-writing-the-integrator" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong> Write a function of the form</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">euler</span><span class="p">(</span><span class="n">vec_init</span><span class="p">,</span> <span class="n">t_init</span><span class="p">,</span> <span class="n">t_final</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">diff_func</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which takes in some initial vector <code class="docutils literal notranslate"><span class="pre">vec_init</span></code>, an initial time <code class="docutils literal notranslate"><span class="pre">t_init</span></code>, a final time <code class="docutils literal notranslate"><span class="pre">t_final</span></code>, a step-size <code class="docutils literal notranslate"><span class="pre">dt</span></code> and a function <code class="docutils literal notranslate"><span class="pre">diff_func</span></code> which plays the role of <span class="math notranslate nohighlight">\(f\)</span> in Eqs. <a class="reference internal" href="#equation-gen-de">(4)</a> and <a class="reference internal" href="#equation-disc-de">(5)</a> (that is, it is the right-hand-size of the differential equation). The function <code class="docutils literal notranslate"><span class="pre">euler</span></code> should use the Euler method to integrate the differential equation defined by <code class="docutils literal notranslate"><span class="pre">diff_func</span></code> and return both a <code class="docutils literal notranslate"><span class="pre">list</span></code> of times <span class="math notranslate nohighlight">\(t_n\)</span> and a <code class="docutils literal notranslate"><span class="pre">list</span></code> of vectors <span class="math notranslate nohighlight">\(\mathbf{u}(t_n)\)</span> corresponding to the solution at those times. Avoid making reference to specific vector lengths; <code class="docutils literal notranslate"><span class="pre">euler</span></code> should work with arbitrarily-sized vectors.</p>
+</div>
+<div class="section" id="b-testing-with-a-1st-order-differential-equation">
+<h3>3.b. Testing with a 1st-order differential equation<a class="headerlink" href="#b-testing-with-a-1st-order-differential-equation" title="Permalink to this headline">¶</a></h3>
+<p>To check that our Euler integrator is working, it is useful to check against a simple 1st-order differential equation, and it doesn’t get much simpler than the exponential function.</p>
+<p><strong>EXERCISE</strong> Use the following setup</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">diff_func</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>  <span class="c1"># simple first order case</span>
+	<span class="k">return</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">vec</span>
+
+<span class="n">t_init</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">t_final</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">vec_init</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">])</span>  <span class="c1"># boundary condition - the function </span>
+							<span class="c1"># takes value 1.0 at t\_init</span>
+</pre></div>
+</div>
+<p>to test your integrator by integrating the equation <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dt}}g(t)=2g(t)\)</span> with the boundary condition <span class="math notranslate nohighlight">\(g(0)=1\)</span>. Note that, although this is really a scalar differential equation, we are defining <code class="docutils literal notranslate"><span class="pre">def_init</span></code> here as a 1-component vector, so that <code class="docutils literal notranslate"><span class="pre">euler</span></code> will accept it.</p>
+<p><strong>EXERCISE</strong> Try plotting the result using <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> (look at the documentation online if you don’t know how to use it). Does it looks how you expect? Try plotting the exact solution on the same axes to compare. How does varying <code class="docutils literal notranslate"><span class="pre">dt</span></code> affect it?</p>
+</div>
+<div class="section" id="c-testing-with-a-2nd-order-differential-equation">
+<h3>3.c. Testing with a 2nd-order differential equation<a class="headerlink" href="#c-testing-with-a-2nd-order-differential-equation" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong> Now try with a 2nd-order version of the differential equation, where <code class="docutils literal notranslate"><span class="pre">vec</span></code> will now refer to the vector containing the value of <span class="math notranslate nohighlight">\(g(t)\)</span> and of its first derivative. That is, redefine <code class="docutils literal notranslate"><span class="pre">vec\_init</span> <span class="pre">=</span> <span class="pre">np.array([1.0,</span> <span class="pre">2.0])</span></code> so that it contains both boundary conditions, <span class="math notranslate nohighlight">\(g(0)=1.0\)</span> and <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dt}}g(t)\Big|_{t=0}=2\)</span>, and redefine <code class="docutils literal notranslate"><span class="pre">diff_func</span></code> to act appropriately on this larger vector.</p>
+</div>
+</div>
+<div class="section" id="simulating-a-charged-test-particle-moving-in-a-magnetic-field">
+<h2>4. Simulating a charged test particle moving in a magnetic field<a class="headerlink" href="#simulating-a-charged-test-particle-moving-in-a-magnetic-field" title="Permalink to this headline">¶</a></h2>
+<p>We are now almost ready to perform a simulation. All that is left to do is create the appropriate differential equation to solve with our integrator.</p>
+<div class="section" id="a-writing-the-differential-equation">
+<h3>4.a. Writing the differential equation<a class="headerlink" href="#a-writing-the-differential-equation" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong> Consider a particle of mass <span class="math notranslate nohighlight">\(m_e\)</span> (electron mass) and charge <span class="math notranslate nohighlight">\(e\)</span> (electron charge), initially at the origin and moving with a speed <span class="math notranslate nohighlight">\(v=10^{11} \mathrm{m}\mathrm{s}^{-1}\)</span> in the positive direction along the <span class="math notranslate nohighlight">\(x\)</span>-axis under the influence of the constant magnetic field we defined in <code class="docutils literal notranslate"><span class="pre">Bfield_constant</span></code>.</p>
+<p>Write an appropriate <code class="docutils literal notranslate"><span class="pre">diff_func</span></code> function that corresponds to the right-hand-side of Eq. <a class="reference internal" href="#equation-ac-concatvec">(3)</a>. Remember, it will need to be a function that operates on a 6-component vector which contains the position and velocity co-ordinates together.</p>
+</div>
+<div class="section" id="b-performing-a-simulation">
+<h3>4.b. Performing a simulation<a class="headerlink" href="#b-performing-a-simulation" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong> Using the ingredients we’ve built so far, simulate the particle moving under the influence of the constant magnetic field for a duration <span class="math notranslate nohighlight">\(t_\mathrm{final}=2\pi\frac{m_e}{(1\mathrm{T})e}\)</span> (what’s so special about this number?). Be sure to choose a time step <span class="math notranslate nohighlight">\(\delta t\)</span> that is small compared to this. Plot the resulting trajectory in the <span class="math notranslate nohighlight">\(xy\)</span>-plane using <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> (why is the motion confined to thr <span class="math notranslate nohighlight">\(xy\)</span>-plane?). Does it looks how you expect?</p>
+</div>
+<div class="section" id="c-another-simulation">
+<h3>4.c. Another simulation<a class="headerlink" href="#c-another-simulation" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong> Repeat the previous exercise, but this time with a particle whose charge is <span class="math notranslate nohighlight">\(-e\)</span>. Does the result differ in the way you expect?</p>
+</div>
+</div>
+<div class="section" id="visualising-the-magnetic-field-induced-by-a-moving-charge">
+<h2>5. Visualising the magnetic field induced by a moving charge<a class="headerlink" href="#visualising-the-magnetic-field-induced-by-a-moving-charge" title="Permalink to this headline">¶</a></h2>
+<p>When a charged particle moves through space, it induces a magnetic field in the space around it. This phenomenon is governed by the equation</p>
+<div class="math notranslate nohighlight" id="equation-ac-inducedfield">
+<span class="eqno">(6)<a class="headerlink" href="#equation-ac-inducedfield" title="Permalink to this equation">¶</a></span>\[\mathbf{B}_\mathrm{ind}(\mathbf{x}) = \frac{q\mu_0}{4\pi} \mathbf{v}_\mathrm{particle}\times\Bigg(\frac{\mathbf{x}-\mathbf{x}_\mathrm{particle}}{|\mathbf{x}-\mathbf{x}_\mathrm{particle}|^2}\Bigg)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is a point in space, <span class="math notranslate nohighlight">\(q\)</span> is the particle charge, <span class="math notranslate nohighlight">\(\mu_0\)</span> is the vacuum permeability, and <span class="math notranslate nohighlight">\(\mathbf{x}_\mathrm{particle}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_\mathrm{particle}\)</span> are the positions and velocities of the particle respectively.</p>
+<div class="section" id="a-writing-the-induced-field-function">
+<h3>5.a. Writing the induced field function<a class="headerlink" href="#a-writing-the-induced-field-function" title="Permalink to this headline">¶</a></h3>
+<p>Consider a particle of mass <span class="math notranslate nohighlight">\(m_e\)</span> (electron mass) and charge <span class="math notranslate nohighlight">\(e\)</span> (electron charge), positioned at the co-ordinates <span class="math notranslate nohighlight">\((0.1\mathrm{m}, 0.1\mathrm{m}, 0.1\mathrm{m})\)</span> and moving with a speed <span class="math notranslate nohighlight">\(v=10^{26} \mathrm{m}\mathrm{s}^{-1}\)</span> in the positive direction along the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
+<p><strong>EXERCISE</strong> Write a function <code class="docutils literal notranslate"><span class="pre">Bfield_particle(pos,</span> <span class="pre">t)</span></code> that corresponds to Eq. <a class="reference internal" href="#equation-ac-inducedfield">(6)</a> as applied to the particle described above.</p>
+</div>
+<div class="section" id="b-visualising-the-induced-field">
+<h3>5.b. Visualising the induced field<a class="headerlink" href="#b-visualising-the-induced-field" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong> Repeat the exercise in part 2.c. using the magnetic field defined by <code class="docutils literal notranslate"><span class="pre">Bfield_particle</span></code>. Does the visualisation look how you expect?</p>
+</div>
+</div>
+<div class="section" id="gauss-law-for-magnetism">
+<h2>6. Gauss’ law for magnetism<a class="headerlink" href="#gauss-law-for-magnetism" title="Permalink to this headline">¶</a></h2>
+<p>Gauss’ law for magnetism, one of the four Maxwell’s equations, states that (in integral form) that for any closed surface <span class="math notranslate nohighlight">\(S\)</span> in space,</p>
+<div class="math notranslate nohighlight" id="equation-ac-gausslaw">
+<span class="eqno">(7)<a class="headerlink" href="#equation-ac-gausslaw" title="Permalink to this equation">¶</a></span>\[\intop_S \mathbf{B} \cdot \mathrm{d}\mathbf{A} = 0\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> is the magnetic field evaluated at each point on the surface and <span class="math notranslate nohighlight">\(\mathrm{d}\mathbf{A}\)</span> is the vector surface element (i.e a vector whose magnitude is an infinitesimal area and whose direction is normal to the surface and pointing out).
+This integral is the magnetic flux through the surface <span class="math notranslate nohighlight">\(S\)</span>.
+In this part, we will explore this law, starting by creating a cubic surface centred on the origin.
+You will want to use finer grids than you used for the field visualisations, because we will be approximating a surface integral.</p>
+<div class="section" id="a-creating-the-cubic-surface">
+<h3>6.a. Creating the cubic surface<a class="headerlink" href="#a-creating-the-cubic-surface" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong> Figure out a way to generalise your your <code class="docutils literal notranslate"><span class="pre">gen_grid</span></code> function from part 2.b. to create a planar surface parrallel to a chosen co-ordinate plane (e.g parrallel to the <span class="math notranslate nohighlight">\(xz\)</span>-plane).</p>
+<p><strong>EXERCISE</strong> Using your generalised <code class="docutils literal notranslate"><span class="pre">gen_grid</span></code> function, generate the six faces of a cube of side <span class="math notranslate nohighlight">\(1.0\mathrm{m}\)</span>, centred on the origin.</p>
+</div>
+<div class="section" id="b-creating-the-area-element-vectors">
+<h3>6.b. Creating the area element vectors<a class="headerlink" href="#b-creating-the-area-element-vectors" title="Permalink to this headline">¶</a></h3>
+<p><strong>EXERCISE</strong> For each of the surfaces created above, create an appropriate area element vector <span class="math notranslate nohighlight">\(\delta\mathbf{A}\)</span>.
+These will be vectors with magnitude equal to the area of the discrete squares that make up the surface, and with direction that is facing out of the cube (i.e away from the origin).</p>
+</div>
+<div class="section" id="c-calculating-the-fluxes">
+<h3>6.c. Calculating the fluxes<a class="headerlink" href="#c-calculating-the-fluxes" title="Permalink to this headline">¶</a></h3>
+<p>Consider the particle whose induced field we visualised in part 5.b. We want to verify that Gauss’ law for magnetism holds for this induced field.</p>
+<p><strong>EXERCISE</strong> For each of the six faces, compute the discrete form of the integral in Eq. <a class="reference internal" href="#equation-ac-gausslaw">(7)</a>. That is, compute</p>
+<div class="math notranslate nohighlight">
+\[ \sum_{i} \mathbf{B}(\mathbf{x}_i) \cdot \delta\mathbf{A} \]</div>
+<p>for each surface, where <span class="math notranslate nohighlight">\(\mathbf{x}_i\)</span> are the points defining the surface.
+Which surface fluxes are non-zero? Does this make sense? Is the total flux through the closed surface zero? What do you think are the limits to this approach?</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="magnetism.html" title="previous page">Magnetism</a>
+    <a class='right-next' id="next-link" href="mag.html" title="next page">Answers</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

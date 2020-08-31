@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Problem 3 &#8212; PyProblems</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 3 - Answers" href="mech3.html" />
+    <link rel="prev" title="Problem 2 - Answers" href="mech2.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="mechanics.html">
+   Mechanics
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech1Q.html">
+     Problem 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech1.html">
+     Problem 1 - Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech2Q.html">
+     Problem 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech2.html">
+     Problem 2 - Answers
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Problem 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech3.html">
+     Problem 3 - Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech4Q.html">
+     Problem 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech4.html">
+     Problem 4 - Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="electrostatics.html">
+   Electrostatics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="magnetism.html">
+   Magnetism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vibrations.html">
+   Vibrations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="relativity.html">
+   Relativity
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/mech3Q.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-kepler-s-first-law">
+   Example: Kepler’s First Law
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-3">
+<h1>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h1>
+<p>In this first part we’ll learn to solve differential equations numerically in Python. In the second part we’ll use the code we write here to solve a much more complicated problem. As a motivating example, we will be proving Kepler’s first law numerically.</p>
+<p>The force on a body of mass <span class="math notranslate nohighlight">\(m\)</span> at <span class="math notranslate nohighlight">\(\boldsymbol{\mathrm{r}}\)</span> due to a body of mass <span class="math notranslate nohighlight">\(M\)</span> at the origin is given by Newton’s law
+\begin{equation}
+\boldsymbol{\mathrm{F}}= -\frac{GMm}{\left|\boldsymbol{r}\right|^3}\boldsymbol{r}.
+\end{equation}
+In two dimensions, where <span class="math notranslate nohighlight">\(\boldsymbol{\mathrm{r}}=x\boldsymbol{\hat{\imath}} + y \boldsymbol{\hat{\jmath}}\)</span>, the components of the acceleration <span class="math notranslate nohighlight">\(\boldsymbol{\mathrm{a}}=a_x \boldsymbol{\hat{\imath}} + a_y \boldsymbol{\hat{\jmath}}\)</span> are given by
+\begin{equation}
+a_x = \frac{\mathrm{d}v_x}{\mathrm{d}t} = - \frac{GMx}{\left(x^2 + y^2\right)^{3/2}},\quad a_y = \frac{\mathrm{d}v_y}{\mathrm{d}t} = - \frac{GMy}{\left(x^2 + y^2\right)^{3/2}}.
+\end{equation}
+A problem where we know the equations of motion and the starting point for the system is called an <em>initial value problem</em> and is a very common numerical problem in physics. Python comes with a few ways to easily solve initial value problems. Here we’ll use the <samp>scipy.integrate.solve_isp</samp> function.</p>
+<p>We have to provide the function with three arguments to work (see <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html#scipy.integrate.solve_ivp">the documentation</a> for more). The first argument is a function <span class="math notranslate nohighlight">\(\boldsymbol{\mathrm{F}}(t,\boldsymbol{\mathrm{X}})\)</span> which ‘updates’ the system, this is where the equations of motion are set. This function must take the time, and a <em>state vector</em> as inputs and return the derivative (wrt time) of the state vector’s components. Our state vector we’ll call <span class="math notranslate nohighlight">\(\boldsymbol{\mathrm{X}}\)</span> and which just holds the current state of the system, in our case
+\begin{equation}
+\boldsymbol{\mathrm{X}} = \left(x, y, v_x, v_y\right).
+\end{equation}
+So it follows that the function <span class="math notranslate nohighlight">\(\boldsymbol{\mathrm{F}}(t,\boldsymbol{\mathrm{X}})\)</span> must return
+\begin{equation}
+\boldsymbol{\mathrm{F}}(t,\boldsymbol{\mathrm{X}}) = \left(v_x, v_y, a_x, a_y\right).
+\end{equation}
+The first two components are simply the last two components in the input. The second two components can be calculated from the acceleration equations above. The other arguments that <samp>scipy.integrate.solve_isp</samp> requires is the initial state of the system <span class="math notranslate nohighlight">\(\boldsymbol{\mathrm{X}}_0\)</span> and the time span over which to solve the equations.</p>
+<p>A few tips:</p>
+<ul class="simple">
+<li><p>You must set the <samp>method</samp> argument of <samp>solve_isp</samp> to <samp>”Radau”</samp> to get a stable solution.</p></li>
+<li><p>Set the <samp>t_eval</samp> to an array of time coordinates and the function will find <span class="math notranslate nohighlight">\(\boldsymbol{\mathrm{X}}\)</span> at those time coordinates.</p></li>
+<li><p>The <span class="math notranslate nohighlight">\((x, y, v_x, v_y)\)</span> values are stored in array at <samp>result.y</samp> where <samp>result = solve_isp(…)</samp></p></li>
+</ul>
+<div class="section" id="example-kepler-s-first-law">
+<h2>Example: Kepler’s First Law<a class="headerlink" href="#example-kepler-s-first-law" title="Permalink to this headline">¶</a></h2>
+<p>States that</p>
+<blockquote>
+<div><p>All planets move in elliptical orbits, with the sun at one focus.</p>
+</div></blockquote>
+<p>To prove this numerically, start the solver with a body at <span class="math notranslate nohighlight">\(x=1 \mathrm{AU}\)</span>, <span class="math notranslate nohighlight">\(y=0\)</span> and an initial velocity <span class="math notranslate nohighlight">\(35\)</span> km/s in the positive <span class="math notranslate nohighlight">\(y\)</span> direction. Plot the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> values and you should see an elliptical orbit. Ensure you run the simulation over a sensible time-scale, e.g. a few years.</p>
+<p>Now check if the orbit is elliptical. The equation of an ellipse is
+\begin{equation}
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1,
+\end{equation}
+where <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are the semi-minor and semi-major axes respectively. What are <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> for this orbit? The below figure shows what the orbit should look like.</p>
+<div class="figure align-default" id="kepler-example-orbit">
+<a class="reference internal image-reference" href="_images/kepler_example_orbit.png"><img alt="_images/kepler_example_orbit.png" src="_images/kepler_example_orbit.png" style="height: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">The elliptical orbit for the Kepler’s law example.</span><a class="headerlink" href="#kepler-example-orbit" title="Permalink to this image">¶</a></p>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">Hint</p>
+<p>Rearrange the above to something that looks like the equation for a straight line and fit to find <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. The <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> in the equation are centred  on the centre of the ellipse but our data is centred on the sun (the ellipse’s focus). Make sure to shift your data (only necessary in <span class="math notranslate nohighlight">\(x\)</span>) to the centre.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="mech2.html" title="previous page">Problem 2 - Answers</a>
+    <a class='right-next' id="next-link" href="mech3.html" title="next page">Problem 3 - Answers</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,4 +1,4 @@
-# Question 1 - Problems
+# Problem 1
 
 This question concerns the properties of the potential function found in the file <a href="_data/Potential.txt">Potential.txt</a>.
 
@@ -12,4 +12,4 @@ You can use <samp>scipy.interpolate.interp1d</samp> to create a function which y
 
 c) Find and plot the maximum energy of particle bound in this potential
 
-d) Find and plot the allowed region for this bound particle
+d) Find and plot the allowed region for this bound particlejupyter

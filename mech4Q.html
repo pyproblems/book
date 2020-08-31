@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Problem 4 &#8212; PyProblems</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 4 - Answers" href="mech4.html" />
+    <link rel="prev" title="Problem 3 - Answers" href="mech3.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="mechanics.html">
+   Mechanics
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech1Q.html">
+     Problem 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech1.html">
+     Problem 1 - Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech2Q.html">
+     Problem 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech2.html">
+     Problem 2 - Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech3Q.html">
+     Problem 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech3.html">
+     Problem 3 - Answers
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Problem 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mech4.html">
+     Problem 4 - Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="electrostatics.html">
+   Electrostatics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="magnetism.html">
+   Magnetism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vibrations.html">
+   Vibrations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="relativity.html">
+   Relativity
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/mech4Q.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#closest-approach">
+   Closest Approach
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#impact-probability">
+   Impact Probability
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#avoiding-impact">
+   Avoiding Impact
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-4">
+<h1>Problem 4<a class="headerlink" href="#problem-4" title="Permalink to this headline">¶</a></h1>
+<p>An asteroid has been spotted heading towards Earth. It is your task to determine how much of a risk it poses, using the simulation techniques we developed in the previous part.</p>
+<p>The asteroid is currently estimated to be at a distance <span class="math notranslate nohighlight">\(r=1000R_\mathrm{E}\)</span> from the Earth, where <span class="math notranslate nohighlight">\(R_\mathrm{E}=6371\)</span>km is the radius of the Earth. It’s at due NW, an angle of <span class="math notranslate nohighlight">\(\theta=3\pi/2\)</span> from the <span class="math notranslate nohighlight">\(x\)</span>-axis. It’s travelling with a radial speed of <span class="math notranslate nohighlight">\(v_\mathrm{r}=-1000\)</span>m/s and a tangential speed of <span class="math notranslate nohighlight">\(v_\mathrm{t}=15\)</span>m/s, where the radial vector points away from the Earth and the tangent vector points anti-clockwise. The below diagram illustrates the coordinate system.</p>
+<div class="figure align-default" id="asteroid">
+<a class="reference internal image-reference" href="_images/asteroid.png"><img alt="_images/asteroid.png" src="_images/asteroid.png" style="height: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">The coordinate system for this problem.</span><a class="headerlink" href="#asteroid" title="Permalink to this image">¶</a></p>
+</div>
+<p>Using the same simulation technique from the previous part, answer the following questions. Make sure first that you can easily convert between the Cartesian coordinates needed in the simulation and the polar coordinates we have used to define the initial conditions.</p>
+<div class="section" id="closest-approach">
+<h2>Closest Approach<a class="headerlink" href="#closest-approach" title="Permalink to this headline">¶</a></h2>
+<p>Using the initial conditions above, run a simulation and determine the closest point of approach for the asteroid. How long have we got until this occurs? What speed does the asteroid have at this point? The below figure shows what the orbit should look like.</p>
+<div class="figure align-default" id="asteroid-initial-trajectory">
+<a class="reference internal image-reference" href="_images/asteroid_initial_trajectory.png"><img alt="_images/asteroid_initial_trajectory.png" src="_images/asteroid_initial_trajectory.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">The trajectory for the initial conditions. Earth is drawn to scale. Note the difference in axis limits.</span><a class="headerlink" href="#asteroid-initial-trajectory" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="impact-probability">
+<h2>Impact Probability<a class="headerlink" href="#impact-probability" title="Permalink to this headline">¶</a></h2>
+<p>The initial conditions we have for the asteroid predict that it will pass closely by the Earth, but not impact. However, those initial conditions are from telescope measurements which have uncertainties. The radial distance has a <span class="math notranslate nohighlight">\(15\%\)</span> uncertainty, i.e., it is measured as <span class="math notranslate nohighlight">\(r=(1000\pm150)R_\mathrm{E}\)</span>. Using this, calculate the percentage chance that the asteroid will impact the Earth. Plot all of the sample orbits on the same figure to see how the change in initial position effects the orbit. The below figure shows an example.</p>
+<div class="figure align-default" id="orbit-distribution">
+<a class="reference internal image-reference" href="_images/orbit_distribution.png"><img alt="_images/orbit_distribution.png" src="_images/orbit_distribution.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">The distribution of trajectories for a <span class="math notranslate nohighlight">\(15\%\)</span> error in initial radius. All trajectories to the left of the black dashed line will collide.</span><a class="headerlink" href="#orbit-distribution" title="Permalink to this image">¶</a></p>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">Hint</p>
+<p>Use <samp>numpy.random.normal</samp> to get a normal distribution centred on <span class="math notranslate nohighlight">\(r=1000R_\mathrm{E}\)</span> with standard deviation <span class="math notranslate nohighlight">\(\sigma_r=150R_\mathrm{E}\)</span>. In a <samp>for</samp> loop, run a simulation for every initial radial position in the distribution. Determine the condition for a trajectory to collide with the Earth and find how many of these occur.</p>
+</div>
+</div>
+<div class="section" id="avoiding-impact">
+<h2>Avoiding Impact<a class="headerlink" href="#avoiding-impact" title="Permalink to this headline">¶</a></h2>
+<p>We have now obtained new data that confirms the asteroid is at exactly <span class="math notranslate nohighlight">\(r=750R_\mathrm{E}\)</span>. This puts it on a direct collision trajectory. A plan has been proposed to divert the asteroid’s course. A rocket will intercept the asteroid when the asteroid is at <span class="math notranslate nohighlight">\(r=60R_\mathrm{E}\)</span>, releasing at <span class="math notranslate nohighlight">\(r=40R_\mathrm{E}\)</span>. While attached, the rocket will boost the asteroid’s velocity in the direction perpendicular to its current velocity, and away from the Earth, i.e., if the asteroid is travelling in the SE direction, the rocket boosts it SW. Determine the necessary boost to the asteroid’s velocity to successfully prevent it from colliding with Earth. The below figure shows an example of the trajectories you should see from the given range of boosts.</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">Hint</p>
+<p>You will need to modify the <samp>update_function</samp> so that, when in the correct radial range, the asteroid’s velocity is boosted by a certain amount. Choose a range of velocity amounts and perform a simulation for each to find which collide.</p>
+</div>
+<div class="figure align-default" id="boost-speeds">
+<a class="reference internal image-reference" href="_images/boost_speeds.png"><img alt="_images/boost_speeds.png" src="_images/boost_speeds.png" style="height: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The trajectories resulting from the boost indicated on the colourbar.</span><a class="headerlink" href="#boost-speeds" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="mech3.html" title="previous page">Problem 3 - Answers</a>
+    <a class='right-next' id="next-link" href="mech4.html" title="next page">Problem 4 - Answers</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
