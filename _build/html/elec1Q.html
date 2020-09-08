@@ -1,0 +1,568 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Problem 1 &#8212; PyProblems</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 1 - Answers" href="elec1.html" />
+    <link rel="prev" title="Electrostatics" href="electrostatics.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mechanics.html">
+   Mechanics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="electrostatics.html">
+   Electrostatics
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Problem 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="elec1.html">
+     Problem 1 - Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="elec2Q.html">
+     Problem 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="elec2.html">
+     Problem 2 - Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="magnetism.html">
+   Magnetism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vibrations.html">
+   Vibrations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="relativity.html">
+   Relativity
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/elec1Q.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   Background
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#physics">
+     Physics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#coulomb-s-law">
+       Coulomb’s Law
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#electric-field">
+       Electric Field
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#particle-acceleration">
+       Particle Acceleration
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computational-methods">
+     Computational Methods
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#finite-differences">
+       Finite Differences
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#scipy-solver">
+       SciPy Solver
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-task">
+   Your Task
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initial-conditions">
+     Initial Conditions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coding-hints">
+     Coding Hints
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#initialisation">
+       Initialisation
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#writing-a-function-to-calculate-the-electric-field">
+       Writing a function to calculate the electric field
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#animation-code">
+       Animation Code
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-1">
+<h1>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h1>
+<p>Your task is to simulate the motion of 3 electrically charged particles. To solve this problem you will need to use finite difference methods. Specifically, you will use a forward Euler solver which you will code yourself, as well as a pre-packaged solver from SciPy.</p>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>Below, you will be given background information required to solve the problem. The basic physics will be explained first, followed by a description of the finite difference and computational methods you will need to employ.</p>
+<div class="section" id="physics">
+<h3>Physics<a class="headerlink" href="#physics" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="coulomb-s-law">
+<h4>Coulomb’s Law<a class="headerlink" href="#coulomb-s-law" title="Permalink to this headline">¶</a></h4>
+<p>The electrostatic force between two point charges is given by the following relation:</p>
+<div class="math notranslate nohighlight">
+\[ |\mathbf{F}| = k_e \frac{q_1 q_2}{r^2}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(|\mathbf{F}|\)</span> is the magnitude of the force acting on the charges, <span class="math notranslate nohighlight">\(k_e\)</span> is Coulomb’s constant <span class="math notranslate nohighlight">\(\mathrm{(}k_e = 8.990 \times 10^9\ \mathrm{N\, m^2\, C^{-2}}\mathrm{)}\)</span>, <span class="math notranslate nohighlight">\(q_x\)</span> is the charge of point charge <span class="math notranslate nohighlight">\(x\)</span>, and <span class="math notranslate nohighlight">\(r\)</span> is their separation. If <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span> have the same sign, the force is repulsive along the vector linking the charges, and vice versa.</p>
+</div>
+<div class="section" id="electric-field">
+<h4>Electric Field<a class="headerlink" href="#electric-field" title="Permalink to this headline">¶</a></h4>
+<p>To calculate the force on a given point charge, Coulomb’s law has to be applied to all other charges in the system. This leads to the definition of the electric field:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{E}_1 = \frac{\mathbf{F}_1}{q_1}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}_1\)</span> is the force acting on the point charge of interest, and <span class="math notranslate nohighlight">\(q_1\)</span> is its charge.</p>
+<p>The force can be calculated as</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{F}_1 = \sum_{i \neq 1} k_e \frac{q_1 q_i}{|\mathbf{r}_{i1}|^2} \mathbf{\hat{r}}_{i1} \]</div>
+<p>from the definition of the force above written in vector form, with <span class="math notranslate nohighlight">\(r_{i1}\)</span> being the vector from <span class="math notranslate nohighlight">\(r_i\)</span> to <span class="math notranslate nohighlight">\(r_1\)</span>.</p>
+</div>
+<div class="section" id="particle-acceleration">
+<h4>Particle Acceleration<a class="headerlink" href="#particle-acceleration" title="Permalink to this headline">¶</a></h4>
+<p>We will assume that each of our point charges has a constant mass <span class="math notranslate nohighlight">\(m_i\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\mathbf{F}_i}{m_i} = \bf{a}_i = \frac{\mathrm{d} \mathbf{v}_i}{\mathrm{d}\:\! t} = \frac{\mathrm{d^2} \mathbf{x}_i}{\mathrm{d}\:\! t^2}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}_i\)</span> is the force acting on point charge <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a_i}\)</span> its acceleration, <span class="math notranslate nohighlight">\(\mathbf{v_i}\)</span> its velocity, and <span class="math notranslate nohighlight">\(\mathbf{x_i}\)</span> its position.</p>
+<p>We are trying to simulate the <strong>future</strong> motion of the particles given their <strong>current</strong> state. Thus, we want to determine <span class="math notranslate nohighlight">\(\mathbf{x}_i^{t+h}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_i^{t+h}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{a}_i^{t+h}\)</span> from <span class="math notranslate nohighlight">\(\mathbf{x}_i^{t}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_i^{t}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{a}_i^{t}\)</span>, where <span class="math notranslate nohighlight">\(\mathbf{x}_i^{t+h}\)</span> refers to the position of point charge <span class="math notranslate nohighlight">\(i\)</span> at time <span class="math notranslate nohighlight">\(t+h\)</span>, where <span class="math notranslate nohighlight">\(h\)</span> is the integration time step.</p>
+<p>This second order initial value problem can be rewritten as a coupled system of first order equations:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm{d} \mathbf{x}^t}{\mathrm{d}\:\! t} = \mathbf{v}^t \]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm{d} \mathbf{v}^t}{\mathrm{d}\:\! t} = \mathbf{a}^t \]</div>
+<p>where the initial positions <span class="math notranslate nohighlight">\(\mathbf{x}^{t_0}\)</span> and velocities <span class="math notranslate nohighlight">\(\mathbf{v}^{t_0}\)</span> are the known initial conditions.</p>
+</div>
+</div>
+<div class="section" id="computational-methods">
+<h3>Computational Methods<a class="headerlink" href="#computational-methods" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="finite-differences">
+<h4>Finite Differences<a class="headerlink" href="#finite-differences" title="Permalink to this headline">¶</a></h4>
+<p>Using a Taylor series,</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{x}^{t+h} = \mathbf{x}^{t} + \frac{\mathrm{d} \mathbf{x}^t}{\mathrm{d}\:\! t} h + O(h^2), \]</div>
+<p>where the discretisation error is seen to scale with <span class="math notranslate nohighlight">\(h^2\)</span>. Since</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm{d} \mathbf{x}^t}{\mathrm{d}\:\! t} = \mathbf{v}^t, \]</div>
+<div class="math notranslate nohighlight">
+\[ \mathbf{x}^{t+h} \approx \mathbf{x}^t + h \mathbf{v}^t, \]</div>
+<p>with <span class="math notranslate nohighlight">\(\mathbf{v}^t\)</span> approximated by</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{v}^t = \frac{\mathbf{x}^{t+h} - \mathbf{x}^t}{h}. \]</div>
+<p>Similarly,</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{a}^t = \frac{\mathbf{v}^{t+h} - \mathbf{v}^t}{h} \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{v}^{t+h} \approx \mathbf{v}^t + h \mathbf{a}^t. \]</div>
+<p>An implementation of the above scheme is one of the simplest methods of numerically integrating differential equations, known as the explicit forward Euler method.</p>
+</div>
+<div class="section" id="scipy-solver">
+<h4>SciPy Solver<a class="headerlink" href="#scipy-solver" title="Permalink to this headline">¶</a></h4>
+<p>Using the SciPy <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html">solve_ivp</a> function will yield significantly better results than using the first-order explicit Euler scheme above, because it is capable of using higher order integration methods with a much lower discretisation error. It also dynamically adjusts the integration step size to further reduce the error.</p>
+<p>In order to use this function, you must rewrite your force calculation function to adhere to a function signature akin to that below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">int_fun</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">masses</span><span class="p">,</span> <span class="n">charges</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Differential equations for the system of point charges.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        t (float): Time.</span>
+<span class="sd">        y (numpy.ndarray): Array containing the state variables,</span>
+<span class="sd">            (x_1_x, x_1_y, v_1_x, v_1_y, ...), the position and velocity</span>
+<span class="sd">            components of all the charges.</span>
+<span class="sd">        masses (numpy.ndarray): (N,) array of masses in kg.</span>
+<span class="sd">        charges (numpy.ndarray): (N,) array of charges in C.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        iterable: Rates of change of the state variables</span>
+<span class="sd">        (v_1_x, v_1_y, a_1_x, a_1_y, ...).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Your code here ...</span>
+</pre></div>
+</div>
+<p>Note especially that the function <strong>must</strong> take a single float (the time) as its first parameter, even if the function never uses this parameter.</p>
+<p>The function can then be used like this (see <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html">solve_ivp</a> for a thorough description of the function parameters):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span>
+    <span class="n">partial</span><span class="p">(</span><span class="n">int_fun</span><span class="p">,</span> <span class="n">masses</span><span class="o">=</span><span class="n">masses</span><span class="p">,</span> <span class="n">charges</span><span class="o">=</span><span class="n">charges</span><span class="p">),</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">],</span>
+    <span class="n">init_state</span><span class="p">,</span>
+    <span class="n">t_eval</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">,</span> <span class="mi">2000</span><span class="p">),</span>
+    <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-7</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># The solutions at different times are then contained in sol.y</span>
+</pre></div>
+</div>
+<p>You might have to set the <samp>rtol</samp> parameter to a low number like <samp>1e-7</samp> (as above) to achieve realistic results (this is especially relevant to the question in the next notebook)!</p>
+</div>
+</div>
+</div>
+<div class="section" id="your-task">
+<h2>Your Task<a class="headerlink" href="#your-task" title="Permalink to this headline">¶</a></h2>
+<p>Your task is to simulate the trajectories of the three particles described below. You will need to use both the forward Euler solver, as well as the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html">solve_ivp</a> function from SciPy to do this.</p>
+<p>You are expected to use the animation code provided further below (amongst other visualisations if you wish) to evaluate your two solutions.</p>
+<p>You will also have to compare the solutions arrived at using the two different solvers. One way to contrast these solutions could be to plot the x-position of one particle over time.</p>
+<p>Your final task is to identify a general property of the system that remains constant throughout and show (graphically or otherwise) that this is the case.</p>
+<div class="section" id="initial-conditions">
+<h3>Initial Conditions<a class="headerlink" href="#initial-conditions" title="Permalink to this headline">¶</a></h3>
+<p>The three point charges you will simulate will start at rest at <span class="math notranslate nohighlight">\((x, y)\)</span> positions (m) <span class="math notranslate nohighlight">\((2, 1)\)</span>, <span class="math notranslate nohighlight">\((1, 3)\)</span>, and <span class="math notranslate nohighlight">\((3, 2)\)</span> with charges (C) <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(-4\)</span>, and <span class="math notranslate nohighlight">\(2\)</span>, and masses (kg) <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(3\)</span>, and <span class="math notranslate nohighlight">\(2\)</span> respectively (all units are SI).</p>
+<p>The temporal range of integration should encompass at least <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(10^{-4}\)</span> seconds.</p>
+</div>
+<div class="section" id="coding-hints">
+<h3>Coding Hints<a class="headerlink" href="#coding-hints" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="initialisation">
+<h4>Initialisation<a class="headerlink" href="#initialisation" title="Permalink to this headline">¶</a></h4>
+<p>One way to initialise the system:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+<span class="n">velocities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">positions</span><span class="p">)</span>
+<span class="n">masses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+<span class="n">charges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="writing-a-function-to-calculate-the-electric-field">
+<h4>Writing a function to calculate the electric field<a class="headerlink" href="#writing-a-function-to-calculate-the-electric-field" title="Permalink to this headline">¶</a></h4>
+<p>Since the force acting on a given point charge is given by</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{F}_j = q_j \mathbf{E}_j, \]</div>
+<p>with <span class="math notranslate nohighlight">\(\mathbf{E}_j\)</span> given by</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{E}_j = \sum_{i \neq j} k_e \frac{q_j}{|\mathbf{r}_{ij}|^2} \mathbf{\hat{r}}_{ij} \]</div>
+<p>it makes sense to define a function that calculates <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> as defined above.</p>
+<p>While the exact implementation is up to you, this could look something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">E</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Electric field.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (float): X position(s).</span>
+<span class="sd">        y (float): Y position(s).</span>
+<span class="sd">        q (float): Charge(s).</span>
+<span class="sd">        r (iterable of float): (x, y) position(s) of the point charge(s).</span>
+<span class="sd">            If an array is given, it should be a (2, N) array where N</span>
+<span class="sd">            is the number of point charges.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       float: Electric field vectors at every point in `x` and `y`. The</span>
+<span class="sd">       shape of this array is the same shape as `x` and `y` with an</span>
+<span class="sd">       added initial dimension.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Your code here ...</span>
+</pre></div>
+</div>
+<p>While you could write a function to calculate the electric field from a single point charge, it makes sense to vectorise this function so that it accepts multiple charges. Both methods should yield the same result, since the individual electric fields from multiple charges may be added together to yield the combined field.</p>
+</div>
+<div class="section" id="animation-code">
+<h4>Animation Code<a class="headerlink" href="#animation-code" title="Permalink to this headline">¶</a></h4>
+<p>The code below is meant to be run inside a Jupyter notebook.</p>
+<p>Should you choose run it elsewhere, please see <a href="https://matplotlib.org/api/animation_api.html">animation_api</a> for further information.</p>
+<p>Using <a href="https://pypi.org/project/tqdm/2.2.3/">tqdm</a> here is completely optional. It provides a straightforward way to judge the time remaining for the animation from within the notebook. Should you wish to run the code without it, simply delete the line using tqdm and unindent everything from <samp>def animate(i)</samp> up to and including <samp>js_output</samp> by one level.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">animation</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="c1"># Just to illustrate what shape this has to be.</span>
+<span class="c1"># It could just as well be a list of (2, 3) arrays!</span>
+<span class="n">all_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">charges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">scat</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">all_positions</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">charges</span><span class="p">)</span>
+
+<span class="n">all_xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">step_positions</span> <span class="ow">in</span> <span class="n">all_positions</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">step_positions</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">all_ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">step_positions</span> <span class="ow">in</span> <span class="n">all_positions</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">step_positions</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">all_xs</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">all_xs</span><span class="p">)])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">all_ys</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">all_ys</span><span class="p">)])</span>
+
+<span class="n">title_text</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+    <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.08</span><span class="p">,</span> <span class="s2">&quot;placeholder&quot;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span>
+<span class="p">)</span>
+<span class="c1"># Prevent display of (duplicate) static figure due to %matplotlib inline</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">N_frames</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_positions</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">N_frames</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_positions</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
+    <span class="n">scat</span><span class="o">.</span><span class="n">set_offsets</span><span class="p">(</span><span class="n">all_positions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">title_text</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">scat</span><span class="p">,)</span>
+
+
+<span class="k">with</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s2">&quot; plots&quot;</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Plotting&quot;</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="n">N_frames</span><span class="p">)</span> <span class="k">as</span> <span class="n">t</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="n">scat</span><span class="o">.</span><span class="n">set_offsets</span><span class="p">(</span><span class="n">all_positions</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="n">title_text</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Frame &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="n">scat</span><span class="p">,</span> <span class="n">title_text</span><span class="p">)</span>
+
+    <span class="n">anim</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span>
+        <span class="n">fig</span><span class="p">,</span> <span class="n">animate</span><span class="p">,</span> <span class="n">init_func</span><span class="o">=</span><span class="n">init</span><span class="p">,</span> <span class="n">frames</span><span class="o">=</span><span class="n">N_frames</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+        <span class="n">blit</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+
+    <span class="n">js_output</span> <span class="o">=</span> <span class="n">anim</span><span class="o">.</span><span class="n">to_jshtml</span><span class="p">()</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="n">js_output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="electrostatics.html" title="previous page">Electrostatics</a>
+    <a class='right-next' id="next-link" href="elec1.html" title="next page">Problem 1 - Answers</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

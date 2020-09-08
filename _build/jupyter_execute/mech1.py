@@ -1,4 +1,4 @@
-# Question 1 - Answers
+# Problem 1 - Answers
 
 ## a) Plotting potential data from file 
 

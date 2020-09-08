@@ -1,0 +1,3 @@
+# Problem 2
+
+Consider two pendula of mass 1 Kg attached to each other by a spring of stiffness 1 Nm$^{-1}$ and suspended from ideal strings of length 1 m. The left mass is displaced from equilibrium by 1 cm whilst the right one is held fixed, and then released. Use the fourth order Runge-Kutta method (explained in the solutions to problem 1) to simulate the displacement from equilibrium of each mass as the system evolves over time. Now extend the method so that it will solve for N identical pendula attached by identical springs in a line, with the same displacement of the left pendulum to start it off.

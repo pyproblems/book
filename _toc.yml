@@ -3,4 +3,33 @@
   sections:
     - file: mech1Q
     - file: mech1
+    - file: mech2Q
     - file: mech2
+    - file: mech3Q
+    - file: mech3
+    - file: mech4Q
+    - file: mech4
+- file: electrostatics
+  sections:
+    - file: elec1Q
+    - file: elec1
+    - file: elec2Q
+    - file: elec2
+- file: magnetism
+  sections:
+    - file: magQ
+    - file: mag
+- file: vibrations
+  sections:
+    - file: vib1Q
+    - file: vib1
+    - file: vib2Q
+    - file: vib2
+    - file: vib3Q
+    - file: vib3
+- file: relativity
+  sections:
+    - file: relQ
+    - file: rel
+
+
