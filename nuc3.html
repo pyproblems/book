@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 3 - Answers &#8212; PyProblems</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Optics" href="optics.html" />
+    <link rel="prev" title="Problem 3" href="nuc3Q.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Imperial Physics PyProblems
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="year1.html">
+   First Year Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="year2.html">
+   Second Year Curriculum
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="stom.html">
+     Statistics of Measurement
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4Q.html">
+       Problem 4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4.html">
+       Problem 4 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="qm.html">
+     Quantum Mechanics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermo.html">
+     Thermodynamics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="reference internal" href="nuclear.html">
+     Nuclear Physics
+    </a>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="optics.html">
+     Optics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1Q.html">
+       Problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1.html">
+       Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="year3.html">
+   Third Year Curriculum
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/nuc3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/nuc3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/nuc3.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-3-answers">
+<h1>Problem 3 - Answers<a class="headerlink" href="#problem-3-answers" title="Permalink to this headline">¶</a></h1>
+<p><strong>Particle scattering and collection in an attractive potential</strong></p>
+<p>The ‘mixed’ scattering considered in the previous problems, involving a charged hard sphere, has not been seen by the author in describing particle scattering. However, it does appear in a different context - studying the collection and scattering of ions and electrons by a charged spherical ‘dust’ particle in a plasma. In this problem we will study the interaction between positively charged ions and a negatively charged dust particle in more detail.</p>
+<p>You may use your <code class="docutils literal notranslate"><span class="pre">collide</span></code> function from the previous problems. But the physical parameters will change somewhat. A dust particle may have a charge of -10,000e and a radius of 10<span class="math notranslate nohighlight">\(\mu m\)</span>. The incident particle might be a Hydrogen ion. The initial velocity of this particle should be added as an argument to the <code class="docutils literal notranslate"><span class="pre">collide</span></code> function, but you may use 10,000ms<span class="math notranslate nohighlight">\(^{-1}\)</span> as a typical value to determine the simulation domain size and time step.</p>
+<p>a) Modify your <code class="docutils literal notranslate"><span class="pre">collide</span></code> function to return True/False to indicate whether the incident ion collides with the dust grain surface, or not.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">q1</span> <span class="o">=</span> <span class="o">-</span><span class="n">constants</span><span class="o">.</span><span class="n">e</span> <span class="o">*</span> <span class="mf">1e4</span>   <span class="c1"># Dust charge</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">e</span>     <span class="c1"># Hydrogen charge</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">1.67262e-27</span>      <span class="c1"># Hydrogen mass</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="mf">1e4</span>             <span class="c1"># Initial speed</span>
+
+<span class="c1"># Determine Coulomb interaction length</span>
+<span class="n">r_int</span> <span class="o">=</span> <span class="o">-</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">constants</span><span class="o">.</span><span class="n">epsilon_0</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v0</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r_int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.7586392035749136e-05
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sd</span> <span class="o">=</span> <span class="mf">2e-4</span>            <span class="c1"># Size of simulation domain (in z axis)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">1e-11</span>           <span class="c1"># Simulation time step</span>
+
+<span class="c1"># Define a Coulomb potential</span>
+<span class="k">def</span> <span class="nf">Coulomb</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">Q</span><span class="p">,</span><span class="n">q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Q</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">constants</span><span class="o">.</span><span class="n">epsilon_0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span>
+
+<span class="c1"># Define a function to simulate ion trajectory</span>
+<span class="c1"># The np.vectorize decorator allows evaluation of </span>
+<span class="c1">#    the function over a numpy array input</span>
+<span class="nd">@np</span><span class="o">.</span><span class="n">vectorize</span>
+<span class="k">def</span> <span class="nf">collide</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="n">v0</span><span class="p">):</span>
+    <span class="n">rvals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">b</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="n">sd</span><span class="p">])</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="n">v0</span><span class="p">])</span>
+    
+    <span class="n">exited</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">exited</span><span class="p">:</span>
+        <span class="n">rvals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+        <span class="n">v</span> <span class="o">+=</span> <span class="n">dt</span> <span class="o">*</span> <span class="n">Coulomb</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">q1</span><span class="p">,</span><span class="n">q2</span><span class="p">)</span> <span class="o">/</span> <span class="n">m</span>
+        <span class="n">r</span> <span class="o">+=</span> <span class="n">dt</span> <span class="o">*</span> <span class="n">v</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">sd</span><span class="p">:</span>
+            <span class="n">exited</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Define a function <code class="docutils literal notranslate"><span class="pre">bmax</span></code> which takes the radius of the dust grain and the initial speed of the ion as arguments. It should return the maximum impact parameter for which ions are ‘collected’ (collide with the dust surface).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># finding maximum impact parameter for which collide </span>
+<span class="c1"># returns True, using a bisection method</span>
+
+<span class="k">def</span> <span class="nf">bmax</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">v0</span><span class="p">):</span>
+    <span class="n">dbmin</span> <span class="o">=</span> <span class="mf">1e-7</span>  <span class="c1"># desired precision on bmax</span>
+    <span class="n">b1</span> <span class="o">=</span> <span class="mf">0.0</span>      <span class="c1"># minimum of interval</span>
+    <span class="n">b2</span> <span class="o">=</span> <span class="n">sd</span>       <span class="c1"># maximum of interval</span>
+    
+    <span class="k">while</span> <span class="n">b2</span><span class="o">-</span><span class="n">b1</span> <span class="o">&gt;</span> <span class="n">dbmin</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">collide</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">b2</span><span class="p">),</span><span class="n">R</span><span class="p">,</span><span class="n">v0</span><span class="p">):</span>
+            <span class="n">b1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">b2</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">b2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">b2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">b2</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<p>c) Pick a range of values for initial ion speeds (e.g. speeds between 10<span class="math notranslate nohighlight">\(^3\)</span>ms<span class="math notranslate nohighlight">\(^{-1}\)</span> and 10<span class="math notranslate nohighlight">\(^5\)</span>ms<span class="math notranslate nohighlight">\(^{-1}\)</span>). Evaluate the value of bmax for each of these speeds, and make a plot. How does this compare against the function:</p>
+<div class="math notranslate nohighlight">
+\[ b = R\sqrt{1-\frac{2Qq}{4\pi\epsilon_0Rmv^2}}  \]</div>
+<p>This expression, which can be derived straightforwardly from conservation of energy and momentum, is key to the
+&lt;a href=https://doi.org/10.1017/S0022377800008345”&gt;Orbital Motion Limited (OML)</a> model of dust charging in a plasma, and while never being stricted valid is a useful model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">bmaxs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vs</span><span class="p">:</span>
+    <span class="n">bmaxs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bmax</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">bmaxs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00016313476562500003
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.000127978515625
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.000100439453125
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.905273437500002e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.2255859375e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.9267578125e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.911132812500001e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1298828125e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.5341796875e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0849609375e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.7529296875e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5087890625e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.3330078125e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2158203125000001e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1376953125e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0888671875000002e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0498046875000001e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0302734375000002e-05
+1.0205078125000001e-05
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0107421875000002e-05
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see that faster ions are collected across a smaller cross section, as they have less time to be deflected in the Coulomb potential. So bmax tends towards the dust radius for large v. Making a plot against the OML model:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vs</span><span class="p">,</span><span class="mf">1e6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bmaxs</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vs</span><span class="p">,</span><span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">constants</span><span class="o">.</span><span class="n">epsilon_0</span><span class="o">*</span><span class="mf">1e-5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">vs</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$v$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$b_</span><span class="si">{max}</span><span class="s1"> (\mu m)$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$b_{max} (\\mu m)$&#39;)
+</pre></div>
+</div>
+<img alt="_images/nuc3_8_1.png" src="_images/nuc3_8_1.png" />
+</div>
+</div>
+<p>d) In reality, the potential around a charged body in a plasma does not look like a Coulomb potential, but instead takes the form of the &lt;a href=https://en.wikipedia.org/wiki/Debye_length”&gt;
+Debye–Hückel potential</a>, which is an exponentially decaying Coulomb potential with a decay length <span class="math notranslate nohighlight">\(\lambda_D\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ F_{D} = \frac{Qq}{4\pi\epsilon_0r^3} \exp{\left(\frac{-r}{\lambda_D}\right)} \mathbf{r} \]</div>
+<p>Define a function that specifies the Debye–Hückel potential, and use it to solve for and plot the <span class="math notranslate nohighlight">\(b_{max}\)</span> vs <span class="math notranslate nohighlight">\(v\)</span> profiles for values of <span class="math notranslate nohighlight">\(\lambda_D\)</span> that are smaller than, larger than, and equal to the radius of the dust particle. How do these profiles compare to the OML model?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a Debye-Huckel potential</span>
+<span class="k">def</span> <span class="nf">Debye</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">Q</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Q</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">constants</span><span class="o">.</span><span class="n">epsilon_0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="n">L</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span>
+
+<span class="c1"># Redefine the collide and bmax functions to use the Debye-Huckel</span>
+<span class="c1"># potential with a variable decay length L</span>
+<span class="nd">@np</span><span class="o">.</span><span class="n">vectorize</span>
+<span class="k">def</span> <span class="nf">collide</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="n">v0</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">rvals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">b</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="n">sd</span><span class="p">])</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="n">v0</span><span class="p">])</span>
+    
+    <span class="n">exited</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">exited</span><span class="p">:</span>
+        <span class="n">rvals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+        <span class="n">v</span> <span class="o">+=</span> <span class="n">dt</span> <span class="o">*</span> <span class="n">Debye</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">q1</span><span class="p">,</span><span class="n">q2</span><span class="p">,</span><span class="n">L</span><span class="p">)</span> <span class="o">/</span> <span class="n">m</span>
+        <span class="n">r</span> <span class="o">+=</span> <span class="n">dt</span> <span class="o">*</span> <span class="n">v</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">sd</span><span class="p">:</span>
+            <span class="n">exited</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">bmax</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">v0</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">dbmin</span> <span class="o">=</span> <span class="mf">1e-7</span>  <span class="c1"># desired precision on bmax</span>
+    <span class="n">b1</span> <span class="o">=</span> <span class="mf">0.0</span>      <span class="c1"># minimum of interval</span>
+    <span class="n">b2</span> <span class="o">=</span> <span class="n">sd</span>       <span class="c1"># maximum of interval</span>
+    
+    <span class="k">while</span> <span class="n">b2</span><span class="o">-</span><span class="n">b1</span> <span class="o">&gt;</span> <span class="n">dbmin</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">collide</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">b2</span><span class="p">),</span><span class="n">R</span><span class="p">,</span><span class="n">v0</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+            <span class="n">b1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">b2</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">b2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">b2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">b2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">bmaxs1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bmaxs2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bmaxs3</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vs</span><span class="p">:</span>
+    <span class="n">bmaxs1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bmax</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mf">3e-6</span><span class="p">))</span>  <span class="c1"># lambda_D &lt; dust radius</span>
+    <span class="n">bmaxs2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bmax</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mf">1e-5</span><span class="p">))</span>  <span class="c1"># lambda_D = dust radius</span>
+    <span class="n">bmaxs3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bmax</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mf">3e-5</span><span class="p">))</span>  <span class="c1"># lambda_D &gt; dust radius</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vs</span><span class="p">,</span><span class="mf">1e6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bmaxs1</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\lambda_D=3\mu m$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vs</span><span class="p">,</span><span class="mf">1e6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bmaxs2</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\lambda_D=10\mu m$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vs</span><span class="p">,</span><span class="mf">1e6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bmaxs3</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\lambda_D=30\mu m$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vs</span><span class="p">,</span><span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">q1</span><span class="o">*</span><span class="n">q2</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">constants</span><span class="o">.</span><span class="n">epsilon_0</span><span class="o">*</span><span class="mf">1e-5</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">vs</span><span class="o">**</span><span class="mi">2</span><span class="p">)),</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;OML&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$v$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$b_</span><span class="si">{max}</span><span class="s1"> (\mu m)$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1b5b1f2d708&gt;
+</pre></div>
+</div>
+<img alt="_images/nuc3_12_1.png" src="_images/nuc3_12_1.png" />
+</div>
+</div>
+<p>It is only in the limit where the dust radius is much smaller than <span class="math notranslate nohighlight">\(\lambda_D\)</span> that OML describes ion collection - for larger dust, ions are only collected within a few <span class="math notranslate nohighlight">\(\lambda_D\)</span> of the dust surface.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="nuc3Q.html" title="previous page">Problem 3</a>
+    <a class='right-next' id="next-link" href="optics.html" title="next page">Optics</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

@@ -2,9 +2,7 @@
 
 The drag force on a skydiver is of the form
 
-\begin{equation}
-  F_{Drag} = -kv^2,
-\end{equation}
+$$ F_{Drag} = -kv^2 $$
 
 where $k$ = 0.7kgm$^{-1}$s$^2$ with the parachute closed and k = 30kgm$^{-1}$s$^2$ with the parachute open. The skydiver performs a series of 3 jumps from an altitude of 3000m. To perform the jump safely, the speed of the skydiver must be less than 10m/s when they land.
 
