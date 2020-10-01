@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 1 - Answers &#8212; PyProblems</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 2" href="thermo2Q.html" />
+    <link rel="prev" title="Problem 1" href="thermo1Q.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Imperial Physics PyProblems
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="year1.html">
+   First Year Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="year2.html">
+   Second Year Curriculum
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="stom.html">
+     Statistics of Measurement
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4Q.html">
+       Problem 4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4.html">
+       Problem 4 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="qm.html">
+     Quantum Mechanics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="reference internal" href="thermo.html">
+     Thermodynamics
+    </a>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nuclear.html">
+     Nuclear Physics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="optics.html">
+     Optics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1Q.html">
+       Problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1.html">
+       Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="year3.html">
+   Third Year Curriculum
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/thermo1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/thermo1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/thermo1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-problem">
+   The Problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-for-loops">
+   Nested for loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scipy-pdist-function">
+   SciPy pdist function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array-flattening">
+   Array flattening
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing">
+   Testing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-1-answers">
+<h1>Problem 1 - Answers<a class="headerlink" href="#problem-1-answers" title="Permalink to this headline">¶</a></h1>
+<p>There are generally many routes to simulating a physics problem in Python. Some of these will be more efficient, particularly those that rely on functions in libraries like numpy and scipy that are built on well optimised, compiled code. This problem builds functionality that will be used in Problems 2 and 3 for doing thermodynamics simulation. But we will try doing the same thing in three different ways, and will see that we can get 10-100 times speed-up by doing it the ‘right’ way.</p>
+<div class="section" id="the-problem">
+<h2>The Problem<a class="headerlink" href="#the-problem" title="Permalink to this headline">¶</a></h2>
+<p>Many thermodynamic principles can be tested numerically by simulating a large number of interacting particles. If you have done the Thermodynamics problem in 2nd Year Computing, you will have seen how simulating the collisions of hard spheres can reproduce certain important phenomena. However, the approach to modelling used there does not allow implementation of interparticle forces, which are important in real fluids.</p>
+<p>In the following sections, your task will be to implement a simulation of <span class="math notranslate nohighlight">\(n\)</span> identical particles, interacting via a simple Coulomb-like force:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{F} = \frac{\alpha}{r^3}\mathbf{r} \]</div>
+<p>A simple simulation suitable for testing will use <span class="math notranslate nohighlight">\(\alpha=1\)</span>, will sample initial particle positions randomly in the unit square, and will give particles zero initial speed. A simulation time step of 0.001 will be suitable.</p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">initialise</span></code> which takes the number of particles <span class="math notranslate nohighlight">\(n\)</span> as an argument. This function should return an <span class="math notranslate nohighlight">\(n\times 2\)</span> numpy array of random 2D initial particle positions, and an <span class="math notranslate nohighlight">\(n\times 2\)</span> array of zeros, for the initial particle velocities.</p>
+<p>In each of the following sections, define a function that takes the number of particles <span class="math notranslate nohighlight">\(n\)</span>, and <span class="math notranslate nohighlight">\(n\times 2\)</span> position and velocity arrays as arguments. These functions used the method specified to step the position and velocity arrays one step forward in time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Useful imports</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">pdist</span><span class="p">,</span><span class="n">squareform</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="k">def</span> <span class="nf">initialise</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">vel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">pos</span><span class="p">,</span><span class="n">vel</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nested-for-loops">
+<h2>Nested for loops<a class="headerlink" href="#nested-for-loops" title="Permalink to this headline">¶</a></h2>
+<p>Use a nested pair of for loops, each iterating over all <span class="math notranslate nohighlight">\(n\)</span> particles. For a given pair of different particles i and j, calculate the force of j acting on i. Sum over all the forces acting on particle i, and use this total force to do an Euler step and update the positions and velocities.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">method1</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">Ftotal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>   <span class="c1"># vector for total force</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
+                <span class="c1"># calculate distance between i and j</span>
+                <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">pos</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  
+                
+                <span class="c1"># find the unit vector pointing from i to j</span>
+                <span class="n">vec</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">pos</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">/</span> <span class="n">dist</span> 
+                
+                <span class="c1"># calculate the force vector of j acting on i and sum</span>
+                <span class="n">Ftotal</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="n">dist</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">vec</span>
+                
+    <span class="c1"># Euler step</span>
+    <span class="n">vel</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">Ftotal</span> <span class="o">*</span> <span class="n">dt</span>
+    <span class="n">pos</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">vel</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">dt</span>
+
+    <span class="k">return</span> <span class="n">pos</span><span class="p">,</span><span class="n">vel</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="scipy-pdist-function">
+<h2>SciPy pdist function<a class="headerlink" href="#scipy-pdist-function" title="Permalink to this headline">¶</a></h2>
+<p>Look up the documentation for the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.pdist.html">scipy.spatial.distance.pdist</a> function. This is a useful function which calculates the matrix of distances between each pair of points in an N-dimensional space.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will see that the return of pdist is a ‘condensed’ matrix. To convert to a conventional square matrix, use scipy.spatial.distance.squareform.</p>
+</div>
+<p>pdist will allow us to implement this functionality without using any for loops. However, we have a problem to work around: pdist returns pairwise scalar distances, but to find the forces we require pairwise <em>displacements</em>. pdist will take as an argument a function defining a custom metric, however this must still be a scalar. Try to figure out you can use multiple calls to pdist to work around this issue.</p>
+<p>We can split our position array into separate X and Y arrays, and use pdist on those separately to get around the distance vs displacement issue. One problem with this is that we still lose the signs associated with the displacements. While we could solve this with only 2 calls to pdist, it would be a bit ugly and so I offer the below solution which uses 4 calls to pdist, two of which use the function sgn to define a custom metric for pdist which just gets back the sign information.</p>
+<p>This sign matrix comes back from pdist as a symmetric matrix, but of course it should be antisymmetric (the sign of the displacement from particle i to particle j is opposite the displacement from j to i). So we flip the signs of elements of the matrix below the diagonal.</p>
+<p>Note that accessing <code class="docutils literal notranslate"><span class="pre">[norms!=0]</span></code> of an array is to avoid division by zero issues.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sgn</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">u</span><span class="o">&gt;</span><span class="n">v</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">method2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">):</span>
+    <span class="c1"># split pos into separate X and Y arrays</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">pos</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">pos</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    
+    <span class="c1"># get pairwise distances along X and Y axes separately</span>
+    <span class="n">dX</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">(</span><span class="n">pdist</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+    <span class="n">dY</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">(</span><span class="n">pdist</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
+    
+    <span class="c1"># calculate 2D distances between each pair</span>
+    <span class="n">norms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dX</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">dY</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="c1"># use the custom metric to get the signs of the displacements in each axis</span>
+    <span class="n">SX</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">(</span><span class="n">pdist</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">sgn</span><span class="p">))</span>
+    <span class="n">SY</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">(</span><span class="n">pdist</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">sgn</span><span class="p">))</span>
+    
+    <span class="c1"># correct the signs (see description above)</span>
+    <span class="n">SX</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">SX</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">SX</span><span class="p">)</span>
+    <span class="n">SY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">SY</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">SY</span><span class="p">)</span>
+
+    <span class="c1"># normalise and sign</span>
+    <span class="n">dX</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="n">SX</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">norms</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">dY</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="n">SY</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">norms</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># calculate magnitude of force</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">C</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="n">norms</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
+
+    <span class="n">dX</span> <span class="o">*=</span> <span class="n">C</span>
+    <span class="n">dY</span> <span class="o">*=</span> <span class="n">C</span>
+
+    <span class="c1"># Euler step</span>
+    <span class="n">vel</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dX</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
+    <span class="n">vel</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dY</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
+    <span class="n">pos</span> <span class="o">+=</span> <span class="n">vel</span> <span class="o">*</span> <span class="n">dt</span>
+    
+    <span class="k">return</span> <span class="n">pos</span><span class="p">,</span><span class="n">vel</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="array-flattening">
+<h2>Array flattening<a class="headerlink" href="#array-flattening" title="Permalink to this headline">¶</a></h2>
+<p>A third way of approaching this problem is to use only a single for loop rather than two nested loops. This can be done using the functionality of numpy arrays.</p>
+<p>This will require taking the difference between appropriate slices of the position array. To assign these displacements into a square matrix, use of the numpy ‘flat’ property of an array will be required. You can deal with each dimension separately.</p>
+<p>The solution is to loop over the n-1 diagonal slices of one half of the square matrix of displacements. You can access the ith diagonal slice in the upper triangle (where i=0 is the main diagonal) with <code class="docutils literal notranslate"><span class="pre">.flat[i:n*(n-i):n+1]</span></code>. You can access the X displacements corresponding to each element of this diagonal slice with <code class="docutils literal notranslate"><span class="pre">(pos[:n-i,0]</span> <span class="pre">-</span> <span class="pre">pos[i:,0]).flat</span></code>.</p>
+<p>To explain with an example: the i=1 diagonal of the matrix corresponds with the displacements between particles j and j+1. So you are filling this with the difference between slices of the position matrix that are offset by one row.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">method3</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">):</span>
+    
+    <span class="n">dX</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">dY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">dX</span><span class="o">.</span><span class="n">flat</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">):</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span><span class="p">[:</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">pos</span><span class="p">[</span><span class="n">i</span><span class="p">:,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">flat</span>
+        <span class="n">dY</span><span class="o">.</span><span class="n">flat</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">):</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span><span class="p">[:</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">pos</span><span class="p">[</span><span class="n">i</span><span class="p">:,</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">flat</span>
+
+    <span class="c1"># calculate distances and get the matrix of force magnitudes</span>
+    <span class="n">norms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dX</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dY</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">C</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="n">norms</span><span class="p">[</span><span class="n">norms</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">3</span>
+
+    <span class="c1"># multiply displacements by force magnitudes to get force vectors</span>
+    <span class="n">dX</span> <span class="o">*=</span> <span class="n">C</span>
+    <span class="n">dY</span> <span class="o">*=</span> <span class="n">C</span>
+    
+    <span class="c1"># make the matrices antisymmetric</span>
+    <span class="n">dX</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">rot90</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">dX</span><span class="p">))</span>
+    <span class="n">dY</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">rot90</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">dY</span><span class="p">))</span>
+
+    <span class="c1"># Euler step</span>
+    <span class="n">vel</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dX</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
+    <span class="n">vel</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dY</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
+    <span class="n">pos</span> <span class="o">+=</span> <span class="n">vel</span> <span class="o">*</span> <span class="n">dt</span>
+    
+    <span class="k">return</span> <span class="n">pos</span><span class="p">,</span><span class="n">vel</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>a) Generate initial position and velocity arrays for 5 particles. Test these on the three different methods you’ve implemented, and check that you get the same results for the iterated velocity for all 3 methods.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span> <span class="o">=</span> <span class="n">initialise</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">p1</span><span class="p">,</span><span class="n">v1</span> <span class="o">=</span> <span class="n">method1</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">)</span>
+<span class="n">p2</span><span class="p">,</span><span class="n">v2</span> <span class="o">=</span> <span class="n">method2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">)</span>
+<span class="n">p3</span><span class="p">,</span><span class="n">v3</span> <span class="o">=</span> <span class="n">method3</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.03016846 -0.00427355]
+ [-0.01116495  0.13068978]
+ [-0.02039495 -0.0081794 ]
+ [-0.00148045 -0.1052142 ]
+ [ 0.00430788 -0.01953416]]
+[[ 0.03016846 -0.00427355]
+ [-0.01116495  0.13068978]
+ [-0.02039495 -0.0081794 ]
+ [-0.00148045 -0.1052142 ]
+ [ 0.00430788 -0.01953416]]
+[[ 0.03016846 -0.00427355]
+ [-0.01116495  0.13068978]
+ [-0.02039495 -0.0081794 ]
+ [-0.00148045 -0.1052142 ]
+ [ 0.00430788 -0.01953416]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Clearly, all three methods are yielding the same results to the precision displayed.</p>
+<p>b) Create a list of values for <span class="math notranslate nohighlight">\(n\)</span>, ranging from around 10 to around 1000. Write a loop over these values, and for each use the time.time() function to measure the time each of the three methods takes to run one time step using this number of particles. Make a plot comparing these three methods.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ns</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">160</span><span class="p">,</span><span class="mi">320</span><span class="p">,</span><span class="mi">640</span><span class="p">,</span><span class="mi">1280</span><span class="p">]</span>
+<span class="n">times1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">times2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">times3</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">ns</span><span class="p">:</span>
+    <span class="n">pos</span><span class="p">,</span><span class="n">vel</span> <span class="o">=</span> <span class="n">initialise</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    
+    <span class="c1"># Method 1: Nested for loops</span>
+    <span class="n">p1</span><span class="p">,</span><span class="n">v1</span> <span class="o">=</span> <span class="n">method1</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">)</span>
+    <span class="n">times1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    
+    <span class="c1"># Method 2: SciPy pdist</span>
+    <span class="n">p2</span><span class="p">,</span><span class="n">v2</span> <span class="o">=</span> <span class="n">method2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">)</span>
+    <span class="n">times2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    
+    <span class="c1"># Method 3: Array flattening</span>
+    <span class="n">p3</span><span class="p">,</span><span class="n">v3</span> <span class="o">=</span> <span class="n">method3</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">)</span>
+    <span class="n">times3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span><span class="n">times1</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Nested for loops&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span><span class="n">times2</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;SciPy pdist&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span><span class="n">times3</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Array flattening&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$n$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$t$(s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x15d80297788&gt;
+</pre></div>
+</div>
+<img alt="_images/thermo1_13_1.png" src="_images/thermo1_13_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<p>If I can convince you of one thing from this exercise, it’s that if efficiency is important:</p>
+<p><strong>Nested for loops should generally be avoided</strong></p>
+<p>They are terribly inefficient in Python, and there are generally other ways of doing it (even if they are less obvious).</p>
+<p>I was surprised that using pdist was not significantly faster that using for loops (generally purpose-built numpy/scipy functions are much more efficient). It was clearly hindered by our needing 4 calls to pdist for the work around to get displacements.</p>
+<p>The approach involving array flattening was the clear winner here - it is around 100 times faster than using nested for loops, for large n. It is able to take advantage of the efficiency of numpy operations (which employ compiled code), without the overhead involved in using pdist.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="thermo1Q.html" title="previous page">Problem 1</a>
+    <a class='right-next' id="next-link" href="thermo2Q.html" title="next page">Problem 2</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

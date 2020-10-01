@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 3 &#8212; PyProblems</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 3 - Answers" href="nuc3.html" />
+    <link rel="prev" title="Problem 2 - Answers" href="nuc2.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Imperial Physics PyProblems
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="year1.html">
+   First Year Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="year2.html">
+   Second Year Curriculum
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="stom.html">
+     Statistics of Measurement
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4Q.html">
+       Problem 4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4.html">
+       Problem 4 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="qm.html">
+     Quantum Mechanics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermo.html">
+     Thermodynamics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="reference internal" href="nuclear.html">
+     Nuclear Physics
+    </a>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="optics.html">
+     Optics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1Q.html">
+       Problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1.html">
+       Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="year3.html">
+   Third Year Curriculum
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/nuc3Q.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-3">
+<h1>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h1>
+<p><strong>Particle scattering and collection in an attractive potential</strong></p>
+<p>The ‘mixed’ scattering considered in the previous problems, involving a charged hard sphere, has not been seen by the author in describing particle scattering. However, it does appear in a different context - studying the collection and scattering of ions and electrons by a charged spherical ‘dust’ particle in a plasma. In this problem we will study the interaction between positively charged ions and a negatively charged dust particle in more detail.</p>
+<p>You may use your <code class="docutils literal notranslate"><span class="pre">collide</span></code> function from the previous problems. But the physical parameters will change somewhat. A dust particle may have a charge of -10,000e and a radius of 10<span class="math notranslate nohighlight">\(\mu m\)</span>. The incident particle might be a Hydrogen ion. The initial velocity of this particle should be added as an argument to the <code class="docutils literal notranslate"><span class="pre">collide</span></code> function, but you may use 10,000ms<span class="math notranslate nohighlight">\(^{-1}\)</span> as a typical value to determine the simulation domain size and time step.</p>
+<p>a) Modify your <code class="docutils literal notranslate"><span class="pre">collide</span></code> function to return True/False to indicate whether the incident ion collides with the dust grain surface, or not.</p>
+<p>b) Define a function <code class="docutils literal notranslate"><span class="pre">bmax</span></code> which takes the radius of the dust grain and the initial speed of the ion as arguments. It should return the maximum impact parameter for which ions are ‘collected’ (collide with the dust surface).</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">Hint</p>
+<p>An efficient way to implement this would be to use a form of <a href="https://en.wikipedia.org/wiki/Bisection_method">bisection method</a>, to repeatedly bisect an interval of impact parameter space until you get within a certain precision of where the return of <code class="docutils literal notranslate"><span class="pre">collide</span></code> goes from True to False.</p>
+</div>
+<p>c) Pick a range of values for initial ion speeds (e.g. speeds between 10<span class="math notranslate nohighlight">\(^3\)</span>ms<span class="math notranslate nohighlight">\(^{-1}\)</span> and 10<span class="math notranslate nohighlight">\(^5\)</span>ms<span class="math notranslate nohighlight">\(^{-1}\)</span>). Evaluate the value of <span class="math notranslate nohighlight">\(b_{max}\)</span> for each of these speeds, and make a plot. How does this compare against the function:</p>
+<div class="math notranslate nohighlight">
+\[ b = R\sqrt{1-\frac{2Qq}{4\pi\epsilon_0Rmv^2}}  \]</div>
+<p>This expression, which can be derived straightforwardly from conservation of energy and momentum, is key to the
+<a href="https://doi.org/10.1017/S0022377800008345">Orbital Motion Limited (OML)</a> model of dust charging in a plasma, and while never being stricted valid is a useful model.</p>
+<p>d) In reality, the potential around a charged body in a plasma does not look like a Coulomb potential, but instead takes the form of the <a href="https://en.wikipedia.org/wiki/Debye_length">
+Debye–Hückel potential</a>, which is an exponentially decaying Coulomb potential with a decay length <span class="math notranslate nohighlight">\(\lambda_D\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{F}_{D} = \frac{Qq}{4\pi\epsilon_0r^3} \exp{\left(\frac{-r}{\lambda_D}\right)} \mathbf{r} \]</div>
+<p>Define a function that specifies the Debye–Hückel potential, and use it to solve for and plot the <span class="math notranslate nohighlight">\(b_{max}\)</span> vs <span class="math notranslate nohighlight">\(v\)</span> profiles for values of <span class="math notranslate nohighlight">\(\lambda_D\)</span> that are smaller than, larger than, and equal to the radius of the dust particle. How do these profiles compare to the OML model?</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="nuc2.html" title="previous page">Problem 2 - Answers</a>
+    <a class='right-next' id="next-link" href="nuc3.html" title="next page">Problem 3 - Answers</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

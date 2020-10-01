@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 2 - Answers &#8212; PyProblems</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 3" href="qm3Q.html" />
+    <link rel="prev" title="Problem 2" href="qm2Q.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Imperial Physics PyProblems
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="year1.html">
+   First Year Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="year2.html">
+   Second Year Curriculum
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="stom.html">
+     Statistics of Measurement
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4Q.html">
+       Problem 4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4.html">
+       Problem 4 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="reference internal" href="qm.html">
+     Quantum Mechanics
+    </a>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermo.html">
+     Thermodynamics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nuclear.html">
+     Nuclear Physics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="optics.html">
+     Optics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1Q.html">
+       Problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1.html">
+       Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="year3.html">
+   Third Year Curriculum
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/qm2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/qm2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/qm2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-2-answers">
+<h1>Problem 2 - Answers<a class="headerlink" href="#problem-2-answers" title="Permalink to this headline">¶</a></h1>
+<p><strong>Time independent perturbation theory</strong></p>
+<p>In your problem sheets you have calculated the first order corrections to the ground state energy and eigenfunction of a particle in a perturbed infinite square well. In this question you will expand this analysis to higher order.</p>
+<p>The potential for this perturbed infinite square well is given by</p>
+<p><span class="math notranslate nohighlight">\(V = \infty\)</span> for <span class="math notranslate nohighlight">\(x &lt; 0\)</span>,     <span class="math notranslate nohighlight">\(V = \delta\)</span> for <span class="math notranslate nohighlight">\(0 &lt; x &lt; a\)</span>,     <span class="math notranslate nohighlight">\(V = 0\)</span> for <span class="math notranslate nohighlight">\(a &lt; x &lt; L\)</span>,     <span class="math notranslate nohighlight">\(V = \infty\)</span> for <span class="math notranslate nohighlight">\(x &gt; L\)</span>.</p>
+<p>For the rest of this question assume an electron is confined in the perturbed potential well with  <span class="math notranslate nohighlight">\(L = 1\times10^{-10}\)</span> m, <span class="math notranslate nohighlight">\(a = 5\times10^{-11}\)</span> m and <span class="math notranslate nohighlight">\(\delta = 1\times10^{-19}\)</span> J.</p>
+<ol class="simple">
+<li><p>Verify that <span class="math notranslate nohighlight">\(\delta\)</span> &lt;&lt; E1.</p></li>
+</ol>
+<p>The energy eigenstates for the infinite square well are</p>
+<div class="math notranslate nohighlight">
+\[ E_n = \frac{\pi^2\hbar^2n^2}{{8ma}^2}. \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import libraries we will need and define constants</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">hbar</span> <span class="o">=</span> <span class="mf">1.05e-34</span>
+<span class="n">m_e</span> <span class="o">=</span> <span class="mf">9.11e-31</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">5e-11</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mf">1e-10</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="mf">1e-19</span>
+
+<span class="c1"># Create a function to work out the energy of the infinte square well</span>
+<span class="c1"># I have re-used the functions that you saw in lectures</span>
+<span class="k">def</span> <span class="nf">En</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span><span class="n">m_e</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Energy eigenvalues</span>
+<span class="sd">    n - integer quantum number</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">En</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">hbar</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">m</span> <span class="o">*</span> <span class="n">L</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">En</span>
+
+<span class="c1">#We will also need the energy eigenstates for later</span>
+<span class="k">def</span> <span class="nf">un</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Energy eigenstates for infinite square well</span>
+<span class="sd">    x - 1D position in meters</span>
+<span class="sd">    n - integer quantum number</span>
+<span class="sd">    L - width of well (well runs 0 to L)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="n">L</span><span class="p">)</span>
+    <span class="n">kx</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span> <span class="o">/</span> <span class="n">L</span>
+    <span class="n">un</span> <span class="o">=</span> <span class="n">norm</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">kx</span><span class="p">)</span>
+    
+    <span class="c1"># Wavefunction is 0 outside well</span>
+    <span class="n">un</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">L</span><span class="p">),</span> <span class="n">un</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">un</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E1 = &quot;</span><span class="p">,</span> <span class="n">En</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">L</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;delta = &quot;</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E1 =  5.972139874973115e-18
+delta =  1e-19
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have verified that <span class="math notranslate nohighlight">\(\delta\)</span> &lt;&lt; E1.</p>
+<ol class="simple">
+<li><p>Calculate the first order shift in the energy of the ground state and compare this to the value you found by hand.</p></li>
+</ol>
+<p>The first order correction to the energy is</p>
+<div class="math notranslate nohighlight">
+\[E_{n}^{(1)} = \int_{-\infty}^{-\infty} u^{*}_{n}\,\delta\,u_{n} dx,\]</div>
+<p>which we can represent as a function using <code class="docutils literal notranslate"><span class="pre">scipy.integrate.quad</span></code> to perform the integration.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">energy_perturbation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">V_perturbation</span><span class="p">):</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    x - 1D position in meters</span>
+<span class="sd">    u - eigenstate of unperturbed system</span>
+<span class="sd">    V_perturbation - potential of the perturbation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Turn the eigenstate into a function which we can solve using scipy.quad</span>
+    <span class="n">u_function</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">to_intergrate</span><span class="p">(</span><span class="n">dummy</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">u_function</span><span class="p">(</span><span class="n">dummy</span><span class="p">))</span><span class="o">*</span><span class="n">V_perturbation</span><span class="p">(</span><span class="n">dummy</span><span class="p">)</span><span class="o">*</span><span class="n">u_function</span><span class="p">(</span><span class="n">dummy</span><span class="p">)</span>
+    <span class="n">intergral</span><span class="p">,</span> <span class="n">uncertainty</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">to_intergrate</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">intergral</span><span class="p">,</span> <span class="n">uncertainty</span>
+
+<span class="c1"># Define x coordinates</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="n">L</span><span class="o">+</span><span class="n">a</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Define peturbed potential as a function</span>
+<span class="k">def</span> <span class="nf">V1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">a</span><span class="p">),</span> <span class="n">delta</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">E1</span> <span class="o">=</span> <span class="n">En</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="n">m_e</span><span class="p">)</span>
+<span class="n">u1</span> <span class="o">=</span> <span class="n">un</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">delta_E</span><span class="p">,</span> <span class="n">numerical_uncertainty</span> <span class="o">=</span> <span class="n">energy_perturbation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">V1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Energy change: (</span><span class="si">{:.2f}</span><span class="s2">+/-</span><span class="si">{:.2f}</span><span class="s2">)e-20&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">delta_E</span><span class="o">/</span><span class="mf">1e-20</span><span class="p">,</span> <span class="n">numerical_uncertainty</span><span class="o">/</span><span class="mf">1e-20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Delta/2: </span><span class="si">{:.2f}</span><span class="s2">e-20&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">delta</span><span class="o">/</span><span class="mf">2e-20</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Energy change: (5.00+/-0.00)e-20
+Delta/2: 5.00e-20
+</pre></div>
+</div>
+</div>
+</div>
+<p>Performing the calculation by hand we find that the change in energy is <span class="math notranslate nohighlight">\(\frac{\delta}{2}\)</span>, which is consistent with our numerical calculation.</p>
+<ol class="simple">
+<li><p>Find the perturbed ground state wavefunction. Compare the calculated <span class="math notranslate nohighlight">\(a_{12}\)</span> co-efficient to the value you found by hand.
+Plot the unperturbed and perturbed wavefunctions and the difference between them.</p></li>
+</ol>
+<p>The equation for the eigenstates of the perturbed potential is</p>
+<div class="math notranslate nohighlight">
+\[ u_n^{(1)}(x) = \sum_{m \neq n}a_{nm}u_m(x) = \sum_{m \neq n} \left(\frac{\int_{-\infty}^{-\infty} u^{*}_{n}\,\delta\,u_{n} dx}{E_n - E_m}\right)u_m(x). \]</div>
+<p>The eigenfunctions of the perturbed system depend on the energies and wavefunctions of all the eigenstates of the infinite square well, though the amount of overlap decreases as the eigenstates get further apart.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define function that will perform the wavefunction perturbation</span>
+<span class="k">def</span> <span class="nf">wavefunction_perturbation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">V_perturbation</span><span class="p">,</span> <span class="n">energy_levels</span><span class="p">,</span> <span class="n">wavefunctions</span><span class="p">,</span> <span class="n">show_a</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    x - 1D position in meters</span>
+<span class="sd">    n - quantum number of the eigenstate to calculate</span>
+<span class="sd">    V_perturbation - potential of the perturbation</span>
+<span class="sd">    energy_levels - list of energy levels of the unperturbed system</span>
+<span class="sd">    wavefunctions - list of wavefunctions of the unperturbed system</span>
+<span class="sd">    show_a - print out the coefficients</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#This is to account for the fact that python counts from 0</span>
+    <span class="c1">#and we define our energy levels starting at 1</span>
+    <span class="n">u_n</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">wavefunctions</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">energy_n</span> <span class="o">=</span> <span class="n">energy_levels</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">u_out</span> <span class="o">=</span> <span class="n">wavefunctions</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="c1"># Loop through every eigenfunction where m is not equal to n</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">energy_levels</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">m</span><span class="o">==</span><span class="n">n</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">energy_multiplier</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">energy_n</span> <span class="o">-</span> <span class="n">energy_levels</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">u_m_function</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">wavefunctions</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        
+        <span class="k">def</span> <span class="nf">integral</span><span class="p">(</span><span class="n">dummy</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">u_m_function</span><span class="p">(</span><span class="n">dummy</span><span class="p">))</span><span class="o">*</span><span class="n">V_perturbation</span><span class="p">(</span><span class="n">dummy</span><span class="p">)</span><span class="o">*</span><span class="n">u_n</span><span class="p">(</span><span class="n">dummy</span><span class="p">)</span>
+        
+        <span class="n">overlap_intergral</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">integral</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">contribution</span> <span class="o">=</span> <span class="n">energy_multiplier</span> <span class="o">*</span> <span class="n">overlap_intergral</span> <span class="o">*</span> <span class="n">wavefunctions</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">show_a</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a </span><span class="si">%i</span><span class="s2"> </span><span class="si">%i</span><span class="s2"> = </span><span class="si">%e</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">energy_multiplier</span> <span class="o">*</span> <span class="n">overlap_intergral</span><span class="p">))</span>
+        <span class="n">u_out</span> <span class="o">+=</span> <span class="n">contribution</span>
+    <span class="k">return</span> <span class="n">u_out</span>
+
+<span class="c1"># Calculate the perturbed ground state wavefunction</span>
+<span class="c1"># Define x coordinates</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="n">L</span><span class="o">+</span><span class="n">a</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+
+<span class="c1"># Define peturbed potential as a function</span>
+<span class="k">def</span> <span class="nf">V1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">a</span><span class="p">),</span> <span class="n">delta</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Define number of eigenfunctions to calculate</span>
+<span class="n">n_eigenfunctions</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># Create a list of unpeturbed energies and unperturbed eigenfunctions</span>
+<span class="n">energy_unperturbed</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">eigenfunction_unperturbed</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_eigenfunctions</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">energy_unperturbed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">En</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">m_e</span><span class="p">))</span>
+    <span class="n">eigenfunction_unperturbed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">un</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="n">L</span><span class="p">))</span>
+
+<span class="c1"># Print coefficient we are expecting for a12</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Expected value of a12 = </span><span class="si">%e</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mf">0.14</span><span class="o">*</span><span class="n">delta</span><span class="o">/</span><span class="n">energy_unperturbed</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="c1"># Calculate the perturbed ground state</span>
+<span class="n">perturbed_wavefunction</span> <span class="o">=</span> <span class="n">wavefunction_perturbation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">V1</span><span class="p">,</span> 
+                                                   <span class="n">energy_unperturbed</span><span class="p">,</span>
+                                                   <span class="n">eigenfunction_unperturbed</span><span class="p">,</span>
+                                                   <span class="n">show_a</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Plot wavefunctions and difference between them</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;axes.labelsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+<span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+<span class="s1">&#39;legend.fontsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+<span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+<span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+<span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> 
+<span class="p">}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+<span class="n">fig1</span><span class="p">,</span> <span class="p">[</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">]</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">eigenfunction_unperturbed</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Unperturbed&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">perturbed_wavefunction</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Perturbed&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;$\psi$&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">perturbed_wavefunction</span><span class="o">-</span> <span class="n">eigenfunction_unperturbed</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;change in $\psi$&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="n">fig1</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Expected value of a12 = 2.344218e-03
+a 1 2 = -2.368850e-03
+a 1 3 = 8.788849e-12
+a 1 4 = 1.895079e-04
+a 1 5 = -1.431892e-11
+a 1 6 = -5.221134e-05
+a 1 7 = 2.828768e-12
+a 1 8 = 2.148613e-05
+a 1 9 = -8.543240e-12
+a 1 10 = -1.087624e-05
+a 1 11 = -3.873320e-12
+a 1 12 = 6.255419e-06
+a 1 13 = -6.780229e-12
+a 1 14 = -3.924550e-06
+a 1 15 = 6.618056e-10
+a 1 16 = 2.624761e-06
+a 1 17 = 4.319224e-09
+a 1 18 = -1.828913e-06
+a 1 19 = 2.658317e-08
+a 1 20 = 1.413080e-06
+</pre></div>
+</div>
+<img alt="_images/qm2_7_1.png" src="_images/qm2_7_1.png" />
+</div>
+</div>
+<p>We’ve found the same behaviour as we saw in the problem sheet, with the wavefunction shifting towards the lower potential at the right side of the well. The sign of the co-efficient is different because our potential well runs from 0 to L whereas the potential well in the problem sheet runs from -L/2 to L/2.</p>
+<ol class="simple">
+<li><p>By repeatedly applying the functions you have just created, calculate the higher order approximations for the ground state energy. How many iterations are required for the size of the energy shift to halve compared to the first iteration?</p></li>
+</ol>
+<p>For the second order approximation, we need to repeat the above procedure with the state or energy being assumed to be, not just un or En, but the corrected values we just calculated. The next order approximation is then done in an equivalent way, and so on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run perturbation 500 times</span>
+<span class="c1"># Note: it would be more efficient to use a while loop here but I want to calculate extra values to plot</span>
+
+<span class="n">iterations_to_run</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">wavefunctions_to_use</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># This will be a list where each item is a list of energy levels for that iteration</span>
+<span class="n">all_energy_levels</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">all_wavefunctions</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">energy_levels_unperturbed</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">wavefunctions_unperturbed</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Calculate energy levels and eigenstates for the unpertubed infinte square well</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">wavefunctions_to_use</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">energy_levels_unperturbed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">En</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="n">m_e</span><span class="p">))</span>
+    <span class="n">wavefunctions_unperturbed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">un</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">L</span><span class="p">))</span>
+
+<span class="c1"># Add these to the master list</span>
+<span class="n">all_energy_levels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">energy_levels_unperturbed</span><span class="p">)</span>
+<span class="n">all_wavefunctions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">wavefunctions_unperturbed</span><span class="p">)</span>
+    
+<span class="c1"># This is where we will store the ground state energy and changes in the ground state energy</span>
+<span class="n">change_E1</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iterations_to_run</span><span class="p">):</span>
+    <span class="n">new_energy_levels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">delta_Es</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">new_wavefunctions</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">wavefunctions_to_use</span><span class="p">):</span>
+        <span class="n">delta_E</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">energy_perturbation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">all_wavefunctions</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">V1</span><span class="p">)</span>
+        <span class="n">delta_Es</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">delta_E</span><span class="p">)</span>
+        <span class="n">new_energy_levels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">all_energy_levels</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">delta_E</span><span class="p">)</span>
+
+        <span class="n">new_wavefunction</span> <span class="o">=</span> <span class="n">wavefunction_perturbation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">V1</span><span class="p">,</span> <span class="n">all_energy_levels</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">all_wavefunctions</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+        <span class="n">new_wavefunctions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_wavefunction</span><span class="p">)</span>
+    
+    <span class="c1"># Calculate the percentage change in enegy compared to E1 for the ground state</span>
+    <span class="n">change_E1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">delta_Es</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">all_energy_levels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_energy_levels</span><span class="p">)</span>
+    <span class="n">all_wavefunctions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_wavefunctions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Print and plot results</span>
+
+<span class="c1">#Find first index where value has reduced by half</span>
+<span class="n">iteration</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">idx</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">change_E1</span><span class="p">)</span> <span class="k">if</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">change_E1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The energy shift is less than half the original energy shift after </span><span class="si">%i</span><span class="s2"> iterations&quot;</span> <span class="o">%</span> <span class="n">iteration</span><span class="p">)</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;axes.labelsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+<span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+<span class="s1">&#39;legend.fontsize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+<span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+<span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+<span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> 
+<span class="p">}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+<span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">E</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">E</span> <span class="ow">in</span> <span class="n">all_energy_levels</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Iterations&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Ground state energy&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="n">fig2</span><span class="p">,</span> <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">change_E1</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Iterations&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Change in ground state energy&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The energy shift is less than half the original energy shift after 141 iterations
+</pre></div>
+</div>
+<img alt="_images/qm2_10_1.png" src="_images/qm2_10_1.png" />
+<img alt="_images/qm2_10_2.png" src="_images/qm2_10_2.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="qm2Q.html" title="previous page">Problem 2</a>
+    <a class='right-next' id="next-link" href="qm3Q.html" title="next page">Problem 3</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

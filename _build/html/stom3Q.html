@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 3 &#8212; PyProblems</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 3 - Answers" href="stom3.html" />
+    <link rel="prev" title="Problem 2 - Answers" href="stom2.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Imperial Physics PyProblems
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="year1.html">
+   First Year Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="year2.html">
+   Second Year Curriculum
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="reference internal" href="stom.html">
+     Statistics of Measurement
+    </a>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4Q.html">
+       Problem 4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4.html">
+       Problem 4 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="qm.html">
+     Quantum Mechanics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermo.html">
+     Thermodynamics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nuclear.html">
+     Nuclear Physics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="optics.html">
+     Optics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1Q.html">
+       Problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1.html">
+       Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="year3.html">
+   Third Year Curriculum
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/stom3Q.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-packages">
+   Python packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-tasks">
+   Your tasks
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-3">
+<h1>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h1>
+<p><strong>Chi-square Tests and Parameter Estimation</strong></p>
+<p>The chi-square test is used to test whether observed counts agree with a proposed distribution.
+The test statistic is <span class="math notranslate nohighlight">\(X = \sum (O - E)^2 / E,\)</span> where <span class="math notranslate nohighlight">\(E\)</span> are the expected and <span class="math notranslate nohighlight">\(O\)</span> the observed counts, and the sum is taken over all bins.
+This is equivalent (given certain conditions) to a chi-square distribution with <span class="math notranslate nohighlight">\(k\)</span> - 1 degrees of freedom, where <span class="math notranslate nohighlight">\(k\)</span> is the number of bins.
+To carry out the test, <span class="math notranslate nohighlight">\(X\)</span> is therefore compared to the quantile of the corresponding chi-square distribution dictated by the chosen significance level, <span class="math notranslate nohighlight">\(\alpha\)</span>.
+Generally, <span class="math notranslate nohighlight">\(E &gt; 20\)</span> should be satisfied for all bins in order to carry out this test.
+While a variety of binning methods are used in practice, you will be using bins with <em>equal probabilities</em> here.
+This implies that the bins will, in general, have unequal widths.</p>
+<div class="section" id="python-packages">
+<h2>Python packages<a class="headerlink" href="#python-packages" title="Permalink to this headline">¶</a></h2>
+<p>While you are free to use any approach you like, the following may come in handy:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">chisquare</span></code> and <code class="docutils literal notranslate"><span class="pre">norm</span></code> from the <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code> sub-package</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fmin</span></code> from <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="your-tasks">
+<h2>Your tasks<a class="headerlink" href="#your-tasks" title="Permalink to this headline">¶</a></h2>
+<p>Ensure that every part of the code is repeatable by seeding the random generator at the appropriate times.</p>
+<ol class="simple">
+<li><p>Generate a random sample from the normal distribution with <span class="math notranslate nohighlight">\(\mu=0\)</span> and <span class="math notranslate nohighlight">\(\sigma=1\)</span>, i.e. <span class="math notranslate nohighlight">\(\mathcal{N}(0, 1)\)</span>.
+On the same plot, show the expected pdf in addition to a histogram of the generated sample.</p></li>
+<li><p>From <span class="math notranslate nohighlight">\(\mathcal{N}(0, 1)\)</span>, determine 11 bin edges (for 10 bins) which each contain equal probabilities, encompassing <span class="math notranslate nohighlight">\([-\inf, +\inf]\)</span>.
+Using the chi-square goodness-of-fit test, determine the p-value of a random sample of <span class="math notranslate nohighlight">\(\mathcal{N}(0, 1)\)</span>, binned according to the aforementioned bin edges.
+Here, we are trying to determine if the sample originated from <span class="math notranslate nohighlight">\(\mathcal{N}(0, 1)\)</span> or not.
+Repeat this process <span class="math notranslate nohighlight">\(&gt;100\)</span> times until you are satisfied with the results.
+Plot a histogram of all p-values.
+For the <span class="math notranslate nohighlight">\(0.10\)</span>, <span class="math notranslate nohighlight">\(0.05\)</span>, and <span class="math notranslate nohighlight">\(0.01\)</span> significance levels, calculate the fraction of samples with p-values below <span class="math notranslate nohighlight">\(\alpha\)</span>.
+Do the significance levels and your calculated fractions agree?</p></li>
+<li><p>Next, the above will be expanded using maximum likelihood parameter estimation.</p>
+<ol class="simple">
+<li><p>Write a function which, given <span class="math notranslate nohighlight">\(\mu\)</span>, <span class="math notranslate nohighlight">\(\sigma\)</span>, and an array of observations, returns the value of the (log) likelihood (up to a constant) for the normal distribution.</p></li>
+<li><p>Test the above function by generating a random sample from <span class="math notranslate nohighlight">\(\mathcal{N}(0, 1)\)</span>, and evaluating the function using this sample along with a range of values for <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> on a grid.</p></li>
+<li><p>Plot a contour plot of the resulting (log) likelihood values. This should allow you to visually verify that the maximum of the function is located at the expected values <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(\sigma=1\)</span>.</p></li>
+<li><p>Carry out explicit maximisation of the likelihood function using <code class="docutils literal notranslate"><span class="pre">fmin</span></code> and your own function, and verify that the maximum is indeed at the expected location.</p></li>
+</ol>
+</li>
+<li><p>Carrying out parameter estimation changes the null hypothesis, <span class="math notranslate nohighlight">\(H_0\)</span>, being tested—it is now a composite null hypothesis.
+We are now trying to determine if the sample originates from <em>any</em> normal distribution, instead of just <span class="math notranslate nohighlight">\(\mathcal{N}(0, 1)\)</span>.
+The calculations from 2. will be repeated here with the additional step of parameter estimation, as above.
+Thus, instead of fixed bin edges for every trial, these will now depend on the drawn samples and the resulting estimates for <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span>.
+Thereafter, the chi-square statistic and p-value is calculated as before.
+Again, calculate the fraction of rejected samples for various significance levels.
+This time, the degrees of freedom used for the chi-square test will need to be varied.
+Carry out the above for <span class="math notranslate nohighlight">\(k-1\)</span>, <span class="math notranslate nohighlight">\(k-2\)</span>, <span class="math notranslate nohighlight">\(k-3\)</span>, and <span class="math notranslate nohighlight">\(k-4\)</span> degrees of freedom, where <span class="math notranslate nohighlight">\(k\)</span> is the number of bins.
+Which number of degrees of freedom is appropriate here, and is this supported by your data?</p></li>
+<li><p>Finally, carry out the parameter estimation in the last exercise using chi-square minimisation instead of maximising the likelihood function.</p>
+<ol class="simple">
+<li><p>First define a function which will be minimized using <code class="docutils literal notranslate"><span class="pre">fmin</span></code>.
+It should take the mean and standard deviation of the normal distribution, bin edges, and observed counts as arguments, and return the corresponding chi-square value.
+This will involve calculating the expected counts in the given bins resulting from the given <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span>.</p></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="stom2.html" title="previous page">Problem 2 - Answers</a>
+    <a class='right-next' id="next-link" href="stom3.html" title="next page">Problem 3 - Answers</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

@@ -1,12 +1,22 @@
-# Problem 3 - Answers
+#!/usr/bin/env python
+# coding: utf-8
 
-First of all import packages and set the constants and discretisation. Note that the number of timesteps has been defined such that $v\frac{\delta t}{\delta x} \leq 1$
+# # Problem 3 - Answers
+
+# First of all import packages and set the constants and discretisation. Note that the number of timesteps has been defined such that $v\frac{\delta t}{\delta x} \leq 1$
+
+# In[1]:
+
 
 # imports
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as ani
 from IPython.display import HTML
+
+
+# In[2]:
+
 
 # set timesteps and constants
 L = 0.610
@@ -23,19 +33,22 @@ t = np.linspace(start,end,Nt)
 x = np.linspace(0,L,Nx)
 
 
-The finite difference method approximates $f''(x)$ with $\frac{f(x-\delta x) - 2f(x) + f(x+\delta x)}{\delta x^2}$. This can be derived quite nicely by adding together Taylor series around $x + \delta x$ and $x - \delta x$, and rearraging for $f''(x)$.  
+# The finite difference method approximates $f''(x)$ with $\frac{f(x-\delta x) - 2f(x) + f(x+\delta x)}{\delta x^2}$. This can be derived quite nicely by adding together Taylor series around $x + \delta x$ and $x - \delta x$, and rearraging for $f''(x)$.  
+# 
+# The wave equation is:
+# 
+# $$ \frac{d^2\psi}{dt^2} = v^2\frac{d^2\psi}{dx^2}. $$
+# 
+# $\frac{d^2\psi}{dx^2}$ is the 1D laplacian, so we can approximate it at point $i$ along the string according to the above method as:
+# 
+# $$ \frac{d^2\psi_i}{dx^2} = \frac{\psi_{i-1} - 2\psi_i + \psi_{i+1}}{g^2}, $$
+# 
+# as $g$ is what we are calling $\delta x$.
+# 
+# Implementing this in a function:
 
-The wave equation is:
+# In[3]:
 
-$$ \frac{d^2\psi}{dt^2} = v^2\frac{d^2\psi}{dx^2}. $$
-
-$\frac{d^2\psi}{dx^2}$ is the 1D laplacian, so we can approximate it at point $i$ along the string according to the above method as:
-
-$$ \frac{d^2\psi_i}{dx^2} = \frac{\psi_{i-1} - 2\psi_i + \psi_{i+1}}{g^2}, $$
-
-as $g$ is what we are calling $\delta x$.
-
-Implementing this in a function:
 
 # new function to evaluate
 def f(r,t):
@@ -53,6 +66,9 @@ def f(r,t):
     return np.array([fphi,fVphi])
 
 
+# In[4]:
+
+
 # runge-kutta solver, as in question 2
 def rungekutta(r,t):
     solution = [[] for n in r]
@@ -66,6 +82,10 @@ def rungekutta(r,t):
         r = r + (k1 + 2 * k2 + 2 * k3 + k4) / 6
     return np.array(solution)
 
+
+# In[5]:
+
+
 # set initial conditions
 phiinit = np.zeros((len(x)))
 vinit = np.copy(phiinit)
@@ -74,7 +94,10 @@ r = np.array([phiinit,vinit])
 rsol = rungekutta(r,t)
 
 
-In order to use FuncAnimation we first need to explicitly create a figure to draw our animation on. We create the figure, axes (on which we then set limits), and an empty line. The line will be used to be our string, so we create this object now for ease of reference later.
+# In order to use FuncAnimation we first need to explicitly create a figure to draw our animation on. We create the figure, axes (on which we then set limits), and an empty line. The line will be used to be our string, so we create this object now for ease of reference later.
+
+# In[6]:
+
 
 # initialise the figure to be animated
 fig = plt.figure()
@@ -82,7 +105,10 @@ ax = plt.axes(xlim=(0, 0.610), ylim=(-1, 1),ylabel='Displacement (mm)',xlabel='s
 line, = ax.plot([], [], lw=2)
 
 
-FuncAnimation creates an animation by repeatedly calling a function to generate the frames of the animation. Here we create an initial function, to reset the line to empty for the start of the animation, and then an animate function, to pick out the position of all the x points at the timestep i and plot them against the x axis (defined at the beginning).
+# FuncAnimation creates an animation by repeatedly calling a function to generate the frames of the animation. Here we create an initial function, to reset the line to empty for the start of the animation, and then an animate function, to pick out the position of all the x points at the timestep i and plot them against the x axis (defined at the beginning).
+
+# In[7]:
+
 
 # define the initial state of the line, and the update function of the animator
 def init():
@@ -95,14 +121,25 @@ def animate(i):
     return line,
 
 
-Next we create an animation object with the FuncAnimation function. We ask it to make frames for the number of timesteps equivalent to the number we have calculated, and to display them with a 20 ms interval between them. Blit essentially asks the animation to only update the things that were changed in the animation function (i.e. it will only update the line, and it will leave the figure and the axes alone). We can then get the jupyter notebook to display this animation by saving it as an html5 video and embedding it in the notebook 
+# Next we create an animation object with the FuncAnimation function. We ask it to make frames for the number of timesteps equivalent to the number we have calculated, and to display them with a 20 ms interval between them. Blit essentially asks the animation to only update the things that were changed in the animation function (i.e. it will only update the line, and it will leave the figure and the axes alone). We can then get the jupyter notebook to display this animation by saving it as an html5 video and embedding it in the notebook 
+
+# In[8]:
+
 
 # call the animation function
 animation = ani.FuncAnimation(fig,animate,init_func=init,
                                frames=Nt, interval=20, blit=True)
 
 
+# In[9]:
+
+
 # embed the animation in the jupyter notebook
 HTML(animation.to_jshtml())
+
+
+# In[ ]:
+
+
 
 

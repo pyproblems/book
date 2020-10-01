@@ -1,35 +1,85 @@
 - file: intro
-- file: mechanics
+- file: year1
   sections:
-    - file: mech1Q
-    - file: mech1
-    - file: mech2Q
-    - file: mech2
-    - file: mech3Q
-    - file: mech3
-    - file: mech4Q
-    - file: mech4
-- file: electrostatics
+    - file: mechanics
+      sections:
+        - file: mech1Q
+        - file: mech1
+        - file: mech2Q
+        - file: mech2
+        - file: mech3Q
+        - file: mech3
+        - file: mech4Q
+        - file: mech4
+    - file: electrostatics
+      sections:
+        - file: elec1Q
+        - file: elec1
+        - file: elec2Q
+        - file: elec2
+    - file: magnetism
+      sections:
+        - file: magQ
+        - file: mag
+    - file: vibrations
+      sections:
+        - file: vib1Q
+        - file: vib1
+        - file: vib2Q
+        - file: vib2
+        - file: vib3Q
+        - file: vib3
+    - file: relativity
+      sections:
+        - file: relQ
+        - file: rel
+- file: year2
   sections:
-    - file: elec1Q
-    - file: elec1
-    - file: elec2Q
-    - file: elec2
-- file: magnetism
+    - file: stom
+      sections:
+        - file: stom1Q
+        - file: stom1
+        - file: stom2Q
+        - file: stom2
+        - file: stom3Q
+        - file: stom3
+        - file: stom4Q
+        - file: stom4
+    - file: qm
+      sections:
+        - file: qm1Q
+        - file: qm1
+        - file: qm2Q
+        - file: qm2 
+        - file: qm3Q
+        - file: qm3
+    - file: thermo
+      sections:
+        - file: thermo1Q
+        - file: thermo1 
+        - file: thermo2Q
+        - file: thermo2
+        - file: thermo3Q
+        - file: thermo3
+    - file: nuclear
+      sections:
+        - file: nuc1Q
+        - file: nuc1 
+        - file: nuc2Q
+        - file: nuc2 
+        - file: nuc3Q
+        - file: nuc3
+    - file: optics
+      sections:
+        - file: optics1Q
+        - file: optics1
+- file: year3
   sections:
-    - file: magQ
-    - file: mag
-- file: vibrations
-  sections:
-    - file: vib1Q
-    - file: vib1
-    - file: vib2Q
-    - file: vib2
-    - file: vib3Q
-    - file: vib3
-- file: relativity
-  sections:
-    - file: relQ
-    - file: rel
-
-
+    - file: solidstate
+      sections:
+        - file: ss1Q
+        - file: ss1
+        - file: ss2Q
+        - file: ss2 
+        - file: ss3Q
+        - file: ss3

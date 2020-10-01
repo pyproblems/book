@@ -1,18 +1,24 @@
-# Problem 1 - Answers
+#!/usr/bin/env python
+# coding: utf-8
 
-## Imports and Setup
+# # Problem 1 - Answers
+# 
+# ## Imports and Setup
+# 
+# Matplotlib inline plotting will set the matplotlib backend to ensure that the plots will not appear in a separate window, but rather in the notebook itself. 
+# Of course plots can always be saved to a separate file using the `savefig` command or shown in a separate window by changing the [matplotlib backend](https://matplotlib.org/3.1.1/tutorials/introductory/usage.html#backends) (advanced!).
+# 
+# These imported packages are used throughout the Jupyter Notebook.
+# The [matplotlib](https://matplotlib.org/) package is used for plotting, while [NumPy](https://numpy.org/) is used for underlying numerical calculations.
+# [SciPy](https://www.scipy.org/) provides multiple advanced routines, such as routines for solving differential equations which are used in this notebook.
+# [Tqdm](https://tqdm.github.io/) is used to record the elapsed time for computations and predict how long a given part of the program is expected to take to run.
+# The electrostatics module defines simple routines to calculate electric fields for different arrangements of charges.
+# It also defines a Timer class which can be used to time isolated parts of code.
 
-Matplotlib inline plotting will set the matplotlib backend to ensure that the plots will not appear in a separate window, but rather in the notebook itself. 
-Of course plots can always be saved to a separate file using the `savefig` command or shown in a separate window by changing the [matplotlib backend](https://matplotlib.org/3.1.1/tutorials/introductory/usage.html#backends) (advanced!).
+# In[1]:
 
-These imported packages are used throughout the Jupyter Notebook.
-The [matplotlib](https://matplotlib.org/) package is used for plotting, while [NumPy](https://numpy.org/) is used for underlying numerical calculations.
-[SciPy](https://www.scipy.org/) provides multiple advanced routines, such as routines for solving differential equations which are used in this notebook.
-[Tqdm](https://tqdm.github.io/) is used to record the elapsed time for computations and predict how long a given part of the program is expected to take to run.
-The electrostatics module defines simple routines to calculate electric fields for different arrangements of charges.
-It also defines a Timer class which can be used to time isolated parts of code.
 
-%matplotlib inline
+get_ipython().run_line_magic('matplotlib', 'inline')
 import time
 from functools import partial
 
@@ -30,9 +36,13 @@ mpl.rc("figure", figsize=(10, 10))
 mpl.rc("font", size=16)
 mpl.rc("animation", embed_limit=40)
 
-## SciPy Solver Function
 
-The function below will be used in conjunction with the SciPy solver to solve for the particles' trajectories.
+# ## SciPy Solver Function
+# 
+# The function below will be used in conjunction with the SciPy solver to solve for the particles' trajectories.
+
+# In[2]:
+
 
 def int_fun(t, y, masses, charges):
     """Differential equations for the system of point charges.
@@ -80,14 +90,18 @@ def int_fun(t, y, masses, charges):
 
     return out
 
-## Euler Method
 
-The function below contains all the logic necessary for the Euler method.
+# ## Euler Method
+# 
+# The function below contains all the logic necessary for the Euler method.
+# 
+# The positions are first updated using the known velocities.
+# Then, the accelerations of all particles are determined using the electric field at that point in time.
+# Finally, new velocities are calculated using these accelerations.
+# When the function is next called, these new positions and velocities are then supplied, thereby advancing the solution by one step.
 
-The positions are first updated using the known velocities.
-Then, the accelerations of all particles are determined using the electric field at that point in time.
-Finally, new velocities are calculated using these accelerations.
-When the function is next called, these new positions and velocities are then supplied, thereby advancing the solution by one step.
+# In[3]:
+
 
 def euler_step(positions, velocities, masses, charges, h):
     """Get new positions and velocities using the Euler method.
@@ -129,6 +143,10 @@ def euler_step(positions, velocities, masses, charges, h):
 
     return new_positions, new_velocities
 
+
+# In[4]:
+
+
 def get_initial(verbose=False):
     """Get initial parameters.
     
@@ -153,7 +171,11 @@ def get_initial(verbose=False):
             print(charges[i])
     return positions, velocities, masses, charges
 
-## Using the Euler Method
+
+# ## Using the Euler Method
+
+# In[5]:
+
 
 positions, velocities, masses, charges = get_initial()
 
@@ -166,6 +188,10 @@ all_positions = []
 for i in range(2000):
     positions, velocities = euler_step(positions, velocities, masses, charges, h)
     all_positions.append(positions)
+
+
+# In[6]:
+
 
 fig, ax = plt.subplots()
 scat = ax.scatter(*all_positions[0], c=charges)
@@ -206,7 +232,11 @@ js_output = anim.to_jshtml()
 
 HTML(js_output)
 
-## Using the Scipy Solver
+
+# ## Using the Scipy Solver
+
+# In[7]:
+
 
 positions, velocities, masses, charges = get_initial()
 
@@ -224,6 +254,10 @@ sol = solve_ivp(
     t_eval=np.linspace(0, 1e-4, 2000),
     rtol=1e-7,
 )
+
+
+# In[8]:
+
 
 fig, ax = plt.subplots()
 scat = ax.scatter(*all_positions[0], c=charges)
@@ -268,11 +302,15 @@ js_output = anim.to_jshtml()
 
 HTML(js_output)
 
-## Comparing Euler Method with Scipy solver
 
-Here, the evolution of the x-position of particle 1 is shown for both cases.
-Even though the Euler method takes significantly longer than the SciPy solver to find the solution, it only performs similarly when the accelerations are low.
-Upon encountering a 'dramatic' event, such as a close encounter between charges, the Euler method (with the currently selected step size) fails to capture the expected motion.
+# ## Comparing Euler Method with Scipy solver
+# 
+# Here, the evolution of the x-position of particle 1 is shown for both cases.
+# Even though the Euler method takes significantly longer than the SciPy solver to find the solution, it only performs similarly when the accelerations are low.
+# Upon encountering a 'dramatic' event, such as a close encounter between charges, the Euler method (with the currently selected step size) fails to capture the expected motion.
+
+# In[9]:
+
 
 # Define basic solver parameters.
 
@@ -328,12 +366,16 @@ plt.xlabel("t")
 plt.ticklabel_format(style="sci", axis="x", scilimits=(0, 0))
 _ = plt.legend(loc="best")
 
-## Plotting the Energy of System
 
-Both the electrostatic potential energy of the system and the sum of all kinetic energies is plotted.
-It can be seen that their sum is constant, up to very small fluctuations ($\lt 0.01\%$) related to the discretisation error.
+# ## Plotting the Energy of System
+# 
+# Both the electrostatic potential energy of the system and the sum of all kinetic energies is plotted.
+# It can be seen that their sum is constant, up to very small fluctuations ($\lt 0.01\%$) related to the discretisation error.
+# 
+# The SciPy (RK) solution `sol.y` from the previous cell is used here throughout.
 
-The SciPy (RK) solution `sol.y` from the previous cell is used here throughout.
+# In[10]:
+
 
 def pot_energy(positions, charges):
     """Calculate the electrostatic potential energy of the system.
@@ -373,6 +415,10 @@ kin_energies = 0.5 * np.sum(
     axis=0,
 )
 
+
+# In[11]:
+
+
 plt.figure()
 plt.plot(pot_energies / np.max(np.abs(pot_energies)), label="Potential Energy")
 plt.plot(kin_energies / np.max(np.abs(kin_energies)), label="Kinetic Energy", c="C1")
@@ -393,10 +439,14 @@ plt.ticklabel_format(style="sci", axis="x", scilimits=(0, 0))
 plt.ticklabel_format(style="sci", axis="y", scilimits=(0, 0))
 plt.show()
 
-### Inspecting the System at Particular Points
 
-We can visualise the state of the system at interesting points, such as when it possesses the minimum or maximum potential and kinetic energies.
-As expected, we can verify that when the system has minimum potential energy, it has maximum kinetic energy and vice versa (see the `assert` statements below).
+# ### Inspecting the System at Particular Points
+# 
+# We can visualise the state of the system at interesting points, such as when it possesses the minimum or maximum potential and kinetic energies.
+# As expected, we can verify that when the system has minimum potential energy, it has maximum kinetic energy and vice versa (see the `assert` statements below).
+
+# In[12]:
+
 
 norm_charges = charges - np.min(charges)
 norm_charges /= np.max(norm_charges)
@@ -421,3 +471,4 @@ for index, title, ylims in zip(
     plt.xlabel("x")
     plt.ylabel("y")
     plt.show()
+

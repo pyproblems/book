@@ -1,20 +1,34 @@
-# Answers
+#!/usr/bin/env python
+# coding: utf-8
 
-## 1. Parent particle rest frame
+# # Answers
 
-**Focus on $\nu_\mu$ production in the parent particle rest frame.**
+# ## 1. Parent particle rest frame
+# 
+# **Focus on $\nu_\mu$ production in the parent particle rest frame.**
+# 
+# 1.1 Write a function which calculates the energy of particle c in a generic 2-body decay $a \rightarrow b + c$ with masses $m_a, m_b, m_c.$
 
-1.1 Write a function which calculates the energy of particle c in a generic 2-body decay $a \rightarrow b + c$ with masses $m_a, m_b, m_c.$
+# In[1]:
+
 
 def Energy_c(m_a, m_b, m_c):
     return (m_a**2-m_b**2+m_c**2)/(2*m_a)
 
-1.2 Use it to calculate the Energy of the $\nu_\mu$ in both cases.
+
+# 1.2 Use it to calculate the Energy of the $\nu_\mu$ in both cases.
+
+# In[2]:
+
 
 m_pi = 140. # MeV
 m_K  = 490. # MeV
 m_mu = 105. # MeV
 m_nu = 0.   # MeV
+
+
+# In[3]:
+
 
 energy_nu_1 = Energy_c(m_pi, m_mu, m_nu)
 energy_nu_2 = Energy_c(m_K, m_mu, m_nu)
@@ -22,7 +36,11 @@ energy_nu_2 = Energy_c(m_K, m_mu, m_nu)
 print('energy nu from pi:', energy_nu_1, 'MeV')
 print('energy nu from K: ', energy_nu_2, 'MeV')
 
-1.3 Write a function to calculate the 3-momentum of a generic particle $c$ in the same 2-body decay with angle $\theta$ w.r.t. the $z$-axis and azimuthal angle $\phi$.
+
+# 1.3 Write a function to calculate the 3-momentum of a generic particle $c$ in the same 2-body decay with angle $\theta$ w.r.t. the $z$-axis and azimuthal angle $\phi$.
+
+# In[4]:
+
 
 import numpy as np 
 
@@ -33,7 +51,11 @@ def Momentum_c(m_a, m_b, m_c, theta, phi):
     pc = np.sqrt(Energy_c(m_a, m_b, m_c)**2 - m_c**2)
     return pc * Direction(theta, phi)
 
-1.4 Use the functions above to calculate the 3-momentum of $\nu$ in both decays, assuming the decay happens on the plane $x = 0$, with a $\theta$ of your choice.
+
+# 1.4 Use the functions above to calculate the 3-momentum of $\nu$ in both decays, assuming the decay happens on the plane $x = 0$, with a $\theta$ of your choice.
+
+# In[5]:
+
 
 theta = np.pi/6.
 
@@ -43,7 +65,11 @@ momentum_nu_2 = Momentum_c(m_K, m_mu, m_nu, theta, 0.)
 print('momentum nu from pi:', momentum_nu_1, 'MeV')
 print('momentum nu from K: ', momentum_nu_2, 'MeV')
 
-1.5 Write a function that takes the energy and 3-momentum of a particle $c$ in input and returns the 4-momentum.
+
+# 1.5 Write a function that takes the energy and 3-momentum of a particle $c$ in input and returns the 4-momentum.
+
+# In[6]:
+
 
 def FMomentum_c(energy,momentum):
     return np.insert(momentum,0,energy)
@@ -55,11 +81,14 @@ print('4 - momentum nu from pi:', fmomentum_nu_1, 'MeV')
 print('4 - momentum nu from K: ', fmomentum_nu_2, 'MeV')
 
 
-## 2. Lab frame
+# ## 2. Lab frame
+# 
+# **Assume the $\pi$ and $K$ are travelling in the lab frame with Energy 1GeV in direction $z$.**
+# 
+# 2.1 Write a function which returns the value of $\beta = v/c$ in the lab frame, given the mass and energy of the particle.
 
-**Assume the $\pi$ and $K$ are travelling in the lab frame with Energy 1GeV in direction $z$.**
+# In[7]:
 
-2.1 Write a function which returns the value of $\beta = v/c$ in the lab frame, given the mass and energy of the particle.
 
 energy_pi_lab = 500. # MeV
 energy_K_lab = 500. # MeV
@@ -68,7 +97,11 @@ def Beta(m_c, energy_c_lab):
     p_c_lab = np.sqrt(energy_c_lab**2-m_c**2)
     return p_c_lab/energy_c_lab
 
-2.2 Write a function which allows you to boost a 4-momentum along the positive $z$-axis.
+
+# 2.2 Write a function which allows you to boost a 4-momentum along the positive $z$-axis.
+
+# In[8]:
+
 
 def Boost_along_z(fmomentum, beta):
     gamma = 1./np.sqrt(1-beta**2)
@@ -78,7 +111,11 @@ def Boost_along_z(fmomentum, beta):
     boost_z = gamma * fmomentum[3] - beta * gamma * fmomentum[0]
     return np.array([boost_E, boost_x, boost_y, boost_z])
 
-2.3  Calculate the value of $\beta$ of the lab frame as seen by the rest frame using 2.1.
+
+# 2.3  Calculate the value of $\beta$ of the lab frame as seen by the rest frame using 2.1.
+
+# In[9]:
+
 
 beta_lab_1 = -Beta(m_pi,energy_pi_lab)
 beta_lab_2 = -Beta(m_K,energy_K_lab)
@@ -86,7 +123,11 @@ beta_lab_2 = -Beta(m_K,energy_K_lab)
 print('beta of lab from pi:', beta_lab_1)
 print('beta of lab from K :', beta_lab_2)
 
-2.4 Calculate the 4-momenta of the neutrinos boosted into the lab frame, assuming 1.5.
+
+# 2.4 Calculate the 4-momenta of the neutrinos boosted into the lab frame, assuming 1.5.
+
+# In[10]:
+
 
 fmomentum_nu_1_lab = Boost_along_z(fmomentum_nu_1, beta_lab_1)
 fmomentum_nu_2_lab = Boost_along_z(fmomentum_nu_2, beta_lab_2)
@@ -94,13 +135,21 @@ fmomentum_nu_2_lab = Boost_along_z(fmomentum_nu_2, beta_lab_2)
 print('4-momentum of nu from pi in the lab:', fmomentum_nu_1_lab)
 print('4-momentum of nu from K in the lab :', fmomentum_nu_2_lab)
 
+
+# In[11]:
+
+
 #quick check: 
 print(fmomentum_nu_1_lab[0]**2-fmomentum_nu_1_lab[2]**2-fmomentum_nu_1_lab[3]**2)
 print(fmomentum_nu_2_lab[0]**2-fmomentum_nu_2_lab[2]**2-fmomentum_nu_2_lab[3]**2)
 
-#### The mass is a relativistic invariant
 
-2.5 What are the maximum and minimum values of the energy the product neutrino can have, in the lab frame? 
+# #### The mass is a relativistic invariant
+
+# 2.5 What are the maximum and minimum values of the energy the product neutrino can have, in the lab frame? 
+
+# In[12]:
+
 
 momentum_nu1_max = Momentum_c(m_pi, m_mu, m_nu, 0., 0.)
 momentum_nu2_max = Momentum_c(m_K, m_mu, m_nu, 0., 0.)
@@ -114,6 +163,10 @@ fmomentum_nu2max_lab = Boost_along_z(fmomentum_nu2_max, beta_lab_2)
 print('Maximum energy of nu from pi in the lab:', fmomentum_nu1max_lab[0], 'MeV')
 print('Maximum energy of nu from K in the lab :', fmomentum_nu2max_lab[0], 'MeV')
 
+
+# In[13]:
+
+
 momentum_nu1_min = Momentum_c(m_pi, m_mu, m_nu, np.pi, 0.)
 momentum_nu2_min = Momentum_c(m_K, m_mu, m_nu, np.pi, 0.)
 
@@ -126,15 +179,19 @@ fmomentum_nu2min_lab = Boost_along_z(fmomentum_nu2_min, beta_lab_2)
 print('Maximum energy of nu from pi in the lab:', fmomentum_nu1min_lab[0], 'MeV')
 print('Maximum energy of nu from K in the lab :', fmomentum_nu2min_lab[0], 'MeV')
 
-## 3. Energy Distributions
 
-**Let's generalise what you have found for different angles $\theta$. Let rf refer to the rest frame and lf to the lab frame. What are the allowed values of $\theta_{rf}$ in the rest frame in this decay?**
+# ## 3. Energy Distributions
+# 
+# **Let's generalise what you have found for different angles $\theta$. Let rf refer to the rest frame and lf to the lab frame. What are the allowed values of $\theta_{rf}$ in the rest frame in this decay?**
+# 
+# The thetas in the rest frame are random as it is a 2-body decay.
+# 
+# 3.1 Guided exercise: create a plot of the distribution of energies in the lab frame of the product neutrinos as a function of $\theta$, assuming the parent particle has energy 1GeV in the lab frame. Also look at the histogram of the energies.
+# 
+# a) You can approach this problem in several ways; a natural one is to pick the angle $\theta$ as a random variable many times, until you have a clear picture of the distribution. To do this import `numpy` and use `np.random.rand()` : `theta = np.random.rand()` in a `while` or `for` loop, appending each value to a list. Try running, and make sure you understand, the below code before pressing on. 
 
-The thetas in the rest frame are random as it is a 2-body decay.
+# In[14]:
 
-3.1 Guided exercise: create a plot of the distribution of energies in the lab frame of the product neutrinos as a function of $\theta$, assuming the parent particle has energy 1GeV in the lab frame. Also look at the histogram of the energies.
-
-a) You can approach this problem in several ways; a natural one is to pick the angle $\theta$ as a random variable many times, until you have a clear picture of the distribution. To do this import `numpy` and use `np.random.rand()` : `theta = np.random.rand()` in a `while` or `for` loop, appending each value to a list. Try running, and make sure you understand, the below code before pressing on. 
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -167,7 +224,11 @@ plt.hist(random, bins = 100)
 plt.show()
 # as expected, the histogram looks like a flat distribution
 
-b) Write a loop which will sample $\theta$ in its range with `rand()`, saving each value of $\theta$ and the associated value of `energy_nu_lab` for both decays.
+
+# b) Write a loop which will sample $\theta$ in its range with `rand()`, saving each value of $\theta$ and the associated value of `energy_nu_lab` for both decays.
+
+# In[15]:
+
 
 thetas_1   = []
 thetas_2   = []
@@ -191,7 +252,11 @@ for idx in range(n_events):
     energies_2.append(fmomentum_nu_2_lab[0])
     thetas_2.append(theta)
 
-c) Create plots for both decays of `energy_nu_lab` as a function of $\theta$. What function is it? 
+
+# c) Create plots for both decays of `energy_nu_lab` as a function of $\theta$. What function is it? 
+
+# In[16]:
+
 
 plt.scatter(thetas_1,energies_1)
 plt.xlabel(r'$\theta$ (rad)')
@@ -203,7 +268,11 @@ plt.xlabel(r'$\theta$ (rad)')
 plt.ylabel('Energy (MeV)')
 plt.show()
 
-d) Create plots for both decays of the histograms of the `energy_nu_lab`.
+
+# d) Create plots for both decays of the histograms of the `energy_nu_lab`.
+
+# In[17]:
+
 
 plt.hist(energies_1, bins = 100)
 plt.ylabel('N events')
@@ -215,9 +284,13 @@ plt.ylabel('N events')
 plt.xlabel('Energy (MeV)')
 plt.show()
 
-3.2 Guided exercise: create a plot of the distribution histogram of energies in the lab frame of the product neutrinos, assuming the parent particle has a log-normal momentum distribution in the lab frame. We can assume the momenta of the $\pi$ and $K$ beams follow the log-normal distribution, and that there are roughly 10 more $\pi$ decays than $K$ decays in the beam. 
 
-a) Familiarise yourself with the log-normal distribution function.
+# 3.2 Guided exercise: create a plot of the distribution histogram of energies in the lab frame of the product neutrinos, assuming the parent particle has a log-normal momentum distribution in the lab frame. We can assume the momenta of the $\pi$ and $K$ beams follow the log-normal distribution, and that there are roughly 10 more $\pi$ decays than $K$ decays in the beam. 
+# 
+# a) Familiarise yourself with the log-normal distribution function.
+
+# In[18]:
+
 
 def generate_log_normal(x_min,x_max,mu,sigma):
     x = np.random.lognormal(mu,sigma)
@@ -250,7 +323,11 @@ plt.close()
 plt.hist(distrib_x, bins = 100)
 plt.show()
 
-b) Repeat exercise in 3.1, now drawing the energy of the parent particles from the distribution at each iteration in the loop, and saving the values of `energy_nu_lab` each time. Remember to still keep the value of $\theta$ random! Finally, plot the histogram of the sum of the energies of the product neutrinos.
+
+# b) Repeat exercise in 3.1, now drawing the energy of the parent particles from the distribution at each iteration in the loop, and saving the values of `energy_nu_lab` each time. Remember to still keep the value of $\theta$ random! Finally, plot the histogram of the sum of the energies of the product neutrinos.
+
+# In[19]:
+
 
 n_events_pi = 100000
 
@@ -293,7 +370,11 @@ plt.ylabel('N events')
 plt.xlabel('Energy (MeV)')
 plt.show()
 
-c) You run the experiment and you get the histogram in b), which includes all the product neutrinos. How could you differentiate between the $\pi$ neutrinos and the $K$ neutrinos? Replot the histogram for b) separating the $K$ and $\pi$ neutrinos explicitly, and point out the differences.
+
+# c) You run the experiment and you get the histogram in b), which includes all the product neutrinos. How could you differentiate between the $\pi$ neutrinos and the $K$ neutrinos? Replot the histogram for b) separating the $K$ and $\pi$ neutrinos explicitly, and point out the differences.
+
+# In[20]:
+
 
 plt.hist(ens_all, bins = 250, label = 'product nus energy', alpha = 0.5)
 plt.hist(ens_2, bins = 250, label = 'nus from Kaon', histtype = 'step', linewidth=2)
@@ -318,4 +399,10 @@ plt.ylabel('N events')
 plt.xlabel('Energy (MeV)')
 plt.legend()
 plt.show()
+
+
+# In[ ]:
+
+
+
 

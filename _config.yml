@@ -9,6 +9,9 @@ logo: logo.png
 baseurl: "${baseurl}"
 url: "${url}"
 
+execute:
+  timeout: -1
+
 #######################################################################################
 # Jupyter Book settings
 

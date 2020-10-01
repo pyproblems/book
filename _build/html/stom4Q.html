@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 4 &#8212; PyProblems</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 4 - Answers" href="stom4.html" />
+    <link rel="prev" title="Problem 3 - Answers" href="stom3.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Imperial Physics PyProblems
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="year1.html">
+   First Year Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="year2.html">
+   Second Year Curriculum
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="reference internal" href="stom.html">
+     Statistics of Measurement
+    </a>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Problem 4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4.html">
+       Problem 4 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="qm.html">
+     Quantum Mechanics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermo.html">
+     Thermodynamics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nuclear.html">
+     Nuclear Physics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="optics.html">
+     Optics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1Q.html">
+       Problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1.html">
+       Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="year3.html">
+   Third Year Curriculum
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/stom4Q.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-tasks">
+   Your tasks
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-4">
+<h1>Problem 4<a class="headerlink" href="#problem-4" title="Permalink to this headline">¶</a></h1>
+<p><strong>The CLT applied to sums of dice</strong></p>
+<p>Using the functions created in the first exercise, you will estimate the sum of of particular die combinations, comparing this to the calculated analytical results.</p>
+<div class="section" id="your-tasks">
+<h2>Your tasks<a class="headerlink" href="#your-tasks" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>Make your functions from the first exercise available to the current notebook (or otherwise), so that they are reusable.</p></li>
+<li><p>Sample from the distribution of the sum of 10 6-sided dice and plot a bar chart of the probabilities.</p></li>
+<li><p>Compute the analytical expected probability for each of the bins above, and compare the sampled results to the expected results using a grouped bar chart.
+Also sample the normal distribution with the expected mean and standard deviation of the sum at the bin centres and add this to the grouped bar chart (after normalisation of the probabilities, ensuring they add up to 1).</p></li>
+<li><p>Write a function that calculates the expected probabilities in each bin using the normal distribution and a continuity correction: instead of sampling the normal distribution’s pdf at the bin centres, calculate the probability contained within <span class="math notranslate nohighlight">\(\pm 0.5\)</span> of each bin (or to <span class="math notranslate nohighlight">\(\pm \infty\)</span> at the edges of the dstribution).</p></li>
+<li><p>Compare the results of the above function, for the case in Task 3., adding this to the grouped bar chart.</p></li>
+<li><p>In preparation for the next task, write a function that takes bin edges, the corresponding probabilities for each bin, and a probability threshold as arguments, and joins together those bins which are below the threshold.
+The function should return a set of bin edges and associated probabilities, where each of the bins now has a probability that exceeds the given threshold.
+This is important to satisfy the requirement for the chi-squared test regarding the minimum number of samples per bin at the tails of the distribution of the dice sums.</p>
+<ol>
+<li><p>For example, the input bins could be:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>bin_edge</p></th>
+<th class="text-align:right head"><p>probability</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>(1, 1)</p></td>
+<td class="text-align:right"><p>0.025</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>(2, 2)</p></td>
+<td class="text-align:right"><p>0.075</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>(3, 3)</p></td>
+<td class="text-align:right"><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>(4, 4)</p></td>
+<td class="text-align:right"><p>0.2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>(5, 5)</p></td>
+<td class="text-align:right"><p>0.025</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>(6, 6)</p></td>
+<td class="text-align:right"><p>0.015</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>(7, 7)</p></td>
+<td class="text-align:right"><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>(8, 8)</p></td>
+<td class="text-align:right"><p>0.2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>(9, 9)</p></td>
+<td class="text-align:right"><p>0.025</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>(10, 10)</p></td>
+<td class="text-align:right"><p>0.015</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>(11, 11)</p></td>
+<td class="text-align:right"><p>0.015</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>(12, 12)</p></td>
+<td class="text-align:right"><p>0.015</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>For which the output bins (with a minimum probability of 0.06) would then be:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>bin_edge</p></th>
+<th class="text-align:right head"><p>probability</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>(1, 2)</p></td>
+<td class="text-align:right"><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>(3, 3)</p></td>
+<td class="text-align:right"><p>0.2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>(4, 5)</p></td>
+<td class="text-align:right"><p>0.225</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>(6, 7)</p></td>
+<td class="text-align:right"><p>0.215</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>(8, 8)</p></td>
+<td class="text-align:right"><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>(9, 12)</p></td>
+<td class="text-align:right"><p>0.07</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Note that some bins were merged, and their original probabilities summed: e.g. <span class="math notranslate nohighlight">\(\{(9, 9), \dots, (12, 12)\} \rightarrow (9, 12)\)</span>.</p></li>
+</ol>
+</li>
+<li><p>Using sums of 6-sided dice, this task investigates the CLT.
+For <span class="math notranslate nohighlight">\(2, \dots, 6\)</span> dice, compute the expected distribution of their sum, sample from this distribution randomly, and use both the bin-centre and continuity correction method from the previous tasks in order to compute probabilities for each bin (modified using the function from 6.).
+Using the expected (analytical) probabilities for each bin, compute the p-value of the chi-square test for both the bin-centre and continuity-corrected normal distribution values for each number of dice.
+Using your results, you should be able to answer the following:</p>
+<ul class="simple">
+<li><p>Does the bin-centre or continuity-corrected method work better?</p></li>
+<li><p>How many 6-sided dice are needed in order to confidently say that their sum is described by a normal distribution? How does this depend on the significance level?</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="stom3.html" title="previous page">Problem 3 - Answers</a>
+    <a class='right-next' id="next-link" href="stom4.html" title="next page">Problem 4 - Answers</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

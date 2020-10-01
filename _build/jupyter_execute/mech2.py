@@ -1,21 +1,31 @@
-# Problem 2 - Answers
+#!/usr/bin/env python
+# coding: utf-8
 
-The drag force on a skydiver is of the form
+# # Problem 2 - Answers
+# 
+# The drag force on a skydiver is of the form
+# 
+# \begin{equation}
+#   F_{Drag} = -kv^2,
+# \end{equation}
+# 
+# where $k$ = 0.7kgm$^{-1}$s$^2$ with the parachute closed and k = 30kgm$^{-1}$s$^2$ with the parachute open. The skydiver performs a series of 3 jumps from an altitude of 3000m. To perform the jump safely, the speed of the skydiver must be less than 10m/s when they land.
+# 
+# Use the <samp>scipy.integrate.odeint</samp> function to solve the differential equation describing the sky-diverâ€™s motion. See the Session 4 Advanced Computing Worksheet for help using this function. For each jump listed below plot the altitude and velocity of the skydiver against time and calculate the total time taken for the jump.
+# 
+# ## Scenario a)
+# <strong> The parachute is open for the whole jump </strong>
 
-\begin{equation}
-  F_{Drag} = -kv^2,
-\end{equation}
+# In[1]:
 
-where $k$ = 0.7kgm$^{-1}$s$^2$ with the parachute closed and k = 30kgm$^{-1}$s$^2$ with the parachute open. The skydiver performs a series of 3 jumps from an altitude of 3000m. To perform the jump safely, the speed of the skydiver must be less than 10m/s when they land.
-
-Use the <samp>scipy.integrate.odeint</samp> function to solve the differential equation describing the sky-diver’s motion. See the Session 4 Advanced Computing Worksheet for help using this function. For each jump listed below plot the altitude and velocity of the skydiver against time and calculate the total time taken for the jump.
-
-## Scenario a)
-<strong> The parachute is open for the whole jump </strong>
 
 import numpy as np
 from scipy.integrate import odeint
 from matplotlib import pyplot as plt
+
+
+# In[2]:
+
 
 # Define constants
 g = -9.8
@@ -78,8 +88,11 @@ plt.tight_layout()
 plt.show()
 
 
-## Scenario b)
-<strong> The jump is performed using a static line 1000 m in length. Therefore the parachute opens when the skydiver is 1000 m below the plane </strong>
+# ## Scenario b)
+# <strong> The jump is performed using a static line 1000 m in length. Therefore the parachute opens when the skydiver is 1000 m below the plane </strong>
+
+# In[3]:
+
 
 length_of_line = 1000
 
@@ -139,8 +152,12 @@ plt.tight_layout()
 
 plt.show()
 
-## Scenario c)
-<strong> The skydiver deploys their parachute to minimise the total time taken for the jump, whilst still landing safely </strong>
+
+# ## Scenario c)
+# <strong> The skydiver deploys their parachute to minimise the total time taken for the jump, whilst still landing safely </strong>
+
+# In[4]:
+
 
 # Define new function
 def variable_line(variables, t, h_open):  # Variables will be a list with the form [x, v]
@@ -211,7 +228,10 @@ plt.tight_layout()
 plt.show()
 
 
-From the left hand graph we can see that time of the jump is minimised by opening the parachute as close to the ground as possible. Therefore we need to find the largest distance below the plane where the final speed of the skydiver is less than 10 m/s.
+# From the left hand graph we can see that time of the jump is minimised by opening the parachute as close to the ground as possible. Therefore we need to find the largest distance below the plane where the final speed of the skydiver is less than 10 m/s.
+
+# In[5]:
+
 
 # Find latest trajectory where the final velocity of the skydiver is less than 10 m/s
 index_of_fastest_trajectory = np.where(v_landing > -10)[-1][-1] # Remeber velocity is downwards
@@ -220,3 +240,4 @@ v_fastest = v_landing[index_of_fastest_trajectory]
 
 print("The shortest time in which the skydiver can safely complete the jump is %.3f" % t_fastest) 
 print("The skydiver lands with a velocity of %.3f" % v_fastest)
+

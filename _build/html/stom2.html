@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 2 - Answers &#8212; PyProblems</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 3" href="stom3Q.html" />
+    <link rel="prev" title="Problem 2" href="stom2Q.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PyProblems</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Imperial Physics PyProblems
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="year1.html">
+   First Year Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="year2.html">
+   Second Year Curriculum
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="reference internal" href="stom.html">
+     Statistics of Measurement
+    </a>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4Q.html">
+       Problem 4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stom4.html">
+       Problem 4 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="qm.html">
+     Quantum Mechanics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qm3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermo.html">
+     Thermodynamics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="thermo3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nuclear.html">
+     Nuclear Physics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1Q.html">
+       Problem 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc1.html">
+       Problem 1 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2Q.html">
+       Problem 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc2.html">
+       Problem 2 - Answers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3Q.html">
+       Problem 3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nuc3.html">
+       Problem 3 - Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="optics.html">
+     Optics
+    </a>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1Q.html">
+       Problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="optics1.html">
+       Answers
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="year3.html">
+   Third Year Curriculum
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/stom2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/stom2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/stom2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-statement-from-the-problem-sheets-canonical-variation-a">
+   Problem statement (from the problem sheets) - canonical variation (a)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup">
+     Setup
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-a-function-which-plays-the-game-once-with-an-option-to-switch-or-stay">
+     Define a function which ‘plays’ the game once with an option to switch or stay
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#play-the-game-without-switching">
+     Play the game
+     <em>
+      without
+     </em>
+     switching
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#play-the-game-with-switching">
+     Play the game
+     <em>
+      with
+     </em>
+     switching
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-statement-from-the-problem-sheets-variation-b">
+   Problem statement (from the problem sheets) - variation (b)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Play the game
+     <em>
+      without
+     </em>
+     switching
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Play the game
+     <em>
+      with
+     </em>
+     switching
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-2-answers">
+<h1>Problem 2 - Answers<a class="headerlink" href="#problem-2-answers" title="Permalink to this headline">¶</a></h1>
+<p><strong>The Monty Hall Problem</strong></p>
+<div class="section" id="problem-statement-from-the-problem-sheets-canonical-variation-a">
+<h2>Problem statement (from the problem sheets) - canonical variation (a)<a class="headerlink" href="#problem-statement-from-the-problem-sheets-canonical-variation-a" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>In a game, you can pick one of three doors, labelled A, B and C. Behind one of
+the three doors lies a highly desirable prize, such as the solutions to next summer’s
+exams. After you have chosen, but not opened, one door (e.g., door A) the person
+who is presenting the game opens one of the remaining two doors so as to reveal that
+there is no prize behind it (e.g., door C might be opened). Notice that the gameshow
+presenter knows that the door he opens has no prize behind it. At this point you can
+either stick with your original choice (door A) or switch to the door which remains
+closed (door B). At the end, all doors are opened, at which point you will only win if
+the prize is behind your chosen door. Should you stick with your choice or is it better
+to switch? Justify your answers.</p>
+</div></blockquote>
+<div class="section" id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span> <span class="nn">numbers</span> <span class="kn">import</span> <span class="n">Number</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Homogenise matplotlib plotting.</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s2">&quot;axes&quot;</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s2">&quot;grid&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s2">&quot;legend&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="define-a-function-which-plays-the-game-once-with-an-option-to-switch-or-stay">
+<h3>Define a function which ‘plays’ the game once with an option to switch or stay<a class="headerlink" href="#define-a-function-which-plays-the-game-once-with-an-option-to-switch-or-stay" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">monty_hall</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the result of one iteration of the Monty Hall problem.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    switch : bool</span>
+<span class="sd">        If true, switch when the host opens on of the two remaining doors.</span>
+<span class="sd">    rng : numpy random Generator or None</span>
+<span class="sd">        Generator which can be used to make runs repeatable if given.</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    outcome : bool</span>
+<span class="sd">        True if the winning door was guessed correctly, false otherwise.</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">rng</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Initialise the random number generator.</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
+
+    <span class="c1"># We want 3 doors.</span>
+    <span class="n">doors</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+
+    <span class="c1"># To make debugging easier, we can use the door names &#39;A&#39;, &#39;B&#39;, and &#39;C&#39; directly.</span>
+
+    <span class="c1"># Choose the door containing the prize.</span>
+    <span class="n">prize_door</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">doors</span><span class="p">)</span>
+
+    <span class="c1"># Choose a door randomly.</span>
+    <span class="n">chosen_door</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">doors</span><span class="p">)</span>
+
+    <span class="c1"># The host opens one of the remaining doors randomly, provided there is no prize behind it.</span>
+    <span class="n">remaining_doors</span> <span class="o">=</span> <span class="p">[</span><span class="n">door</span> <span class="k">for</span> <span class="n">door</span> <span class="ow">in</span> <span class="n">doors</span> <span class="k">if</span> <span class="n">door</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">chosen_door</span><span class="p">,</span> <span class="n">prize_door</span><span class="p">)]</span>
+    <span class="n">open_door</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">remaining_doors</span><span class="p">)</span>
+
+    <span class="c1"># Depending on the `switch` option, switch.</span>
+    <span class="k">if</span> <span class="n">switch</span><span class="p">:</span>
+        <span class="c1"># Calculate the doors which are available, i.e. not opened.</span>
+        <span class="n">available_doors</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">door</span> <span class="k">for</span> <span class="n">door</span> <span class="ow">in</span> <span class="n">doors</span> <span class="k">if</span> <span class="n">door</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">open_door</span><span class="p">,</span> <span class="n">chosen_door</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">available_doors</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="n">chosen_door</span> <span class="o">=</span> <span class="n">available_doors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Determine the outcome.</span>
+    <span class="k">return</span> <span class="n">chosen_door</span> <span class="o">==</span> <span class="n">prize_door</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="play-the-game-without-switching">
+<h3>Play the game <em>without</em> switching<a class="headerlink" href="#play-the-game-without-switching" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Play the game multiple times.</span>
+<span class="n">outcomes</span> <span class="o">=</span> <span class="p">[</span><span class="n">monty_hall</span><span class="p">(</span><span class="n">rng</span><span class="o">=</span><span class="n">rng</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">Counter</span><span class="p">(</span><span class="n">outcomes</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;lose&quot;</span><span class="p">,</span> <span class="s2">&quot;win&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stom2_6_0.png" src="_images/stom2_6_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="play-the-game-with-switching">
+<h3>Play the game <em>with</em> switching<a class="headerlink" href="#play-the-game-with-switching" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Play the game multiple times.</span>
+<span class="n">outcomes</span> <span class="o">=</span> <span class="p">[</span><span class="n">monty_hall</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="n">rng</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">Counter</span><span class="p">(</span><span class="n">outcomes</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;lose&quot;</span><span class="p">,</span> <span class="s2">&quot;win&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stom2_8_0.png" src="_images/stom2_8_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="problem-statement-from-the-problem-sheets-variation-b">
+<h2>Problem statement (from the problem sheets) - variation (b)<a class="headerlink" href="#problem-statement-from-the-problem-sheets-variation-b" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>In a variation, after you have chosen door A, you are given the choice to open one
+of the remaining doors B or C. Notice that this time, the person opening the door
+does not know whether the prize is behind it or not. You pick door C, and upon
+opening it you discover there is nothing behind it. At this point you are again free to
+either stick with door A or to switch to door B. Are the probabilities different from
+the previous scenario? Justify your answers.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">monty_hall_b</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the result of one iteration of the varied Monty Hall problem.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    switch : bool</span>
+<span class="sd">        If true, switch again after having opened one door without winning.</span>
+<span class="sd">    rng : numpy random Generator or None</span>
+<span class="sd">        Generator which can be used to make runs repeatable if given.</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    outcome : bool</span>
+<span class="sd">        True if the winning door was guessed correctly, false otherwise.</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">rng</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Initialise the random number generator.</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
+
+    <span class="c1"># We want 3 doors.</span>
+    <span class="n">doors</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+
+    <span class="c1"># To make debugging easier, we can use the door names &#39;A&#39;, &#39;B&#39;, and &#39;C&#39; directly.</span>
+
+    <span class="c1"># Choose the door containing the prize.</span>
+    <span class="n">prize_door</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">doors</span><span class="p">)</span>
+
+    <span class="c1"># Choose a door randomly.</span>
+    <span class="n">chosen_door</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">doors</span><span class="p">)</span>
+
+    <span class="c1"># Pick a second door such that no prize is behind it.</span>
+    <span class="n">second_chosen_door</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">door</span> <span class="k">for</span> <span class="n">door</span> <span class="ow">in</span> <span class="n">doors</span> <span class="k">if</span> <span class="n">door</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">prize_door</span><span class="p">,</span> <span class="n">chosen_door</span><span class="p">)]</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">second_chosen_door</span> <span class="o">==</span> <span class="n">prize_door</span><span class="p">:</span>
+        <span class="c1"># If the correct door was picked, the game is won!</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="c1"># Since the prize was not behind `second_chosen_door`, one now has the option</span>
+    <span class="c1"># between sticking with the original `chosen_door`, or switching.</span>
+    <span class="k">if</span> <span class="n">switch</span><span class="p">:</span>
+        <span class="c1"># Calculate the doors which are available, i.e. not opened.</span>
+        <span class="n">available_doors</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">door</span> <span class="k">for</span> <span class="n">door</span> <span class="ow">in</span> <span class="n">doors</span> <span class="k">if</span> <span class="n">door</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">chosen_door</span><span class="p">,</span> <span class="n">second_chosen_door</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">available_doors</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="n">chosen_door</span> <span class="o">=</span> <span class="n">available_doors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Determine the outcome.</span>
+    <span class="k">return</span> <span class="n">chosen_door</span> <span class="o">==</span> <span class="n">prize_door</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Play the game <em>without</em> switching<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Play the game multiple times.</span>
+<span class="n">outcomes</span> <span class="o">=</span> <span class="p">[</span><span class="n">monty_hall_b</span><span class="p">(</span><span class="n">rng</span><span class="o">=</span><span class="n">rng</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">Counter</span><span class="p">(</span><span class="n">outcomes</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;lose&quot;</span><span class="p">,</span> <span class="s2">&quot;win&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stom2_12_0.png" src="_images/stom2_12_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Play the game <em>with</em> switching<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Play the game multiple times.</span>
+<span class="n">outcomes</span> <span class="o">=</span> <span class="p">[</span><span class="n">monty_hall_b</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="n">rng</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">Counter</span><span class="p">(</span><span class="n">outcomes</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;lose&quot;</span><span class="p">,</span> <span class="s2">&quot;win&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stom2_14_0.png" src="_images/stom2_14_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="stom2Q.html" title="previous page">Problem 2</a>
+    <a class='right-next' id="next-link" href="stom3Q.html" title="next page">Problem 3</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Imperial College Physics Department<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

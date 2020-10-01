@@ -1,8 +1,14 @@
-# Problem 1 - Answers
+#!/usr/bin/env python
+# coding: utf-8
 
-## a) Plotting potential data from file 
+# # Problem 1 - Answers
+# 
+# ## a) Plotting potential data from file 
+# 
+# <strong>Plot the potential given by the data in file <samp>Potential.txt</samp></strong><br>
 
-<strong>Plot the potential given by the data in file <samp>Potential.txt</samp></strong><br>
+# In[7]:
+
 
 import numpy as np
 from matplotlib import pyplot as plt
@@ -29,12 +35,16 @@ plt.xlabel("x")
 plt.ylabel("U(x)")
 plt.show()
 
-## b) Find equilibrium points
-<strong>Find the equilibrium point(s) of the potential and show if they are stable or unstable.<br></strong>
-You can use <samp>scipy.interpolate.interp1d</samp> to create a function which you can then solve using <samp>fsolve</samp>. Use the <samp>xtol</samp> parameter to specify a sensible value for the tolerance in your solution.
-<br>
-The equilibrium points are found where the derivative of the funciton is 0.
-Equilibria are unstable if the second derivative is negative, stable if the second derivative is possitive, and inderterminate if the second derivative is 0.
+
+# ## b) Find equilibrium points
+# <strong>Find the equilibrium point(s) of the potential and show if they are stable or unstable.<br></strong>
+# You can use <samp>scipy.interpolate.interp1d</samp> to create a function which you can then solve using <samp>fsolve</samp>. Use the <samp>xtol</samp> parameter to specify a sensible value for the tolerance in your solution.
+# <br>
+# The equilibrium points are found where the derivative of the funciton is 0.
+# Equilibria are unstable if the second derivative is negative, stable if the second derivative is possitive, and inderterminate if the second derivative is 0.
+
+# In[8]:
+
 
 # Import scipy interpolation
 from scipy.interpolate import interp1d
@@ -85,8 +95,12 @@ plt.xlabel("x")
 plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))  # Put legend outside plot
 plt.show()
 
-## c) Find the maximum energy of a bound particle
-The maximum energy of the bound particle is just less than value of the unstable equilibrium point 
+
+# ## c) Find the maximum energy of a bound particle
+# The maximum energy of the bound particle is just less than value of the unstable equilibrium point 
+
+# In[9]:
+
 
 E_max = f_potential(zero_point2)
 print("The maximum allowed energy of the particle is %.3f" % E_max)
@@ -98,8 +112,12 @@ plt.xlabel("x")
 plt.legend()
 plt.show()
 
-## d) Find the allowed region for this bound particle.
-We have already found the rightmost point. We now need to find the point where U(x) = E_max
+
+# ## d) Find the allowed region for this bound particle.
+# We have already found the rightmost point. We now need to find the point where U(x) = E_max
+
+# In[10]:
+
 
 # Solve for the point where the lines U(x) and E_max intersect
 # i.e. U(x) - E_max = 0
@@ -122,3 +140,4 @@ plt.grid()
 plt.xlabel("x")
 plt.legend()
 plt.show()
+

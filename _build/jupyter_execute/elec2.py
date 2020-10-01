@@ -1,16 +1,22 @@
-# Problem 2 - Answers
+#!/usr/bin/env python
+# coding: utf-8
 
-## Imports and Setup
+# # Problem 2 - Answers
+# 
+# ## Imports and Setup
+# 
+# Matplotlib inline plotting will set the matplotlib backend to ensure that the plots will not appear in a separate window, but rather in the notebook itself. 
+# Of course plots can always be saved to a separate file using the `savefig` command or shown in a separate window by changing the [matplotlib backend](https://matplotlib.org/3.1.1/tutorials/introductory/usage.html#backends) (advanced!).
+#                                                                                                                                                                                                                                                                                    
+# These imported packages are used throughout the Jupyter Notebook.                                                                                                                                                      
+# The [matplotlib](https://matplotlib.org/) package is used for plotting, while [NumPy](https://numpy.org/) is used for underlying numerical calculations.
+# [SciPy](https://www.scipy.org/) provides multiple advanced routines, such as routines for solving differential equations which are used in this notebook.
+# The electrostatics module defines simple routines to calculated electric fields for different arrangements of charges.
 
-Matplotlib inline plotting will set the matplotlib backend to ensure that the plots will not appear in a separate window, but rather in the notebook itself. 
-Of course plots can always be saved to a separate file using the `savefig` command or shown in a separate window by changing the [matplotlib backend](https://matplotlib.org/3.1.1/tutorials/introductory/usage.html#backends) (advanced!).
-                                                                                                                                                                                                                                                                                   
-These imported packages are used throughout the Jupyter Notebook.                                                                                                                                                      
-The [matplotlib](https://matplotlib.org/) package is used for plotting, while [NumPy](https://numpy.org/) is used for underlying numerical calculations.
-[SciPy](https://www.scipy.org/) provides multiple advanced routines, such as routines for solving differential equations which are used in this notebook.
-The electrostatics module defines simple routines to calculated electric fields for different arrangements of charges.
+# In[1]:
 
-%matplotlib inline
+
+get_ipython().run_line_magic('matplotlib', 'inline')
 
 from functools import partial
 
@@ -24,9 +30,13 @@ from electrostatics import E_dir
 mpl.rc("figure", figsize=(10, 10))
 mpl.rc("font", size=16)
 
-## Geometry Functions
 
-These functions are designed to carry out essential geometric manipulations with the overall goal of being able to generate multiple seed coordinates regularly spaced around a given coordinate (like a charge's position).
+# ## Geometry Functions
+# 
+# These functions are designed to carry out essential geometric manipulations with the overall goal of being able to generate multiple seed coordinates regularly spaced around a given coordinate (like a charge's position).
+
+# In[2]:
+
 
 def get_rot_matrix(rad):
     """Return the 2D rotation matrix given an angle (in radians)."""
@@ -58,11 +68,15 @@ def generate_circular_coords(centre_x, centre_y, radius, offset_deg, samples):
         coords.append(rot_matrix.dot(start_vec))
     return np.hstack(coords) + np.array([[centre_x], [centre_y]], dtype=np.float64)
 
-## Calculating the Field Lines
 
-These functions actually carry out the field line calculations, by integrating the differential equations governing the direction of the field lines until certain criteria are met. 
+# ## Calculating the Field Lines
+# 
+# These functions actually carry out the field line calculations, by integrating the differential equations governing the direction of the field lines until certain criteria are met. 
+# 
+# Besides the usual caveats regarding the nature of numerical integration, the most important shortcoming of this algorithm is its failure to handle field lines which extend infinitely. On its own, this is no problem, since the integration can simply be terminated at some arbitrary distance (which is the way it is handled here). However, if one relies on the termination of field lines at other charges to satisfy the proportionality between the field strength and the number of field lines, then 'losing' a field line like this is only acceptable if &mdash; by some symmetry &mdash; the corresponding field line is recovered at the other charge. 
 
-Besides the usual caveats regarding the nature of numerical integration, the most important shortcoming of this algorithm is its failure to handle field lines which extend infinitely. On its own, this is no problem, since the integration can simply be terminated at some arbitrary distance (which is the way it is handled here). However, if one relies on the termination of field lines at other charges to satisfy the proportionality between the field strength and the number of field lines, then 'losing' a field line like this is only acceptable if &mdash; by some symmetry &mdash; the corresponding field line is recovered at the other charge. 
+# In[3]:
+
 
 def exp_value_format(values, sig=1):
     """Exponential string formatting of input values."""
@@ -295,9 +309,13 @@ def plot_field_line(
             size=arrow_size,
         )
 
-### A Simple Configuration
 
-This simple case will depict field lines from two charges at positions (-1, 0) and (1, 0) with charges 1 and -1 respectively.
+# ### A Simple Configuration
+# 
+# This simple case will depict field lines from two charges at positions (-1, 0) and (1, 0) with charges 1 and -1 respectively.
+
+# In[4]:
+
 
 charges = np.array([1, -1])
 positions = np.array([(-1, 0), (1, 0)]).T
@@ -339,10 +357,14 @@ plt.plot(*positions[:, 1], marker="o", label="-ve", ms=7)
 
 _ = plt.legend(loc="best")
 
-### Expanding upon the Simple Configuration
 
-This example is similar to the one above, in that all the charges have magnitude 1. The top dipole is a mirrored version of the previous two charges.
-The charges in this example are positioned at (1, 1), (1, -1), (-1, -1), and (-1, 1) with charges 1, -1, 1, and -1 respectively.
+# ### Expanding upon the Simple Configuration
+# 
+# This example is similar to the one above, in that all the charges have magnitude 1. The top dipole is a mirrored version of the previous two charges.
+# The charges in this example are positioned at (1, 1), (1, -1), (-1, -1), and (-1, 1) with charges 1, -1, 1, and -1 respectively.
+
+# In[5]:
+
 
 charges = np.array([1, -1, 1, -1])
 positions = np.array([(1, 1), (1, -1), (-1, -1), (-1, 1)]).T
@@ -383,15 +405,19 @@ plt.plot(*positions[:, 1::2], marker="o", label="-ve", ms=7, linestyle="", color
 
 _ = plt.legend(loc="best")
 
-### A More Complicated Example
 
-In this example, 4 charges are placed at the vertices of a square, ie. at (1, 1), (1, -1), (-1, -1), and (-1, 1). 
-These charges are all of magnitude 1.
+# ### A More Complicated Example
+# 
+# In this example, 4 charges are placed at the vertices of a square, ie. at (1, 1), (1, -1), (-1, -1), and (-1, 1). 
+# These charges are all of magnitude 1.
+# 
+# Another charge is placed in the centre of the square at (0, 0), with charge -2.
+# This introduces the challenge of satisfying the proportionality between the number of field lines and the electric field magnitude.
+# Here, this is solved simply by only plotting field lines connected to the outer 4 charges.
+# The inner charge is merely a destination for field lines to terminate at (speaking from the viewpoint of the integration).
 
-Another charge is placed in the centre of the square at (0, 0), with charge -2.
-This introduces the challenge of satisfying the proportionality between the number of field lines and the electric field magnitude.
-Here, this is solved simply by only plotting field lines connected to the outer 4 charges.
-The inner charge is merely a destination for field lines to terminate at (speaking from the viewpoint of the integration).
+# In[6]:
+
 
 import warnings
 
@@ -432,3 +458,4 @@ plt.plot(*positions[:, 0:4], marker="o", label="+ve", ms=8, linestyle="", color=
 plt.plot(*positions[:, 4:], marker="o", label="-ve", ms=8, linestyle="", color="C1")
 
 _ = plt.legend(loc="best")
+

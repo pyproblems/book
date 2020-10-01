@@ -1,4 +1,10 @@
-# Problem 4 - Answers
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Problem 4 - Answers
+
+# In[1]:
+
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,7 +12,11 @@ from scipy.integrate import solve_ivp
 from scipy import constants as CONSTANTS
 from matplotlib.patches import Circle
 
-Define the constants we'll use throughout. It's best practice to name constants in `ALL_CAPS`
+
+# Define the constants we'll use throughout. It's best practice to name constants in `ALL_CAPS`
+
+# In[2]:
+
 
 # Constants
 M_EARTH = 5.972E24     # Mass of the earth (kg)
@@ -17,6 +27,10 @@ GRAV = CONSTANTS.gravitational_constant
 YEAR = CONSTANTS.year
 DAY = CONSTANTS.day
 
+
+# In[3]:
+
+
 # We can reuse this from Part I but now use the mass of the Earth, not the Sun!
 def update_function(t, X):
     
@@ -26,23 +40,31 @@ def update_function(t, X):
     # Calculate radial distance
     radial_dist = np.sqrt(x_pos ** 2 + y_pos ** 2)
     
-    # Calculate each component of acceleration
+    #Â Calculate each component of acceleration
     x_acc = - GRAV * M_EARTH * x_pos / (radial_dist ** 3)
     y_acc = - GRAV * M_EARTH * y_pos / (radial_dist ** 3)
     
     return [x_vel, y_vel, x_acc, y_acc]
 
-## Closest Approach
+
+# ## Closest Approach
+
+# In[4]:
+
 
 # Evaluation times
 t_eval = np.linspace(0.0, 100.0 * DAY, 1000000)
 
+
+# In[5]:
+
+
 # Asteroid's initial position (polar coords)
 initial_angle = 3 * PI / 4           # radians
-initial_radius = 1000.0 * R_EARTH    # metres
+initial_radius = 1000.0 * R_EARTH    #Â metres
 
 # Asteroid's initial velocity (polar coords)
-initial_radial_vel = - 1000.0        # metres per second
+initial_radial_vel = - 1000.0        #Â metres per second
 initial_perpnd_vel = 13.0            # metres per second (+ve is anticlockwise)
 
 # Convert to cartesian position
@@ -56,11 +78,15 @@ asteroid_vy0 = initial_radial_vel * np.sin(initial_angle) + initial_perpnd_vel *
 # Asteroid initial state vector
 X_0 = np.array([asteroid_x0, asteroid_y0, asteroid_vx0, asteroid_vy0])
 
-# Integrate
+#Â Integrate
 solution = solve_ivp(update_function, [0.0, t_eval[-1]], X_0, method='Radau', t_eval=t_eval)
 
 # Get the solution
 x, y, vx, vy = solution.y
+
+
+# In[6]:
+
 
 fig, ax = plt.subplots(1, 2)
 
@@ -86,20 +112,36 @@ fig.tight_layout()
 fig.savefig('./asteroid_initial_trajectory.pdf')
 plt.show()
 
-The closest approach occurs when the radius is at a minimum
+
+# The closest approach occurs when the radius is at a minimum
+
+# In[7]:
+
 
 closest_approach_index = np.argmin(np.hypot(x, y))
+
+
+# In[8]:
+
 
 print('Closest approach distance = %.2f R_E' % (np.hypot(x, y)[closest_approach_index] / R_EARTH))
 print('Time of closest approach = %.2f days' % (t_eval[closest_approach_index] / DAY))
 print('Speed at closest approach = %.2f km/s' % (np.hypot(vx, vy)[closest_approach_index] / 1.0E3))
 
-## Impact Probability
+
+# ## Impact Probability
+
+# In[9]:
+
 
 # Get normally distributed samples of initial radius
 # (more samples = more accurate estimate)
 N_SAMPLES = 100
 radius_distribution = np.random.normal(initial_radius, 150.0 * R_EARTH, N_SAMPLES)
+
+
+# In[10]:
+
 
 x, y = [], []
 
@@ -113,7 +155,7 @@ for radius_sample in radius_distribution:
     asteroid_vy0 = initial_radial_vel * np.sin(initial_angle) + initial_perpnd_vel * np.cos(initial_angle)
     X_0 = np.array([asteroid_x0, asteroid_y0, asteroid_vx0, asteroid_vy0])
 
-    # Integrate the equations
+    #Â Integrate the equations
     solution = solve_ivp(update_function, [0.0, t_eval[-1]], X_0, method='Radau', t_eval=t_eval)
 
     # Save the solution
@@ -126,8 +168,16 @@ for radius_sample in radius_distribution:
         x.append(x_[mask])
         y.append(y_[mask])
 
+
+# In[11]:
+
+
 # For each of the runs above we find the closest approach
 closest_approaches = np.array([np.hypot(x[i], y[i]).min() for i in range(len(x))])
+
+
+# In[12]:
+
 
 fig, ax = plt.subplots(1, 2)
 
@@ -155,18 +205,26 @@ fig.tight_layout()
 fig.savefig('./orbit_distribution.png', dpi=150)
 plt.show()
 
-The chance of the asteroid impacting is just the number of hits as a fraction of the total
+
+# The chance of the asteroid impacting is just the number of hits as a fraction of the total
+
+# In[13]:
+
 
 print("Impact probability = %.2f%%" % (100 * (closest_approaches < R_EARTH).sum() / N_SAMPLES))
 
-## Avoiding Impact
+
+# ## Avoiding Impact
+
+# In[14]:
+
 
 # Asteroid's initial position (polar coords)
 initial_angle = 3 * PI / 4                     # radians
-initial_radius = 750.0 * R_EARTH    # metres
+initial_radius = 750.0 * R_EARTH    #Â metres
 
 # Asteroid's initial velocity (polar coords)
-initial_radial_vel = - 1000.0        # metres per second
+initial_radial_vel = - 1000.0        #Â metres per second
 initial_perpnd_vel = 13.0            # metres per second (+ve is anticlockwise)
 
 # Convert to cartesian position
@@ -180,8 +238,16 @@ asteroid_vy0 = initial_radial_vel * np.sin(initial_angle) + initial_perpnd_vel *
 # Asteroid initial state vector
 X_0 = np.array([asteroid_x0, asteroid_y0, asteroid_vx0, asteroid_vy0])
 
+
+# In[15]:
+
+
 boost_speeds = np.linspace(0.0, 100.0, 51)     # Sample boost speeds
 R_ORBIT = 50.0 * R_EARTH                       # Radius of rocket orbit
+
+
+# In[16]:
+
 
 x, y = [], []
 
@@ -197,12 +263,12 @@ for BOOST_SPEED in boost_speeds:
         # Calculate radial distance
         radial_dist = np.sqrt(x_pos ** 2 + y_pos ** 2)
 
-        # Calculate each component of acceleration
+        #Â Calculate each component of acceleration
         x_acc = - GRAV * M_EARTH * x_pos / (radial_dist ** 3)
         y_acc = - GRAV * M_EARTH * y_pos / (radial_dist ** 3)
 
         # When the asteroid reaches the rocket's orbit, fire the booster
-        # (we use a tolerance of 10.0 * earth radius to check this)
+        #Â (we use a tolerance of 10.0 * earth radius to check this)
         if (np.abs(np.hypot(x_pos, y_pos) - R_ORBIT) < (10.0 * R_EARTH)):
 
             # Point the boost perpendicular to the asteroid's velocity
@@ -220,7 +286,7 @@ for BOOST_SPEED in boost_speeds:
     asteroid_vy0 = initial_radial_vel * np.sin(initial_angle) + initial_perpnd_vel * np.cos(initial_angle)
     X_0 = np.array([asteroid_x0, asteroid_y0, asteroid_vx0, asteroid_vy0])
 
-    # Integrate the equations
+    #Â Integrate the equations
     solution = solve_ivp(update_function_with_rocket, [0.0, t_eval[-1]], X_0, method='Radau', t_eval=t_eval)
 
     # Save the solution
@@ -232,6 +298,10 @@ for BOOST_SPEED in boost_speeds:
     if mask.sum() > 0.0:
         x.append(x_[mask])
         y.append(y_[mask])
+
+
+# In[17]:
+
 
 fig, ax = plt.subplots()
 
@@ -253,7 +323,7 @@ ax.axvline(0.0, linewidth=0.5, alpha=0.5, color='k')
 ax.set(xlim=[-2, 2], ylim=[-2, 2], 
        xlabel='$x\,/\,R_\mathrm{E}$', ylabel='$y\,/\,R_\mathrm{E}$')
 
-# Fake image plot to set the colorbar colormap
+#Â Fake image plot to set the colorbar colormap
 cm = ax.imshow(np.ones((10, 10)), extent=[-100, -99, -100, -99],
                 cmap='viridis', vmin=boost_speeds[0], vmax=boost_speeds[-1])
     
@@ -264,9 +334,21 @@ fig.tight_layout()
 fig.savefig('./boost_speeds.png', dpi=150)
 plt.show()
 
+
+# In[18]:
+
+
 closest_approaches = np.array([np.hypot(x[i], y[i]).min() for i in range(len(x))])
 
+
+# In[19]:
+
+
 fit = np.polyfit(boost_speeds, closest_approaches / R_EARTH, 1)
+
+
+# In[20]:
+
 
 fig, ax = plt.subplots()
 
@@ -282,6 +364,16 @@ fig.set_size_inches(6, 6)
 fig.tight_layout()
 plt.show()
 
+
+# In[21]:
+
+
 # Solve for y = 1
 print('Boost velocity = %.2f m/s' % ((1 - fit[1]) / fit[0]))
+
+
+# In[ ]:
+
+
+
 
