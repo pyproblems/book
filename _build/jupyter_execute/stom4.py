@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Problem 4 - Answers
-# 
-# **Random Dice and the CLT**
+# # Random Dice and the CLT
 
-# ## Setup
+# #### Setup
 
 # In[1]:
 
@@ -21,12 +19,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from IPython.display import HTML, display_html
+from IPython.display import display_html
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 from scipy.ndimage import label
 from scipy.optimize import fmin
 from scipy.stats import chisquare, norm
-from tqdm import tqdm, trange
+from tqdm.notebook import tqdm, trange
 
 # Homogenise matplotlib plotting.
 mpl.rc("axes", grid=True)
@@ -276,7 +274,7 @@ def sum_dice_std(dice=None, n=6):
     return total_var ** 0.5
 
 
-# ## Sample from the distribution of the sum of 10 6-sided dice
+# ### Sample from the distribution of the sum of 10 6-sided dice
 
 # In[3]:
 
@@ -347,7 +345,7 @@ sampled = get_sampled_sums(dice=dice, n=n, size=n_samples, rng=rng)
 _ = sampled.plot.bar(figsize=(8, 4), rot=0)
 
 
-# ### Compare sampled values to the analytical results
+# #### Compare sampled values to the analytical results
 
 # In[4]:
 
@@ -375,7 +373,7 @@ df = pd.concat((expected, sampled, bin_centres), axis=1)
 _ = df.plot.bar(figsize=(10, 4), rot=0)
 
 
-# ## Compare continuity correction with the bin centre approach
+# ### Compare continuity correction with the bin centre approach
 
 # In[5]:
 
@@ -422,7 +420,7 @@ _ = df_corr.plot.bar(
 )
 
 
-# ## Write a function that joins adjacent bins with probabilities that are too low
+# ### Write a function that joins adjacent bins with probabilities that are too low
 
 # In[6]:
 
@@ -584,17 +582,17 @@ bins_old = pd.DataFrame(
     {"bin_edge": bin_edges, "probability": probabilities}
 ).set_index("bin_edge")
 
-display_html(HTML(bins_old._repr_html_()))
+display_html(bins_old)
 
 new_edges, new_probs = join_bins(bin_edges, probabilities, min_prob=0.06)
 print("Joined bins:")
 bins_new = pd.DataFrame({"bin_edge": new_edges, "probability": new_probs}).set_index(
     "bin_edge"
 )
-display_html(HTML(bins_new._repr_html_()))
+display_html(bins_new)
 
 
-# ## Test the CLT
+# ### Test the CLT
 
 # In[7]:
 

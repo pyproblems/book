@@ -1,6 +1,4 @@
-# Problem 4
-
-**The CLT applied to sums of dice**
+# The CLT applied to sums of dice
 
 Using the functions created in the first exercise, you will estimate the sum of of particular die combinations, comparing this to the calculated analytical results.
 
@@ -11,7 +9,7 @@ Using the functions created in the first exercise, you will estimate the sum of 
  3. Compute the analytical expected probability for each of the bins above, and compare the sampled results to the expected results using a grouped bar chart.
  Also sample the normal distribution with the expected mean and standard deviation of the sum at the bin centres and add this to the grouped bar chart (after normalisation of the probabilities, ensuring they add up to 1).
  4. Write a function that calculates the expected probabilities in each bin using the normal distribution and a continuity correction: instead of sampling the normal distribution's pdf at the bin centres, calculate the probability contained within $\pm 0.5$ of each bin (or to $\pm \infty$ at the edges of the dstribution).
- 5. Compare the results of the above function, for the case in Task 3., adding this to the grouped bar chart.
+ 5. Compare the results of the above function, for the case in Task 3, adding this to the grouped bar chart.
  6. In preparation for the next task, write a function that takes bin edges, the corresponding probabilities for each bin, and a probability threshold as arguments, and joins together those bins which are below the threshold.
  The function should return a set of bin edges and associated probabilities, where each of the bins now has a probability that exceeds the given threshold.
  This is important to satisfy the requirement for the chi-squared test regarding the minimum number of samples per bin at the tails of the distribution of the dice sums.

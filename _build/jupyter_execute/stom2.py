@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Problem 2 - Answers
+# # The Monty Hall Problem
 # 
-# **The Monty Hall Problem**
-# 
-# ## Problem statement (from the problem sheets) - canonical variation (a)
+# ### Problem statement (from the problem sheets) - canonical variation (a)
 # 
 # > In a game, you can pick one of three doors, labelled A, B and C. Behind one of
 # the three doors lies a highly desirable prize, such as the solutions to next summer’s
@@ -18,7 +16,7 @@
 # the prize is behind your chosen door. Should you stick with your choice or is it better
 # to switch? Justify your answers.
 
-# ### Setup
+# #### Setup
 
 # In[1]:
 
@@ -122,7 +120,7 @@ plt.bar(*zip(*Counter(outcomes).items()))
 _ = plt.xticks([0, 1], ["lose", "win"])
 
 
-# ## Problem statement (from the problem sheets) - variation (b)
+# ### Problem statement (from the problem sheets) - variation (b)
 # 
 # >  In a variation, after you have chosen door A, you are given the choice to open one
 # of the remaining doors B or C. Notice that this time, the person opening the door

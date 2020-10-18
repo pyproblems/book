@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Problem 1 - Answers
-# 
-# ## Random Dice
+# # Random Dice
 
-# ## Setup
+# #### Setup
 
 # In[1]:
 
@@ -75,7 +73,7 @@ occurrences = Counter(samples)
 occurrences
 
 
-# **The `occurrences` dictionary can be unpacked into the values and their counts using `zip`**
+# #### The `occurrences` dictionary can be unpacked into the values and their counts using `zip`
 
 # In[4]:
 
@@ -92,9 +90,9 @@ plt.figure(figsize=(8, 5))
 _ = plt.bar(values, counts)
 
 
-# ## Determine the conditional probability distribution distribution of 2 3-sided dice
+# ### Determine the conditional probability distribution distribution of 2 3-sided dice
 
-# ### Joint and marginal histogram plotting function
+# #### Joint and marginal histogram plotting function
 
 # In[6]:
 
@@ -199,7 +197,7 @@ df = pd.DataFrame({"die 1": outcomes[:, 0], "die 2": outcomes[:, 1]})
 _ = plot_joint_marginal(df)
 
 
-# ## Determine the conditional probability distribution of one of the 2 3-sided dice and their sum
+# ### Determine the conditional probability distribution of one of the 2 3-sided dice and their sum
 
 # In[8]:
 
@@ -219,7 +217,7 @@ df = pd.DataFrame({"die 1": outcomes[:, 0], "die 1 + die 2": np.sum(outcomes, ax
 _ = plot_joint_marginal(df, *df.columns, cbar_corner=(0.04, 0.65), cbar_height=0.35)
 
 
-# ## Use the previous `random_die` function in order to generate samples from the distributions of multiple N-sided die sums
+# ### Use the previous `random_die` function in order to generate samples from the distributions of multiple N-sided die sums
 
 # In[9]:
 
@@ -263,9 +261,9 @@ def random_dice(dice=None, size=None, n=6, rng=None):
     return sum(random_die(size=size, n=n_i, rng=rng) for n_i in n)
 
 
-# ## Two 4-sided dice
+# ### Two 4-sided dice
 
-# **The expected distribution is the sum of two discrete uniform distributions**
+# #### The expected distribution is the sum of two discrete uniform distributions
 # 
 # For a single discrete uniform distribution with $n$ values between $a$ and $b$, the probability of a given value is $1/n$.
 # 
@@ -284,7 +282,7 @@ def random_dice(dice=None, size=None, n=6, rng=None):
 # 
 # This is easily generalised to the sum of multiple discrete uniform distributions.
 
-# ## Define a function to generate the expected distribution of the sums of multiple N-sided dice
+# ### Define a function to generate the expected distribution of the sums of multiple N-sided dice
 
 # In[10]:
 
@@ -377,7 +375,7 @@ def sum_dice_distr(dice=None, n=6):
     return summed
 
 
-# ## Generate numerical results and and compare these to the expected distribution on a bar chart.
+# #### Generate numerical results and and compare these to the expected distribution on a bar chart.
 
 # In[11]:
 
@@ -415,9 +413,9 @@ df = pd.concat((pd.Series(counts, index=values, name="numerical"), expected), ax
 _ = df.plot.bar(rot=0)
 
 
-# ## Extend the functions to handle multiple dice with different numbers of sides
+# ### Extend the functions to handle multiple dice with different numbers of sides
 # 
-# **Generate samples for the sum of 6, 8, and 10 sided dice and plot the resulting bar plots**
+# #### Generate samples for the sum of 6, 8, and 10 sided dice and plot the resulting bar plots
 
 # In[12]:
 
@@ -542,7 +540,7 @@ def sum_dice_std(dice=None, n=6):
     return total_var ** 0.5
 
 
-# **Compare the sample and expected mean and standard deviation**
+# #### Compare the sample and expected mean and standard deviation
 
 # In[14]:
 

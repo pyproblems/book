@@ -48,6 +48,8 @@
     <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,7 +59,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Problem 1" href="stom1Q.html" />
+    <link rel="next" title="Random Dice" href="stom1Q.html" />
     <link rel="prev" title="Second Year Curriculum" href="year2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -116,42 +118,42 @@
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="stom1Q.html">
-       Problem 1
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom1.html">
-       Problem 1 - Answers
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2Q.html">
-       Problem 2
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2.html">
-       Problem 2 - Answers
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3Q.html">
-       Problem 3
+       Chi-square Tests and Parameter Estimation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3.html">
-       Problem 3 - Answers
+       Hypothesis testing
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4Q.html">
-       Problem 4
+       The CLT applied to sums of dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4.html">
-       Problem 4 - Answers
+       Random Dice and the CLT
       </a>
      </li>
     </ul>
@@ -357,6 +359,25 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes">
+   Notes
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -366,15 +387,23 @@
                 
   <div class="section" id="statistics-of-measurement">
 <h1>Statistics of Measurement<a class="headerlink" href="#statistics-of-measurement" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>In the first question, you will simulate random die throws, including the distribution of multiple N-sided dice.
 You will also visualise the two-dimensional probability distribution for the sum of two dice.
 Additionally, you will investigate the sum of an arbitrary number of N-sided dice both numerically and analytically.</p>
-<p>Next, you will investigate the Monty Hall problem numerically.
-You will explicitly simulate multiple iterations of the game show scenarios in order to test your previous hypothesis regarding door switching.</p>
+<p>Next, you will investigate two scenarios of the Monty Hall problem numerically.
+You will explicitly simulate multiple iterations of the game show scenarios in order to test your previous hypotheses regarding door switching.</p>
 <p>Thirdly, hypothesis testing, chi-square tests, and type I errors will be investigated.
 You will carry out hypothesis tests for continuous distributions and parameter estimation using both maximum likelihood estimation and minimisation of the chi-square statistic.</p>
-<p>The final question will combine the central limit theorem (CLT) and hypothesis testing, using the functions you created in question 1.</p>
+<p>The final question will combine the central limit theorem (CLT) and hypothesis testing, using the functions you created in the first question.</p>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>Ensure that all tasks are repeatable by seeding the random number generator you choose to use.
+You may have to do this for every cell in your notebooks in order to ensure that the output of each cell is repeatable, independent of the order in which (or number of times) they are run.</p>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -407,7 +436,7 @@ You will carry out hypothesis tests for continuous distributions and parameter e
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="year2.html" title="previous page">Second Year Curriculum</a>
-    <a class='right-next' id="next-link" href="stom1Q.html" title="next page">Problem 1</a>
+    <a class='right-next' id="next-link" href="stom1Q.html" title="next page">Random Dice</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

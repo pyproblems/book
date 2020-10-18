@@ -1,6 +1,4 @@
-# Problem 3
-
-**Chi-square Tests and Parameter Estimation**
+# Chi-square Tests and Parameter Estimation
 
 The chi-square test is used to test whether observed counts agree with a proposed distribution.
 The test statistic is $X = \sum (O - E)^2 / E,$ where $E$ are the expected and $O$ the observed counts, and the sum is taken over all bins.
@@ -17,8 +15,6 @@ While you are free to use any approach you like, the following may come in handy
  - `fmin` from `scipy.optimize`
 
 ## Your tasks
-
-Ensure that every part of the code is repeatable by seeding the random generator at the appropriate times.
 
  1. Generate a random sample from the normal distribution with $\mu=0$ and $\sigma=1$, i.e. $\mathcal{N}(0, 1)$.
  On the same plot, show the expected pdf in addition to a histogram of the generated sample.

@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Problem 3 - Answers
-# 
-# **Hypothesis testing**
+# # Hypothesis testing
 
-# ## Setup
+# #### Setup
 
 # In[1]:
 
@@ -18,7 +16,7 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import fmin
 from scipy.stats import chisquare, norm
-from tqdm import tqdm, trange
+from tqdm.notebook import tqdm, trange
 
 # Homogenise matplotlib plotting.
 mpl.rc("axes", grid=True)
@@ -26,7 +24,7 @@ mpl.rc("grid", linestyle="--", alpha=0.4)
 mpl.rc("legend", loc="best")
 
 
-# ## Generate random samples and compare the expected and observed distributions
+# ### Generate random samples and compare the expected and observed distributions
 
 # In[2]:
 
@@ -47,7 +45,7 @@ rng = np.random.RandomState(1)
 _ = plt.hist(distr.rvs(200, random_state=rng), density=True, alpha=0.4)
 
 
-# ## Chi-square test - Type I Errors
+# ### Chi-square test - Type I Errors
 # 
 # In the context of the above example, the null hypothesis $H_0$ is that the samples originate from a normal distribution with parameters $\mu=0$ and $\sigma=1$.
 # 
@@ -117,12 +115,12 @@ df.index.name = "Significance Level"
 df
 
 
-# ## Numerical maximum likelihood parameter estimation
+# ### Numerical maximum likelihood parameter estimation
 # 
 # Since analytical solutions are not possible for every pdf, numerical maximisation of the likelihood function may be necessary in order to estimate parameters.
 # Here, you will design a simple numerical solution for the normal distribution, maximising the log-likelihood.
 
-# ### Write a function that calculates the log-likelihood for the normal distribution
+# #### Write a function that calculates the log-likelihood for the normal distribution
 # 
 # This can return the log-likelihood up to a constant, if you wish.
 # For 1000 samples from a normal distribution with $\mu=0$ and $\sigma=1$ (with a fixed seed), visualise the 2D surface of the log-likelihood function using a contour plot.
@@ -177,7 +175,7 @@ plt.xlabel(r"$\mu$")
 _ = plt.ylabel(r"$\sigma$")
 
 
-# ### Optimise the above function using `scipy.optimize.fmin`
+# #### Optimise the above function using `scipy.optimize.fmin`
 # 
 # Note that we want to _maximise_ the log-likelihood, but `fmin` wants to minimise the function.
 # It also accepts the parameters ($\mu, \sigma$) as a 'vector' of arguments, and not as separate arguments as above.
@@ -200,7 +198,7 @@ xopt = fmin(
 print(f"mu: {xopt[0]:0.2f}, sigma: {xopt[1]:0.2f}")
 
 
-# ## Maximum likelihood estimation and chi-square test
+# ### Maximum likelihood estimation and chi-square test
 # 
 # The chi-squared test will be used to determine if generated samples originate from a normal distribution.
 # 
@@ -269,7 +267,7 @@ df.index.name = "Significance Level"
 df
 
 
-# ## Minimum chi-squared estimation and chi-square test
+# ### Minimum chi-squared estimation and chi-square test
 # 
 # The chi-squared test will be used to determine if generated samples originate from a normal distribution.
 # 

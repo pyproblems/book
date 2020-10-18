@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Problem 2 &#8212; PyProblems</title>
+    <title>The Monty Hall Problem &#8212; PyProblems</title>
     
   <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
@@ -48,6 +48,8 @@
     <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,8 +59,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Problem 2 - Answers" href="stom2.html" />
-    <link rel="prev" title="Problem 1 - Answers" href="stom1.html" />
+    <link rel="next" title="The Monty Hall Problem" href="stom2.html" />
+    <link rel="prev" title="Random Dice" href="stom1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -116,42 +118,42 @@
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="stom1Q.html">
-       Problem 1
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom1.html">
-       Problem 1 - Answers
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Problem 2
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2.html">
-       Problem 2 - Answers
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3Q.html">
-       Problem 3
+       Chi-square Tests and Parameter Estimation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3.html">
-       Problem 3 - Answers
+       Hypothesis testing
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4Q.html">
-       Problem 4
+       The CLT applied to sums of dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4.html">
-       Problem 4 - Answers
+       Random Dice and the CLT
       </a>
      </li>
     </ul>
@@ -363,8 +365,8 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-statement-from-the-problem-sheets-canonical-variation-a">
-   Problem statement (from the problem sheets) - canonical variation (a)
+  <a class="reference internal nav-link" href="#problem-statement-canonical-variation-a">
+   Problem statement - canonical variation (a)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -373,8 +375,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-statement-from-the-problem-sheets-variation-b">
-   Problem statement (from the problem sheets) - variation (b)
+  <a class="reference internal nav-link" href="#problem-statement-variation-b">
+   Problem statement - variation (b)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -393,13 +395,13 @@
         
               <div>
                 
-  <div class="section" id="problem-2">
-<h1>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this headline">¶</a></h1>
-<p><strong>The Monty Hall Problem</strong></p>
-<div class="section" id="problem-statement-from-the-problem-sheets-canonical-variation-a">
-<h2>Problem statement (from the problem sheets) - canonical variation (a)<a class="headerlink" href="#problem-statement-from-the-problem-sheets-canonical-variation-a" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="the-monty-hall-problem">
+<h1>The Monty Hall Problem<a class="headerlink" href="#the-monty-hall-problem" title="Permalink to this headline">¶</a></h1>
+<p>Note that the problem statements are adapted from the problem sheets.</p>
+<div class="section" id="problem-statement-canonical-variation-a">
+<h2>Problem statement - canonical variation (a)<a class="headerlink" href="#problem-statement-canonical-variation-a" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>In a game, you can pick one of three doors, labelled A, B and C.
+<div><p>In a game, you can pick one of three doors, labelled A, B, and C.
 Behind one of the three doors lies a highly desirable prize, such as the solutions to next summer’s exams.
 After you have chosen, but not opened, one door (e.g., door A) the person who is presenting the game opens one of the remaining two doors so as to reveal that there is no prize behind it (e.g., door C might be opened).
 Notice that the gameshow presenter knows that the door he opens has no prize behind it.
@@ -417,8 +419,8 @@ Justify your answers.</p>
 <li><p>Repeat the above, this time playing <em>with</em> switching. Are the results any different?</p></li>
 </ol>
 </div>
-<div class="section" id="problem-statement-from-the-problem-sheets-variation-b">
-<h2>Problem statement (from the problem sheets) - variation (b)<a class="headerlink" href="#problem-statement-from-the-problem-sheets-variation-b" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem-statement-variation-b">
+<h2>Problem statement - variation (b)<a class="headerlink" href="#problem-statement-variation-b" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>In a variation, after you have chosen door A, you are given the choice to open one of the remaining doors B or C.
 Notice that this time, the person opening the door does not know whether the prize is behind it or not.
@@ -466,8 +468,8 @@ Justify your answers.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="stom1.html" title="previous page">Problem 1 - Answers</a>
-    <a class='right-next' id="next-link" href="stom2.html" title="next page">Problem 2 - Answers</a>
+    <a class='left-prev' id="prev-link" href="stom1.html" title="previous page">Random Dice</a>
+    <a class='right-next' id="next-link" href="stom2.html" title="next page">The Monty Hall Problem</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
