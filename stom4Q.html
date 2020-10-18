@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Problem 4 &#8212; PyProblems</title>
+    <title>The CLT applied to sums of dice &#8212; PyProblems</title>
     
   <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
@@ -48,6 +48,8 @@
     <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,8 +59,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Problem 4 - Answers" href="stom4.html" />
-    <link rel="prev" title="Problem 3 - Answers" href="stom3.html" />
+    <link rel="next" title="Random Dice and the CLT" href="stom4.html" />
+    <link rel="prev" title="Hypothesis testing" href="stom3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -116,42 +118,42 @@
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="stom1Q.html">
-       Problem 1
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom1.html">
-       Problem 1 - Answers
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2Q.html">
-       Problem 2
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2.html">
-       Problem 2 - Answers
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3Q.html">
-       Problem 3
+       Chi-square Tests and Parameter Estimation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3.html">
-       Problem 3 - Answers
+       Hypothesis testing
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Problem 4
+       The CLT applied to sums of dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4.html">
-       Problem 4 - Answers
+       Random Dice and the CLT
       </a>
      </li>
     </ul>
@@ -378,9 +380,8 @@
         
               <div>
                 
-  <div class="section" id="problem-4">
-<h1>Problem 4<a class="headerlink" href="#problem-4" title="Permalink to this headline">¶</a></h1>
-<p><strong>The CLT applied to sums of dice</strong></p>
+  <div class="section" id="the-clt-applied-to-sums-of-dice">
+<h1>The CLT applied to sums of dice<a class="headerlink" href="#the-clt-applied-to-sums-of-dice" title="Permalink to this headline">¶</a></h1>
 <p>Using the functions created in the first exercise, you will estimate the sum of of particular die combinations, comparing this to the calculated analytical results.</p>
 <div class="section" id="your-tasks">
 <h2>Your tasks<a class="headerlink" href="#your-tasks" title="Permalink to this headline">¶</a></h2>
@@ -390,7 +391,7 @@
 <li><p>Compute the analytical expected probability for each of the bins above, and compare the sampled results to the expected results using a grouped bar chart.
 Also sample the normal distribution with the expected mean and standard deviation of the sum at the bin centres and add this to the grouped bar chart (after normalisation of the probabilities, ensuring they add up to 1).</p></li>
 <li><p>Write a function that calculates the expected probabilities in each bin using the normal distribution and a continuity correction: instead of sampling the normal distribution’s pdf at the bin centres, calculate the probability contained within <span class="math notranslate nohighlight">\(\pm 0.5\)</span> of each bin (or to <span class="math notranslate nohighlight">\(\pm \infty\)</span> at the edges of the dstribution).</p></li>
-<li><p>Compare the results of the above function, for the case in Task 3., adding this to the grouped bar chart.</p></li>
+<li><p>Compare the results of the above function, for the case in Task 3, adding this to the grouped bar chart.</p></li>
 <li><p>In preparation for the next task, write a function that takes bin edges, the corresponding probabilities for each bin, and a probability threshold as arguments, and joins together those bins which are below the threshold.
 The function should return a set of bin edges and associated probabilities, where each of the bins now has a probability that exceeds the given threshold.
 This is important to satisfy the requirement for the chi-squared test regarding the minimum number of samples per bin at the tails of the distribution of the dice sums.</p>
@@ -515,8 +516,8 @@ Using your results, you should be able to answer the following:</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="stom3.html" title="previous page">Problem 3 - Answers</a>
-    <a class='right-next' id="next-link" href="stom4.html" title="next page">Problem 4 - Answers</a>
+    <a class='left-prev' id="prev-link" href="stom3.html" title="previous page">Hypothesis testing</a>
+    <a class='right-next' id="next-link" href="stom4.html" title="next page">Random Dice and the CLT</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

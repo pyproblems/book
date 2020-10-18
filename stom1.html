@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Problem 1 - Answers &#8212; PyProblems</title>
+    <title>Random Dice &#8212; PyProblems</title>
     
   <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
@@ -48,6 +48,8 @@
     <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,8 +59,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Problem 2" href="stom2Q.html" />
-    <link rel="prev" title="Problem 1" href="stom1Q.html" />
+    <link rel="next" title="The Monty Hall Problem" href="stom2Q.html" />
+    <link rel="prev" title="Random Dice" href="stom1Q.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -116,42 +118,42 @@
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="stom1Q.html">
-       Problem 1
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Problem 1 - Answers
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2Q.html">
-       Problem 2
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2.html">
-       Problem 2 - Answers
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3Q.html">
-       Problem 3
+       Chi-square Tests and Parameter Estimation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3.html">
-       Problem 3 - Answers
+       Hypothesis testing
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4Q.html">
-       Problem 4
+       The CLT applied to sums of dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4.html">
-       Problem 4 - Answers
+       Random Dice and the CLT
       </a>
      </li>
     </ul>
@@ -385,23 +387,34 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#random-dice">
-   Random Dice
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-random-sample-generation-function-for-a-single-n-sided-die">
+   Define random sample generation function for a single N-sided die
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-a-bar-chart-of-results">
+   Plotting a bar chart of results
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define-random-sample-generation-function-for-a-single-n-sided-die">
-     Define random sample generation function for a single N-sided die
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plotting-a-bar-chart-of-results">
-     Plotting a bar chart of results
+    <a class="reference internal nav-link" href="#the-occurrences-dictionary-can-be-unpacked-into-the-values-and-their-counts-using-zip">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       occurrences
+      </span>
+     </code>
+     dictionary can be unpacked into the values and their counts using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       zip
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -438,21 +451,42 @@
   <a class="reference internal nav-link" href="#two-4-sided-dice">
    Two 4-sided dice
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-expected-distribution-is-the-sum-of-two-discrete-uniform-distributions">
+     The expected distribution is the sum of two discrete uniform distributions
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#define-a-function-to-generate-the-expected-distribution-of-the-sums-of-multiple-n-sided-dice">
    Define a function to generate the expected distribution of the sums of multiple N-sided dice
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generate-numerical-results-and-and-compare-these-to-the-expected-distribution-on-a-bar-chart">
-   Generate numerical results and and compare these to the expected distribution on a bar chart.
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-numerical-results-and-and-compare-these-to-the-expected-distribution-on-a-bar-chart">
+     Generate numerical results and and compare these to the expected distribution on a bar chart.
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#extend-the-functions-to-handle-multiple-dice-with-different-numbers-of-sides">
    Extend the functions to handle multiple dice with different numbers of sides
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-samples-for-the-sum-of-6-8-and-10-sided-dice-and-plot-the-resulting-bar-plots">
+     Generate samples for the sum of 6, 8, and 10 sided dice and plot the resulting bar plots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-the-sample-and-expected-mean-and-standard-deviation">
+     Compare the sample and expected mean and standard deviation
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -465,11 +499,8 @@
         
               <div>
                 
-  <div class="section" id="problem-1-answers">
-<h1>Problem 1 - Answers<a class="headerlink" href="#problem-1-answers" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="random-dice">
-<h2>Random Dice<a class="headerlink" href="#random-dice" title="Permalink to this headline">¶</a></h2>
-</div>
+  <div class="section" id="random-dice">
+<h1>Random Dice<a class="headerlink" href="#random-dice" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
@@ -494,8 +525,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="define-random-sample-generation-function-for-a-single-n-sided-die">
-<h3>Define random sample generation function for a single N-sided die<a class="headerlink" href="#define-random-sample-generation-function-for-a-single-n-sided-die" title="Permalink to this headline">¶</a></h3>
+<h2>Define random sample generation function for a single N-sided die<a class="headerlink" href="#define-random-sample-generation-function-for-a-single-n-sided-die" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random_die</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -528,7 +560,7 @@
 </div>
 </div>
 <div class="section" id="plotting-a-bar-chart-of-results">
-<h3>Plotting a bar chart of results<a class="headerlink" href="#plotting-a-bar-chart-of-results" title="Permalink to this headline">¶</a></h3>
+<h2>Plotting a bar chart of results<a class="headerlink" href="#plotting-a-bar-chart-of-results" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
@@ -549,7 +581,8 @@
 </div>
 </div>
 </div>
-<p><strong>The <code class="docutils literal notranslate"><span class="pre">occurrences</span></code> dictionary can be unpacked into the values and their counts using <code class="docutils literal notranslate"><span class="pre">zip</span></code></strong></p>
+<div class="section" id="the-occurrences-dictionary-can-be-unpacked-into-the-values-and-their-counts-using-zip">
+<h3>The <code class="docutils literal notranslate"><span class="pre">occurrences</span></code> dictionary can be unpacked into the values and their counts using <code class="docutils literal notranslate"><span class="pre">zip</span></code><a class="headerlink" href="#the-occurrences-dictionary-can-be-unpacked-into-the-values-and-their-counts-using-zip" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">occurrences</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
@@ -764,7 +797,8 @@
 </div>
 <div class="section" id="two-4-sided-dice">
 <h2>Two 4-sided dice<a class="headerlink" href="#two-4-sided-dice" title="Permalink to this headline">¶</a></h2>
-<p><strong>The expected distribution is the sum of two discrete uniform distributions</strong></p>
+<div class="section" id="the-expected-distribution-is-the-sum-of-two-discrete-uniform-distributions">
+<h3>The expected distribution is the sum of two discrete uniform distributions<a class="headerlink" href="#the-expected-distribution-is-the-sum-of-two-discrete-uniform-distributions" title="Permalink to this headline">¶</a></h3>
 <p>For a single discrete uniform distribution with <span class="math notranslate nohighlight">\(n\)</span> values between <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, the probability of a given value is <span class="math notranslate nohighlight">\(1/n\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(X \sim \mathcal{U}\{a,b\}\)</span>. Then for <span class="math notranslate nohighlight">\(k \in [a,b]\)</span>, <span class="math notranslate nohighlight">\(P(X=k) = 1/n\)</span>. For another discrete uniform distribution <span class="math notranslate nohighlight">\(Y \sim \mathcal{U} \{c, d\}\)</span>, with <span class="math notranslate nohighlight">\(m\)</span> values, <span class="math notranslate nohighlight">\(P(Y=k) = 1/m\)</span>, for <span class="math notranslate nohighlight">\(k \in [c,d]\)</span>.</p>
 <p>Denote by <span class="math notranslate nohighlight">\(Z\)</span> the sum <span class="math notranslate nohighlight">\(X + Y\)</span>. Its probability distribution may be determined as follows:</p>
@@ -778,6 +812,7 @@ Thus,</p>
 <div class="math notranslate nohighlight">
 \[P(Z=z) &gt; 0\ \text{for}\ z \in [a+c, b+d].\]</div>
 <p>This is easily generalised to the sum of multiple discrete uniform distributions.</p>
+</div>
 </div>
 <div class="section" id="define-a-function-to-generate-the-expected-distribution-of-the-sums-of-multiple-n-sided-dice">
 <h2>Define a function to generate the expected distribution of the sums of multiple N-sided dice<a class="headerlink" href="#define-a-function-to-generate-the-expected-distribution-of-the-sums-of-multiple-n-sided-dice" title="Permalink to this headline">¶</a></h2>
@@ -873,9 +908,8 @@ Thus,</p>
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="generate-numerical-results-and-and-compare-these-to-the-expected-distribution-on-a-bar-chart">
-<h2>Generate numerical results and and compare these to the expected distribution on a bar chart.<a class="headerlink" href="#generate-numerical-results-and-and-compare-these-to-the-expected-distribution-on-a-bar-chart" title="Permalink to this headline">¶</a></h2>
+<h3>Generate numerical results and and compare these to the expected distribution on a bar chart.<a class="headerlink" href="#generate-numerical-results-and-and-compare-these-to-the-expected-distribution-on-a-bar-chart" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
@@ -917,9 +951,11 @@ Thus,</p>
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="extend-the-functions-to-handle-multiple-dice-with-different-numbers-of-sides">
 <h2>Extend the functions to handle multiple dice with different numbers of sides<a class="headerlink" href="#extend-the-functions-to-handle-multiple-dice-with-different-numbers-of-sides" title="Permalink to this headline">¶</a></h2>
-<p><strong>Generate samples for the sum of 6, 8, and 10 sided dice and plot the resulting bar plots</strong></p>
+<div class="section" id="generate-samples-for-the-sum-of-6-8-and-10-sided-dice-and-plot-the-resulting-bar-plots">
+<h3>Generate samples for the sum of 6, 8, and 10 sided dice and plot the resulting bar plots<a class="headerlink" href="#generate-samples-for-the-sum-of-6-8-and-10-sided-dice-and-plot-the-resulting-bar-plots" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
@@ -1048,7 +1084,9 @@ Thus,</p>
 </div>
 </div>
 </div>
-<p><strong>Compare the sample and expected mean and standard deviation</strong></p>
+</div>
+<div class="section" id="compare-the-sample-and-expected-mean-and-standard-deviation">
+<h3>Compare the sample and expected mean and standard deviation<a class="headerlink" href="#compare-the-sample-and-expected-mean-and-standard-deviation" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;numerical estimates: mu=</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">, sigma=</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1062,6 +1100,7 @@ Thus,</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numerical estimates: mu=13.78, sigma=4.04
 expected: mu=13.50, sigma=4.05
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1096,8 +1135,8 @@ expected: mu=13.50, sigma=4.05
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="stom1Q.html" title="previous page">Problem 1</a>
-    <a class='right-next' id="next-link" href="stom2Q.html" title="next page">Problem 2</a>
+    <a class='left-prev' id="prev-link" href="stom1Q.html" title="previous page">Random Dice</a>
+    <a class='right-next' id="next-link" href="stom2Q.html" title="next page">The Monty Hall Problem</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

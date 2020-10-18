@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Problem 1 &#8212; PyProblems</title>
+    <title>Random Dice &#8212; PyProblems</title>
     
   <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
@@ -48,6 +48,8 @@
     <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,7 +59,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Problem 1 - Answers" href="stom1.html" />
+    <link rel="next" title="Random Dice" href="stom1.html" />
     <link rel="prev" title="Statistics of Measurement" href="stom.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -116,42 +118,42 @@
     <ul class="current">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Problem 1
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom1.html">
-       Problem 1 - Answers
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2Q.html">
-       Problem 2
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2.html">
-       Problem 2 - Answers
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3Q.html">
-       Problem 3
+       Chi-square Tests and Parameter Estimation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3.html">
-       Problem 3 - Answers
+       Hypothesis testing
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4Q.html">
-       Problem 4
+       The CLT applied to sums of dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4.html">
-       Problem 4 - Answers
+       Random Dice and the CLT
       </a>
      </li>
     </ul>
@@ -378,24 +380,22 @@
         
               <div>
                 
-  <div class="section" id="problem-1">
-<h1>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h1>
-<p><strong>Random Dice</strong></p>
+  <div class="section" id="random-dice">
+<h1>Random Dice<a class="headerlink" href="#random-dice" title="Permalink to this headline">¶</a></h1>
 <p>In this exercise, you will investigate the techniques used to generate random numbers in Python using random dice as an example.</p>
 <div class="section" id="tasks">
 <h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Define a function that generates the outcome of a single random 6-sided die throw.</p></li>
-<li><p>Generate a large number of die throws, and plot a histogram of the outcomes.</p></li>
+<li><p>Generate a large number of die throws and plot a histogram of the outcomes.</p></li>
 <li><p>Plot the joint and marginal histograms for two 3-sided dice on a single plot.</p></li>
 <li><p>Plot the joint and marginal histograms for one of the two 3-sided dice and their sum.</p></li>
 <li><p>Write a second function which calls your first function to generate the sum of multiple die throws.</p></li>
 <li><p>Write a function which can generate the expected probabilities (i.e. find the probability distribution) of the sum of multiple dice.</p></li>
-<li><p>Plot a bar plot showing the sampled outcomes and expected probabilities for two 4-sided dice.</p></li>
+<li><p>Plot a bar plot showing the both the sampled (numerical, simulated) outcomes and expected probabilities for two 4-sided dice.</p></li>
 <li><p>Extend the functions to handle multiple dice with different numbers of sides (if you haven’t done so already), and generate samples and the expected distribution for the sum of 6, 8, and 10 sided dice. As before, visualise these using a bar plot.</p></li>
 <li><p>Write functions to compute the mean and standard deviation of the sum of N-sided dice. Use these to compare the sample statistics to the analytical results for the previous exercise.</p></li>
 </ol>
-<p>Ensure that all of these tasks are repeatable by implementing a way to seed the random number generator seed.</p>
 </div>
 </div>
 
@@ -428,7 +428,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="stom.html" title="previous page">Statistics of Measurement</a>
-    <a class='right-next' id="next-link" href="stom1.html" title="next page">Problem 1 - Answers</a>
+    <a class='right-next' id="next-link" href="stom1.html" title="next page">Random Dice</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

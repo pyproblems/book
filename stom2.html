@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Problem 2 - Answers &#8212; PyProblems</title>
+    <title>The Monty Hall Problem &#8212; PyProblems</title>
     
   <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
@@ -48,6 +48,8 @@
     <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,8 +59,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Problem 3" href="stom3Q.html" />
-    <link rel="prev" title="Problem 2" href="stom2Q.html" />
+    <link rel="next" title="Chi-square Tests and Parameter Estimation" href="stom3Q.html" />
+    <link rel="prev" title="The Monty Hall Problem" href="stom2Q.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -116,42 +118,42 @@
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="stom1Q.html">
-       Problem 1
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom1.html">
-       Problem 1 - Answers
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2Q.html">
-       Problem 2
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Problem 2 - Answers
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3Q.html">
-       Problem 3
+       Chi-square Tests and Parameter Estimation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3.html">
-       Problem 3 - Answers
+       Hypothesis testing
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4Q.html">
-       Problem 4
+       The CLT applied to sums of dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4.html">
-       Problem 4 - Answers
+       Random Dice and the CLT
       </a>
      </li>
     </ul>
@@ -394,55 +396,53 @@
      Setup
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define-a-function-which-plays-the-game-once-with-an-option-to-switch-or-stay">
-     Define a function which ‘plays’ the game once with an option to switch or stay
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#play-the-game-without-switching">
-     Play the game
-     <em>
-      without
-     </em>
-     switching
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#play-the-game-with-switching">
-     Play the game
-     <em>
-      with
-     </em>
-     switching
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-a-function-which-plays-the-game-once-with-an-option-to-switch-or-stay">
+   Define a function which ‘plays’ the game once with an option to switch or stay
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#play-the-game-without-switching">
+   Play the game
+   <em>
+    without
+   </em>
+   switching
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#play-the-game-with-switching">
+   Play the game
+   <em>
+    with
+   </em>
+   switching
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problem-statement-from-the-problem-sheets-variation-b">
    Problem statement (from the problem sheets) - variation (b)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Play the game
-     <em>
-      without
-     </em>
-     switching
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Play the game
-     <em>
-      with
-     </em>
-     switching
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Play the game
+   <em>
+    without
+   </em>
+   switching
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Play the game
+   <em>
+    with
+   </em>
+   switching
+  </a>
  </li>
 </ul>
 
@@ -455,9 +455,8 @@
         
               <div>
                 
-  <div class="section" id="problem-2-answers">
-<h1>Problem 2 - Answers<a class="headerlink" href="#problem-2-answers" title="Permalink to this headline">¶</a></h1>
-<p><strong>The Monty Hall Problem</strong></p>
+  <div class="section" id="the-monty-hall-problem">
+<h1>The Monty Hall Problem<a class="headerlink" href="#the-monty-hall-problem" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="problem-statement-from-the-problem-sheets-canonical-variation-a">
 <h2>Problem statement (from the problem sheets) - canonical variation (a)<a class="headerlink" href="#problem-statement-from-the-problem-sheets-canonical-variation-a" title="Permalink to this headline">¶</a></h2>
 <blockquote>
@@ -495,8 +494,9 @@ to switch? Justify your answers.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="define-a-function-which-plays-the-game-once-with-an-option-to-switch-or-stay">
-<h3>Define a function which ‘plays’ the game once with an option to switch or stay<a class="headerlink" href="#define-a-function-which-plays-the-game-once-with-an-option-to-switch-or-stay" title="Permalink to this headline">¶</a></h3>
+<h2>Define a function which ‘plays’ the game once with an option to switch or stay<a class="headerlink" href="#define-a-function-which-plays-the-game-once-with-an-option-to-switch-or-stay" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">monty_hall</span><span class="p">(</span><span class="n">switch</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -551,7 +551,7 @@ to switch? Justify your answers.</p>
 </div>
 </div>
 <div class="section" id="play-the-game-without-switching">
-<h3>Play the game <em>without</em> switching<a class="headerlink" href="#play-the-game-without-switching" title="Permalink to this headline">¶</a></h3>
+<h2>Play the game <em>without</em> switching<a class="headerlink" href="#play-the-game-without-switching" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
@@ -571,7 +571,7 @@ to switch? Justify your answers.</p>
 </div>
 </div>
 <div class="section" id="play-the-game-with-switching">
-<h3>Play the game <em>with</em> switching<a class="headerlink" href="#play-the-game-with-switching" title="Permalink to this headline">¶</a></h3>
+<h2>Play the game <em>with</em> switching<a class="headerlink" href="#play-the-game-with-switching" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
@@ -587,7 +587,6 @@ to switch? Justify your answers.</p>
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/stom2_8_0.png" src="_images/stom2_8_0.png" />
-</div>
 </div>
 </div>
 </div>
@@ -659,8 +658,9 @@ the previous scenario? Justify your answers.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="id1">
-<h3>Play the game <em>without</em> switching<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2>Play the game <em>without</em> switching<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
@@ -680,7 +680,7 @@ the previous scenario? Justify your answers.</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h3>Play the game <em>with</em> switching<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h2>Play the game <em>with</em> switching<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make runs repeatable.</span>
@@ -696,7 +696,6 @@ the previous scenario? Justify your answers.</p>
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/stom2_14_0.png" src="_images/stom2_14_0.png" />
-</div>
 </div>
 </div>
 </div>
@@ -730,8 +729,8 @@ the previous scenario? Justify your answers.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="stom2Q.html" title="previous page">Problem 2</a>
-    <a class='right-next' id="next-link" href="stom3Q.html" title="next page">Problem 3</a>
+    <a class='left-prev' id="prev-link" href="stom2Q.html" title="previous page">The Monty Hall Problem</a>
+    <a class='right-next' id="next-link" href="stom3Q.html" title="next page">Chi-square Tests and Parameter Estimation</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

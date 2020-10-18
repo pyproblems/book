@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Problem 4 - Answers &#8212; PyProblems</title>
+    <title>Random Dice and the CLT &#8212; PyProblems</title>
     
   <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
@@ -48,6 +48,8 @@
     <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,7 +60,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Quantum Mechanics" href="qm.html" />
-    <link rel="prev" title="Problem 4" href="stom4Q.html" />
+    <link rel="prev" title="The CLT applied to sums of dice" href="stom4Q.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -116,42 +118,42 @@
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="stom1Q.html">
-       Problem 1
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom1.html">
-       Problem 1 - Answers
+       Random Dice
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2Q.html">
-       Problem 2
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom2.html">
-       Problem 2 - Answers
+       The Monty Hall Problem
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3Q.html">
-       Problem 3
+       Chi-square Tests and Parameter Estimation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom3.html">
-       Problem 3 - Answers
+       Hypothesis testing
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="stom4Q.html">
-       Problem 4
+       The CLT applied to sums of dice
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Problem 4 - Answers
+       Random Dice and the CLT
       </a>
      </li>
     </ul>
@@ -388,13 +390,11 @@
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#re-define-functions-from-the-first-exercise">
-     Re-define functions from the first exercise
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#re-define-functions-from-the-first-exercise">
+   Re-define functions from the first exercise
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sample-from-the-distribution-of-the-sum-of-10-6-sided-dice">
@@ -434,9 +434,8 @@
         
               <div>
                 
-  <div class="section" id="problem-4-answers">
-<h1>Problem 4 - Answers<a class="headerlink" href="#problem-4-answers" title="Permalink to this headline">¶</a></h1>
-<p><strong>Random Dice and the CLT</strong></p>
+  <div class="section" id="random-dice-and-the-clt">
+<h1>Random Dice and the CLT<a class="headerlink" href="#random-dice-and-the-clt" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
@@ -452,12 +451,12 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display_html</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display_html</span>
 <span class="kn">from</span> <span class="nn">mpl_toolkits.axes_grid1.inset_locator</span> <span class="kn">import</span> <span class="n">inset_axes</span>
 <span class="kn">from</span> <span class="nn">scipy.ndimage</span> <span class="kn">import</span> <span class="n">label</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fmin</span>
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">chisquare</span><span class="p">,</span> <span class="n">norm</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span><span class="p">,</span> <span class="n">trange</span>
+<span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span><span class="p">,</span> <span class="n">trange</span>
 
 <span class="c1"># Homogenise matplotlib plotting.</span>
 <span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s2">&quot;axes&quot;</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -467,8 +466,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="re-define-functions-from-the-first-exercise">
-<h3>Re-define functions from the first exercise<a class="headerlink" href="#re-define-functions-from-the-first-exercise" title="Permalink to this headline">¶</a></h3>
+<h2>Re-define functions from the first exercise<a class="headerlink" href="#re-define-functions-from-the-first-exercise" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random_die</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -707,7 +707,6 @@
 
     <span class="k">return</span> <span class="n">total_var</span> <span class="o">**</span> <span class="mf">0.5</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -1034,14 +1033,14 @@
     <span class="p">{</span><span class="s2">&quot;bin_edge&quot;</span><span class="p">:</span> <span class="n">bin_edges</span><span class="p">,</span> <span class="s2">&quot;probability&quot;</span><span class="p">:</span> <span class="n">probabilities</span><span class="p">}</span>
 <span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;bin_edge&quot;</span><span class="p">)</span>
 
-<span class="n">display_html</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">bins_old</span><span class="o">.</span><span class="n">_repr_html_</span><span class="p">()))</span>
+<span class="n">display_html</span><span class="p">(</span><span class="n">bins_old</span><span class="p">)</span>
 
 <span class="n">new_edges</span><span class="p">,</span> <span class="n">new_probs</span> <span class="o">=</span> <span class="n">join_bins</span><span class="p">(</span><span class="n">bin_edges</span><span class="p">,</span> <span class="n">probabilities</span><span class="p">,</span> <span class="n">min_prob</span><span class="o">=</span><span class="mf">0.06</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Joined bins:&quot;</span><span class="p">)</span>
 <span class="n">bins_new</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;bin_edge&quot;</span><span class="p">:</span> <span class="n">new_edges</span><span class="p">,</span> <span class="s2">&quot;probability&quot;</span><span class="p">:</span> <span class="n">new_probs</span><span class="p">})</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span>
     <span class="s2">&quot;bin_edge&quot;</span>
 <span class="p">)</span>
-<span class="n">display_html</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">bins_new</span><span class="o">.</span><span class="n">_repr_html_</span><span class="p">()))</span>
+<span class="n">display_html</span><span class="p">(</span><span class="n">bins_new</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1273,30 +1272,26 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                            | 0/5 [00:00&lt;?, ?it/s]
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "73b32967ba804c98ad245a0902cb5d72"}
+</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 40%|███████████████████████████▏                                        | 2/5 [00:00&lt;00:00, 16.13it/s]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 80%|██████████████████████████████████████████████████████▍             | 4/5 [00:00&lt;00:00, 14.90it/s]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████| 5/5 [00:00&lt;00:00, 13.51it/s]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
+<img alt="_images/stom4_14_2.png" src="_images/stom4_14_2.png" />
+<img alt="_images/stom4_14_3.png" src="_images/stom4_14_3.png" />
+<img alt="_images/stom4_14_4.png" src="_images/stom4_14_4.png" />
 <img alt="_images/stom4_14_5.png" src="_images/stom4_14_5.png" />
 <img alt="_images/stom4_14_6.png" src="_images/stom4_14_6.png" />
-<img alt="_images/stom4_14_7.png" src="_images/stom4_14_7.png" />
-<img alt="_images/stom4_14_8.png" src="_images/stom4_14_8.png" />
-<img alt="_images/stom4_14_9.png" src="_images/stom4_14_9.png" />
 </div>
 </div>
 </div>
 </div>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"d848fc592f364dad8b0d54289aef1fed": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "1f65fee5e22c4e158690d55dffeefc95": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": "initial"}}, "97df911fd7544f55b2d1ca2030077dea": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "100%", "description_tooltip": null, "layout": "IPY_MODEL_d848fc592f364dad8b0d54289aef1fed", "max": 5.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_1f65fee5e22c4e158690d55dffeefc95", "value": 5.0}}, "eae7274db8ad4bd99fa03ca95e540b29": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4e8f7b935f5c419487ef326d9a317238": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "91eb1026465a4ec0b1b59cfd4d5e45c1": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_eae7274db8ad4bd99fa03ca95e540b29", "placeholder": "\u200b", "style": "IPY_MODEL_4e8f7b935f5c419487ef326d9a317238", "value": " 5/5 [00:00&lt;00:00, 12.32it/s]"}}, "cd9fa765987646a88105595c44e62caa": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "73b32967ba804c98ad245a0902cb5d72": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_97df911fd7544f55b2d1ca2030077dea", "IPY_MODEL_91eb1026465a4ec0b1b59cfd4d5e45c1"], "layout": "IPY_MODEL_cd9fa765987646a88105595c44e62caa"}}}, "version_major": 2, "version_minor": 0}
+</script>
+
 
     <script type="text/x-thebe-config">
     {
@@ -1326,7 +1321,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="stom4Q.html" title="previous page">Problem 4</a>
+    <a class='left-prev' id="prev-link" href="stom4Q.html" title="previous page">The CLT applied to sums of dice</a>
     <a class='right-next' id="next-link" href="qm.html" title="next page">Quantum Mechanics</a>
 
     </div>
