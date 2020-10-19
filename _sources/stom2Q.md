@@ -1,4 +1,6 @@
-# The Monty Hall Problem
+# Problem 2
+
+**The Monty Hall Problem**
 
 Note that the problem statements are adapted from the problem sheets.
 
