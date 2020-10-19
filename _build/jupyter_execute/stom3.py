@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Hypothesis testing
+# # Problem 3 - Answers
+# 
+# **Hypothesis testing**
 
 # #### Setup
 

@@ -1,4 +1,6 @@
-# Chi-square Tests and Parameter Estimation
+# Problem 3
+
+**Chi-square Tests and Parameter Estimation**
 
 The chi-square test is used to test whether observed counts agree with a proposed distribution.
 The test statistic is $X = \sum (O - E)^2 / E,$ where $E$ are the expected and $O$ the observed counts, and the sum is taken over all bins.

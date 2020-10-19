@@ -1,4 +1,6 @@
-# The CLT applied to sums of dice
+# Problem 4
+
+**The CLT applied to sums of dice**
 
 Using the functions created in the first exercise, you will estimate the sum of of particular die combinations, comparing this to the calculated analytical results.
 

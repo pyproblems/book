@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # The Monty Hall Problem
+# # Problem 2 - Answers
+# 
+# **The Monty Hall Problem**
 # 
 # ### Problem statement (from the problem sheets) - canonical variation (a)
 # 

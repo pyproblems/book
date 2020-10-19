@@ -1,4 +1,6 @@
-# Random Dice
+# Problem 1
+
+**Random Dice**
 
 In this exercise, you will investigate the techniques used to generate random numbers in Python using random dice as an example.
 

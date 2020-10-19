@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Random Dice and the CLT
+# # Problem 4 - Answers
+# 
+# **Random Dice and the CLT**
 
 # #### Setup
 
