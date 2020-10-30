@@ -191,7 +191,9 @@ The code below is meant to be run inside a Jupyter notebook.
 
 Should you choose run it elsewhere, please see <a href="https://matplotlib.org/api/animation_api.html">animation_api</a> for further information.
 
-Using <a href="https://pypi.org/project/tqdm/2.2.3/">tqdm</a> here is completely optional. It provides a straightforward way to judge the time remaining for the animation from within the notebook. Should you wish to run the code without it, simply delete the line using tqdm and unindent everything from <samp>def animate(i)</samp> up to and including <samp>js_output</samp> by one level.
+Using <a href="https://pypi.org/project/tqdm/2.2.3/">tqdm</a> here is completely optional. 
+It provides a straightforward way to judge the time remaining for the animation from within the notebook. 
+Should you wish to run the code without it, delete the lines starting <samp>with tqdm(...</samp> and <samp>t.update()</samp>, and unindent everything from <samp>def animate(i)</samp> up to and including <samp>js_output</samp> by one level.
 
 ```{code-block} python
 import matplotlib.pyplot as plt
